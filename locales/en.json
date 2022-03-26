@@ -1,0 +1,70 @@
+{
+  "hello": "",
+  "Menu": "",
+  "home": "",
+  "about": "About Me",
+  "resume": "",
+  "services": "",
+  "portfolio": "",
+  "contact": {
+    "title": "",
+    "description": "",
+    "button": ""
+  },
+  "myName": "",
+  "Je suis un": "",
+  "hero": {
+    "web": "",
+    "network": "",
+    "application": ""
+  },
+  "À Propos": "",
+  "aboutMe": {
+    "about": ""
+  },
+  "Nom :": "",
+  "Date de Naissance:": "",
+  "Adresse :": "",
+  "Email :": "",
+  "Téléphone :": "",
+  "Education": "",
+  "education": {
+    "licence": {
+      "title": "",
+      "subtitle": "",
+      "description": ""
+    },
+    "bac": {
+      "description": ""
+    },
+    "bepc": {
+      "description": ""
+    }
+  },
+  "Baccalauréat Scientifique(série D)": "",
+  "Collège d’Enseignement Général Albarika": "",
+  "Expérience": "",
+  "Formateur": "",
+  "Jeunesse Institut": "",
+  "experience": {
+    "jeunesseInstitut": {
+      "description": ""
+    },
+    "self": {
+      "subtitle": "",
+      "description": ""
+    },
+    "jscom": {
+      "description": ""
+    },
+    "htech": {
+      "description": ""
+    }
+  },
+  "Développeur Wordpress": "",
+  "Compétences": "",
+  "Services": "",
+  "Mes compétences et les services que j'offre": "",
+  "Développement Web": "",
+  "Voir Mes Réalisations": ""
+}
