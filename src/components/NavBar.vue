@@ -6,7 +6,7 @@ fr:
         home: "Accueil"
         about: "À Propos"
         services: "Services"
-        resume: "Résumés"
+        resume: "Résumé"
         portfolio: "Portfolio"
         contact: "Contact"
 
@@ -37,22 +37,22 @@ en:
                 <ul class="navbar-nav nav ml-auto">
                     <li class="nav-item">
                         <router-link :to="{name: 'Home',  hash: '#home-section'}" class="nav-link">
-                            <span>{{ $t("menu.home") }}</span>
+                            <span>{{ t("menu.home") }}</span>
                         </router-link>
                     </li>
                     <li class="nav-item">
                         <router-link :to="{name: 'Home',  hash: '#about-section'}" class="nav-link">
-                            <span>{{ $t("menu.about") }}</span>
+                            <span>{{ t("menu.about") }}</span>
                         </router-link>
                     </li>
                     <li class="nav-item">
                         <router-link :to="{name: 'Home',  hash: '#resume-section'}" class="nav-link">
-                            <span>{{ $t("menu.resume") }}</span>
+                            <span>{{ t("menu.resume") }}</span>
                         </router-link>
                     </li>
                     <li class="nav-item">
                         <router-link :to="{name: 'Home',  hash: '#services-section' } " class="nav-link">
-                            <span>{{ $t("menu.services") }}</span></router-link>
+                            <span>{{ t("menu.services") }}</span></router-link>
                     </li>
                     <!-- A UTILISER PLUS TARD
                     <li class="nav-item">
@@ -65,11 +65,11 @@ en:
                     </li>
                     -->
                     <li class="nav-item">
-                        <router-link :to="{name: 'Portfolio' }" class="nav-link"><span>{{ $t("menu.portfolio") }}</span>
+                        <router-link :to="{name: 'Portfolio' }" class="nav-link"><span>{{ t("menu.portfolio") }}</span>
                         </router-link>
                     </li>
                     <li class="nav-item">
-                        <router-link :to="{name: 'Contact' }" class="nav-link"><span>{{ $t("menu.contact") }}</span>
+                        <router-link :to="{name: 'Contact' }" class="nav-link"><span>{{ t("menu.contact") }}</span>
                         </router-link>
                         <!-- <a href="#contact-section" class="nav-link"><span>Contact</span></a>  --> </li>
                     <li class="nav-item">
@@ -78,8 +78,8 @@ en:
                                 <!--
                                 <option v-for="locale in $i18n.availableLocales" :key="`locale-${locale}`" :value="locale">{{ locale }}</option>
  -->
-                                <option value="fr">fr</option>
-                                <option value="en">en</option>
+                                <option value="fr">Français</option>
+                                <option value="en">English</option>
 
                             </select>
 
@@ -93,10 +93,7 @@ en:
 </template>
 
 
-<style lang="scss">
-    @import "bootstrap/scss/bootstrap";
-
-    @import "src/assets/scss/variables.scss";
+<style lang="scss" >
 
      a.nav-link.router-link-exact-active {
         color: #3e64ff !important;
@@ -112,14 +109,24 @@ en:
 </style>
 <script>
 import $ from "jquery";
+import { useI18n } from 'vue-i18n'
 
 export default {
     name: 'NavBar',
     mounted() {
-
         burgerMenu();
         scrollWindow();
     },
+    setup(){
+        const { t, availableLocales, locale } = useI18n()
+        const toggleLocales = () => {
+            // change to some real logic
+            const locales = availableLocales
+            //locale.value = locales[(locales.indexOf(locale.value) + 1) % locales.length]
+            locale.value = "en";
+        }
+        return { t};
+    }
 }
 // Burger Menu
 // eslint-disable-next-line

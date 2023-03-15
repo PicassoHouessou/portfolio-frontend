@@ -1,7 +1,23 @@
+<i18n>
+{
+    "fr": {
+        "head": {
+            "keywords": "Picasso Houessou, Picasso Houessou-Dossou, Développeur web, Développeur backend, développeur frontend, frontend, backend, HTML, CSS, symfony, laravel, wordpress, développeur wordpress, développeur PHP, développeur vue.js, création de site web au bénin, web designer au bénin, développeur d'API, création de site web à cotonou, refonte de site web",
+            "description": "Bienvenue sur mon site personnel. Je m'appelle Picasso Houessou"
+        }
+    },
+    "en": {
+        "head": {
+            "keywords": "Picasso Houessou, Picasso Houessou-Dossou, Développeur web, Développeur backend, développeur frontend, frontend, backend, HTML, CSS, symfony, laravel, wordpress, développeur wordpress, développeur PHP, développeur vue.js, création de site web au bénin, web designer au bénin, développeur d'API, création de site web à cotonou, refonte de site web",
+            "description": "Bienvenue sur mon site personnel. Je m'appelle Picasso Houessou"
+        }
+    }
+}
+</i18n>
 <template>
 
     <div id="app">
-
+<!--
         <div class="alert-container-fixed show p-t-15 " v-if="alertMessage.show">
             <div class="container-fluid">
                 <div class="row">
@@ -17,6 +33,7 @@
                 </div>
             </div>
         </div>
+        -->
 
 
         <router-view></router-view>
@@ -32,39 +49,23 @@
         -->
         <!-- set progressbar -->
         <vue-progress-bar></vue-progress-bar>
-        <Cookie/>
+        <!-- <Cookie/> -->
 
     </div>
 
 </template>
 
 <style lang="scss">
+@import "https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900";
 @import "./assets/css/open-iconic-bootstrap.min.css";
 @import "./assets/css/animate.css";
+@import "./assets/css/aos.css";
 @import "./assets/css/flaticon.css";
 
 @import "./assets/css/icomoon.css";
 @import "./assets/css/ionicons.min.css";
-/*
-    @import "https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900";
-    @import "./assets/css/open-iconic-bootstrap.min.css";
-     @import "./assets/css/animate.css";
-    @import "./vendors/owl-carousel/owl.carousel.min.css";
-    @import "./vendors/owl-carousel/owl.theme.default.min.css";
-    @import "./assets/css/magnific-popup.css";
-    @import "./assets/css/aos.css";
-    @import "./assets/css/ionicons.min.css";
-
-
-    @import "./assets/css/flaticon.css";
-
-    @import "./assets/css/icomoon.css";
-
-    @import "./assets/css/style.css";
-*/
 
 @import "src/assets/scss/app.scss";
-
 
 .ftco-animate {
     opacity: 1;
@@ -94,45 +95,20 @@
 </style>
 
 <script>
-/*
-    import "./../public/assets/css/open-iconic-bootstrap.min.css";
-    import "./../public/assets/css/animate.css";
-    import "./../public/vendors/owl-carousel/owl.carousel.min.css";
-    import "./../public/vendors/owl-carousel/owl.theme.default.min.css";
-    import "./../public/assets/css/magnific-popup.css";
-    import "./../public/assets/css/aos.css";
-    import "./../public/assets/css/ionicons.min.css";
-    import "./../public/assets/css/flaticon.css";
-    import "./../public/assets/css/icomoon.css";
-    import "./../public/assets/css/style.css";
-*/
-/*
-import 'bootstrap' ;
-import "jquery" ;
-import "popper.js" ;
-import "owl.carousel" ;
-*/
-
-// import NavBar from './components/NavBar.vue' ;
-
-import Cookie from "./components/Cookie.vue";
 import $ from "jquery" ;
+//global.$ = global.jQuery = $;
+import "popper.js";
 import "bootstrap";
-
-//import {mapState} from "vuex" ;
+//import Cookie from "./components/Cookie.vue";
 
 import {useStore} from '@/stores/root'
+import {useI18n} from "vue-i18n";
+import {useHead} from "@vueuse/head";
 
 export default {
     name: 'App',
     components: {
-        Cookie
-    },
-    metaInfo: {
-        // if no subcomponents specify a metaInfo.title, this title will be used
-        title: 'Picasso Houess Website',
-        // all titles will be injected into this template
-        titleTemplate: '%s | Picasso Houessou'
+        //Cookie
     },
     computed: {
         //...mapState(['alertMessage'])
@@ -141,18 +117,42 @@ export default {
         }
     },
     setup() {
-        const store = useStore()
-        //console.log(store.alertMessage )
-        ;
+
+
+        const store = useStore();
+
+        const {locale, t} = useI18n({
+            inheritLocale: true
+        })
+
+        useHead({
+            title: "Picasso Houessou ",
+            meta: [
+                {
+                    name: `author`,
+                    content: store.author,
+                },
+                {
+                    name: `keywords`,
+                    content: t("head.keywords"),
+                },
+                {
+                    name: `description`,
+                    content: t("head.description"),
+                },
+            ],
+        });
         return {
             store,
+            t
         }
     },
     mounted() {
-
-        goHere();
         //  [App.vue specific] When App.vue is finish loading finish the progress bar
         this.$Progress.finish()
+    },
+    updated(){
+
     },
     created() {
         //  [App.vue specific] When App.vue is first loaded start the progress bar
@@ -200,24 +200,5 @@ let loader = function() {
 
 loader();
 */
-
-var goHere = function () {
-
-    $('.mouse-icon').on('click', function (event) {
-
-        event.preventDefault();
-
-        $('html,body').animate({
-            scrollTop: $('.goto-here').offset().top
-        }, 500, 'easeInOutExpo');
-
-        return false;
-    });
-};
-
-
-// this makes the height of each page equal to the height of the window
-$('.page').css('height', $(window).height());
-
 
 </script>

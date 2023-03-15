@@ -16,9 +16,9 @@
         <div class="container-fluid px-md-0">
             <div class="row no-gutters justify-content-center pb-5">
                 <div class="col-md-12 heading-section text-center ftco-animate">
-                    <h1 class="big big-2">{{ $t("Accueil") }}</h1>
-                    <h2 class="mb-4">{{ $t("Mes Projets") }}</h2>
-                    <p>{{ $t("Quelques réalisations de Picasso") }}</p>
+                    <h1 class="big big-2">{{ t("Accueil") }}</h1>
+                    <h2 class="mb-4">{{ t("Mes Projets") }}</h2>
+                    <p>{{ t("Quelques réalisations de Picasso") }}</p>
                 </div>
             </div>
             <div class="row no-gutters">
@@ -32,22 +32,16 @@
 
 </template>
 
-<script>
+<script setup>
 import portfolios from "../js/portfolio";
 
 import PortfolioItem from "./PortfolioItem.vue";
+import {useI18n} from "vue-i18n";
 
-export default {
-    name: "Portfolio",
-    components: {
-        PortfolioItem
-    },
-    data() {
-        return {
-            portfolios
-        }
-    }
-}
+const { locale, t } = useI18n({
+    inheritLocale: true
+});
+
 </script>
 
 <style scoped>

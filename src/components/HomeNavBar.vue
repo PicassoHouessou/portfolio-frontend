@@ -6,29 +6,29 @@
                     class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" data-target="#ftco-nav"
                     data-toggle="collapse"
                     type="button">
-                <span class="oi oi-menu"></span> {{ $t("menu.menu") }}
+                <span class="oi oi-menu"></span> {{ t("menu.menu") }}
             </button>
 
             <div class="collapse navbar-collapse" id="ftco-nav">
                 <ul class="navbar-nav nav ml-auto">
                     <li class="nav-item">
                         <router-link :to="{name: 'Home',  hash: '#home-section'}" class="nav-link">
-                            <span>{{ $t("menu.home") }}</span>
+                            <span>{{ t("menu.home") }}</span>
                         </router-link>
                     </li>
                     <li class="nav-item">
                         <router-link :to="{name: 'Home',  hash: '#about-section'}" class="nav-link">
-                            <span>{{ $t("menu.about") }}</span>
+                            <span>{{ t("menu.about") }}</span>
                         </router-link>
                     </li>
                     <li class="nav-item">
                         <router-link :to="{name: 'Home',  hash: '#resume-section'}" class="nav-link">
-                            <span>{{ $t("menu.resume") }}</span>
+                            <span>{{ t("menu.resume") }}</span>
                         </router-link>
                     </li>
                     <li class="nav-item">
                         <router-link :to="{name: 'Home',  hash: '#services-section' } " class="nav-link">
-                            <span>{{ $t("menu.services") }}</span></router-link>
+                            <span>{{ t("menu.services") }}</span></router-link>
                     </li>
                     <!-- A UTILISER PLUS TARD
                     <li class="nav-item">
@@ -41,11 +41,11 @@
                     </li>
                     -->
                     <li class="nav-item">
-                        <router-link :to="{name: 'Portfolio' }" class="nav-link"><span>{{ $t("menu.portfolio") }}</span>
+                        <router-link :to="{name: 'Portfolio' }" class="nav-link"><span>{{ t("menu.portfolio") }}</span>
                         </router-link>
                     </li>
                     <li class="nav-item">
-                        <router-link :to="{name: 'Contact' }" class="nav-link"><span>{{ $t("menu.contact") }}</span>
+                        <router-link :to="{name: 'Contact' }" class="nav-link"><span>{{ t("menu.contact") }}</span>
                         </router-link>
                         <!-- <a href="#contact-section" class="nav-link"><span>Contact</span></a>  --> </li>
                     <li class="nav-item">
@@ -54,8 +54,8 @@
                                 <!--
                                 <option v-for="locale in $i18n.availableLocales" :key="`locale-${locale}`" :value="locale">{{ locale }}</option>
  -->
-                                <option value="fr">fr</option>
-                                <option value="en">en</option>
+                                <option value="fr">Français</option>
+                                <option value="en">English</option>
 
                             </select>
 
@@ -68,7 +68,15 @@
     </nav>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
+a.nav-link.router-link-exact-active {
+    color: #3e64ff !important;
+
+    span {
+        border-bottom: solid #3e64ff !important ;
+    }
+}
+/*
 .ftco-navbar-light {
 
     .navbar-brand {
@@ -85,6 +93,7 @@
         }
     }
 }
+*/
 
 
 /*
@@ -101,10 +110,13 @@ li a.router-link-exact-active {
  */
 </style>
 <script>
-import "bootstrap";
-import $ from "jquery";
 
-//import {useI18n} from 'vue-i18n'
+import $ from "jquery";
+const jquery = $ ;
+/*
+import "bootstrap";
+*/
+import {useI18n} from 'vue-i18n'
 export default {
     name: 'NavBar',
     mounted() {
@@ -112,19 +124,17 @@ export default {
         burgerMenu();
         scrollWindow();
     },
-/*
+
     setup() {
         const {t, locale, availableLocales, d} = useI18n(
             {
              inheritLocale: true,
-            useScope: 'local'
-        }
-
-        )
+            //useScope: 'local'
+        } )
 
         return {t, locale, availableLocales}
     }
-*/
+
 
 }
 
@@ -189,7 +199,6 @@ var scrollWindow = function () {
     });
 };
 
-
 </script>
 
 <i18n lang="yaml">
@@ -199,7 +208,7 @@ fr:
         home: "Accueil"
         about: "À Propos"
         services: "Services"
-        resume: "Résumés"
+        resume: "Résumé"
         portfolio: "Portfolio"
         contact: "Contact"
 

@@ -1,9 +1,9 @@
 <i18n>{
     "fr": {
-        "Prévisualisation" : "Prévisualisation"
+        "Prévisualisation": "Prévisualisation"
     },
     "en": {
-        "Prévisualisation" : "Preview"
+        "Prévisualisation": "Preview"
     }
 }
 </i18n>
@@ -24,78 +24,91 @@
                 </div>
             </div>
         </div> -->
-      <!--
+        <!--
 
-        <section class="ftco-section portfolio-view " >
+          <section class="ftco-section portfolio-view " >
+              <div class="container-fluid px-md-0">
+                  <div class="row no-gutters justify-content-center pb-5">
+                      <div class="col-md-12">
+          <iframe :src="url" frameborder="0" width="100%" height="800"></iframe>
+                      </div>
+                  </div>
+              </div>
+          </section>
+          -->
+
+
+        <section class="ftco-section ftco-project" id="portfolio-view">
             <div class="container-fluid px-md-0">
-                <div class="row no-gutters justify-content-center pb-5">
-                    <div class="col-md-12">
-        <iframe :src="url" frameborder="0" width="100%" height="800"></iframe>
+                <div class="row no-gutters justify-content-center">
+                    <div class="col-md-12 heading-section text-center ftco-animate">
+                        <h1 class="big big-2">{{ t("Prévisualisation") }}</h1>
+                        <h2 class="mb-4">{{ t("Prévisualisation") }}</h2>
+                    </div>
+                </div>
+                <div class="row no-gutters">
+                    <div class="col-md-12" :class="{'d-flex justify-content-center align-items-center': isLoading}">
+                        <Loader v-if="isLoading" />
+
+                        <iframe :src="url" frameborder="0" width="100%" height="800" loading="eager" v-show="!isLoading" @load="onLoad"></iframe>
+                        <!--
+                                            <vue-iframe
+                                                :src="url"
+                                                @load="onLoad"
+                                                width="100%"
+                                                height="800px"
+                                            /> -->
                     </div>
                 </div>
             </div>
         </section>
-        -->
-
-
-    <section class="ftco-section ftco-project" id="portfolio-view">
-        <div class="container-fluid px-md-0">
-            <div class="row no-gutters justify-content-center">
-                <div class="col-md-12 heading-section text-center ftco-animate">
-                    <h1 class="big big-2">{{ $t("Prévisualisation") }}</h1>
-                    <h2 class="mb-4">{{ $t("Prévisualisation") }}</h2>
-                </div>
-            </div>
-            <div class="row no-gutters">
-                <div class="col-md-12">
-                   <iframe :src="url" frameborder="0" width="100%" height="800" loading="lazy"></iframe>
-<!--
-                    <vue-iframe
-                        :src="url"
-                        @load="onLoad"
-                        width="100%"
-                        height="800px"
-                    /> -->
-                </div>
-            </div>
-        </div>
-    </section>
         <Footer></Footer>
     </div>
 </template>
-<style lang="scss" scoped >
-.portfolio-view{
+<style lang="scss" scoped>
+.portfolio-view {
     margin-bottom: 10px;
 }
 
 </style>
 <script>
-    import Footer from "./../components/Footer.vue";
-    import NavBar from "./../components/NavBar.vue";
-    export default {
-        components: {
-            Footer,
-            NavBar,
-        },
-        data() {
-            return {
+import Footer from "./../components/Footer.vue";
+import NavBar from "./../components/NavBar.vue";
+import {useI18n} from "vue-i18n";
 
-            }
+import Loader from "../components/Loader";
 
-        },
-        props : ['url'],
-        methods: {
-            onLoad(frame) {
-                this.myIframe = frame.contentWindow
-            }
+
+export default {
+    components: {
+        Footer,
+        NavBar,
+        Loader
+    },
+    setup() {
+        const {locale, t} = useI18n({
+            inheritLocale: true
+        });
+        return {t};
+    },
+    data() {
+        return {
+            isLoading: true
+        }
+    },
+    props: ['url'],
+    methods: {
+        onLoad(frame) {
+            this.isLoading = false ;
+
+            //this.myIframe = frame.contentWindow
+
         }
     }
-
-
-
+}
 </script>
 <style scoped>
-#portfolio-view{
+#portfolio-view {
     margin-top: 20px !important;
 }
 </style>

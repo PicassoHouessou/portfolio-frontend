@@ -1,4 +1,4 @@
-<i18n>
+<i18n xmlns="http://www.w3.org/1999/html">
 {
     "fr": {
         "La page que vous demandée semble introuvable": "La page que vous demandée semble introuvable",
@@ -13,28 +13,36 @@
 <template>
     <div>
         <NavBar></NavBar>
-        <div class="container h-100 mt-5">
+
+        <section class="ftco-section ftco-project" id="portfolio-view">
             <div class="row justify-content-center align-items-center">
                 <div class="col-md-7 ftco-animate text-center">
-                    <h2>{{ $t("La page que vous demandée semble introuvable") }}</h2>
+                    <h2>{{ t("La page que vous demandée semble introuvable") }}</h2>
                     <p class="mb-0">
                         <router-link :to="{name: 'Home' } "
-                                     class="btn btn-primary py-3 px-5">{{ $t("Retour à l'accueil") }}
+                                     class="btn btn-primary py-3 px-5">{{ t("Retour à l'accueil") }}
                         </router-link>
                     </p>
                 </div>
             </div>
-        </div>
+        </section>
     </div>
 </template>
 
 <script>
 
 import NavBar from "../components/NavBar.vue";
+import {useI18n} from "vue-i18n";
 export default {
     name: "NotFound",
     components: {
         NavBar
+    },
+    setup() {
+        const {locale, t} = useI18n({
+            inheritLocale: true
+        });
+        return {t};
     }
 }
 </script>

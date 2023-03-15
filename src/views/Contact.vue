@@ -1,6 +1,10 @@
 <i18n>
 {
     "fr": {
+        "head": {
+            "keywords": "Picasso Houessou, Picasso Houessou-Dossou, Développeur web, Développeur backend, développeur frontend, frontend, backend, HTML, CSS, symfony, laravel, wordpress, développeur wordpress, développeur PHP, développeur vue.js, création de site web au bénin, web designer au bénin, développeur d'API, création de site web à cotonou, refonte de site web",
+            "description": "Besoin de me joindre ? Je réponds à toutes vos préoccupations."
+        },
         "Contact": "Contact",
         "Me contacter": "Me contacter",
         "Envie d'un service ou pour un partenariat": "Envie d'un service ou pour un partenariat",
@@ -17,6 +21,10 @@
         "formErrorMessage": "Une erreur a été rencontrée. Veuillez réessayer"
     },
     "en": {
+        "head": {
+            "keyword": "Picasso Houessou, Picasso Houessou-Dossou, Développeur web, Développeur backend, développeur frontend, frontend, backend, HTML, CSS, symfony, laravel, wordpress, développeur wordpress, développeur PHP, développeur vue.js, création de site web au bénin, web designer au bénin, développeur d'API, création de site web à cotonou, refonte de site web",
+            "description": "Need to reach me? I will answer all your concerns."
+        },
         "Contact": "My Contacts",
         "Me contacter": "Contact Us",
         "Envie d'un service ou pour un partenariat": "Looking for a service or for a partnership",
@@ -29,7 +37,6 @@
         "Objet": "Object",
         "Entrez votre message ici": "Type your message here",
         "Envoyer": "Send",
-
         "formSuccessMessage": "Your message has been sent correctly",
         "formErrorMessage": "An error has been encountered. Please try again"
     }
@@ -58,17 +65,17 @@
             <div class="container">
                 <div class="row justify-content-center mb-5 pb-3">
                     <div class="col-md-7 heading-section text-center ftco-animate">
-                        <h1 class="big big-2">{{ $t("Contact") }}</h1>
-                        <h2 class="mb-4">{{ $t("Me contacter") }}</h2>
-                        <p>{{ $t("Envie d'un service ou pour un partenariat") }}</p>
+                        <h1 class="big big-2">{{ t("Contact") }}</h1>
+                        <h2 class="mb-4">{{ t("Me contacter") }}</h2>
+                        <p>{{ t("Envie d'un service ou pour un partenariat") }}</p>
                     </div>
                 </div>
 
                 <div class="row d-flex contact-info mb-5">
-                    <ContactCard :c-name="$t('Adresse')" icon="icon-map-signs" :content="aboutMe.address"/>
-                    <ContactCard :c-name="$t('Numéro de Téléphone')" icon="icon-phone2" :content="aboutMe.phone"/>
-                    <ContactCard :c-name="$t('Adresse Email')" icon="icon-paper-plane" :content="aboutMe.email"/>
-                    <ContactCard :c-name="$t('Site Web')" icon="icon-globe" :content="aboutMe.website"/>
+                    <ContactCard :c-name="t('Adresse')" icon="icon-map-signs" :content="aboutMe.address"/>
+                    <ContactCard :c-name="t('Numéro de Téléphone')" icon="icon-phone2" :content="aboutMe.phone"/>
+                    <ContactCard :c-name="t('Adresse Email')" icon="icon-paper-plane" :content="aboutMe.email"/>
+                    <ContactCard :c-name="t('Site Web')" icon="icon-globe" :content="aboutMe.website"/>
                 </div>
 
                 <div class="row no-gutters block-9">
@@ -81,7 +88,7 @@
                                     <div class="form-group">
                                         <Field name="name" rules="required" v-slot="{ field, errors }">
                                             <input :class="{'input-error': errors[0] }" class="form-control"
-                                                   :placeholder="$t('Votre nom')" type="text" v-bind="field"
+                                                   :placeholder="t('Votre nom')" type="text" v-bind="field"
                                                    v-model="form.fullName">
                                             <span class="validation-error">{{ errors[0] }}</span>
                                         </Field>
@@ -90,7 +97,7 @@
                                     <div class="form-group">
                                         <Field name="email" rules="email|required" v-slot="{field, errors }">
                                             <input
-                                                class="form-control" :placeholder="$t('Votre Email')"
+                                                class="form-control" :placeholder="t('Votre Email')"
                                                 type="email" v-bind="field" v-model="form.email"
                                                 :class="{'input-error': errors[0] }">
                                             <span class="validation-error">{{ errors[0] }}</span>
@@ -99,7 +106,7 @@
                                     </div>
                                     <div class="form-group">
                                         <Field name="subject" rules="required" v-slot="{ field, errors } ">
-                                            <input class="form-control" :placeholder="$t('Objet')"
+                                            <input class="form-control" :placeholder="t('Objet')"
                                                    type="text" v-bind="field" v-model="form.subject"
                                                    :class="{'input-error': errors[0] }">
                                             <span class="validation-error">{{ errors[0] }}</span>
@@ -109,7 +116,7 @@
                                         <Field name="message" rules="required|min:30|max:5000"
                                                v-slot="{field, errors } ">
                                 <textarea class="form-control" cols="30" id=""
-                                          :placeholder="$t('Entrez votre message ici')"
+                                          :placeholder="t('Entrez votre message ici')"
                                           rows="7" v-bind="field" v-model="form.message"
                                           :class="{'input-error': errors[0] }"></textarea>
                                             <span class="validation-error">{{ errors[0] }}</span>
@@ -148,7 +155,8 @@
                                     -->
                                     <div class="form-group">
                                         <button class="btn btn-primary py-3 px-5 submit-contact" type="submit"
-                                             >{{ $t('Envoyer') }}</button>
+                                        >{{ t('Envoyer') }}
+                                        </button>
                                     </div>
                                 </form>
                             </VeeForm>
@@ -203,8 +211,9 @@ import {configure, defineRule, Form as VeeForm, Field} from "vee-validate";
 import {localize, setLocale} from '@vee-validate/i18n';
 import en from '@vee-validate/i18n/dist/locale/en.json';
 import fr from '@vee-validate/i18n/dist/locale/fr.json';
-//import {mapState} from "vuex";
 import {email, required, min, max} from '@vee-validate/rules';
+import {useI18n} from 'vue-i18n'
+import {useHead} from "@vueuse/head";
 
 defineRule('required', required);
 defineRule('email', email);
@@ -252,11 +261,6 @@ export default {
         Field
         //Field,
         //ValidationObserver
-    },metaInfo: {
-        // if no subcomponents specify a metaInfo.title, this title will be used
-        title: 'Contact',
-        // all titles will be injected into this template
-        titleTemplate: null
     },
     computed: {
         aboutMe() {
@@ -266,10 +270,26 @@ export default {
     },
     setup() {
         const store = useStore()
+        const {locale, t} = useI18n({
+            inheritLocale: true
+        })
+        useHead({
+            title: "Picasso Houessou | Contact",
+            meta: [
+                {
+                    name: `keywords`,
+                    content: t("head.keywords"),
+                },
+                {
+                    name: `description`,
+                    content: t("head.description"),
+                },
+            ],
+        });
 
         return {
-            // you can return the whole store instance to use it in the template
             store,
+            locale, t
         }
     },
     data() {
@@ -286,7 +306,7 @@ export default {
     },
     mounted() {
         setLocale(this.$i18n.locale);
-        //this.store.alertMessage(this.$t("formSuccessMessage"));
+        //this.store.alertMessage(this.t("formSuccessMessage"));
     },
 
     methods: {
@@ -307,12 +327,12 @@ export default {
             )
                 .then(() => {
                     this.$Progress.finish();
-                    this.store.updateAlertMessage(this.$t("formSuccessMessage"));
+                    this.store.updateAlertMessage(this.t("formSuccessMessage"));
                 })
                 .catch((error) => {
                     this.$Progress.fail();
                     console.log(error);
-                    this.store.updateAlertMessage(this.$t('formErrorMessage'));
+                    this.store.updateAlertMessage(this.t('formErrorMessage'));
                 })
         },
         progress() {
@@ -340,6 +360,6 @@ export default {
 //               styles: grayStyles,
 //               scrollwheel:  false
 //             });
-//           }gcccgccc
+//           }
 
 </script>

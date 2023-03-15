@@ -19,16 +19,16 @@
         <div class="container" @click="focus">
             <div class="row">
                 <div class="">
-                    <div class="header"> {{ $t("cookie.title") }}
+                    <div class="header"> {{ t("cookie.title") }}
                         <button aria-label="Close" class="close text-light" @click.prevent="cookieShow=true"
                                 data-dismiss="alert"
                                 type="button">
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
-                    <div>{{ $t("cookie.description") }}
+                    <div>{{ t("cookie.description") }}
                     </div>
-                    <form @submit.prevent="submit" action=""><label for="" class="mr-2">#</label
+                    <form @submit.prevent="submit" action=""><label for="acceptCookieInput" class="mr-2">#</label
                     ><input id="acceptCookieInput" type="text" v-model="form.accept">
                     </form>
 
@@ -46,6 +46,8 @@
 <script>
 
 
+import {useI18n} from "vue-i18n";
+
 export default {
     name: "Cookie",
     data() {
@@ -55,6 +57,12 @@ export default {
                 accept: ''
             }
         }
+    },
+    setup() {
+        const {t} = useI18n({
+            inheritLocale: true
+        });
+        return {t}
     },
     // computed: {
     //     // eslint-disable-next-line vue/return-in-computed-property
@@ -120,8 +128,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
 $backgroundColor: #343a40;
-//$backgroungColor : #ebefff ;
+//$backgroundColor : #ebefff ;
 $backgroundColor: #000000;
 
 .accept-cookie {
@@ -151,8 +160,6 @@ $backgroundColor: #000000;
         outline: none;
         color: white;
         caret-color: white;
-
-
     }
 }
 </style>

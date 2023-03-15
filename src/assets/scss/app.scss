@@ -779,6 +779,9 @@ h1, h2, h3, h4, h5,
     width: 100%;
     margin-bottom: 7em;
 
+    &.three {
+        margin-bottom: 0;
+    }
     &.four {
         margin-bottom: 0;
     }

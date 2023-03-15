@@ -3,6 +3,10 @@
 <i18n>
 {
     "fr": {
+        "head": {
+            "keywords": "Picasso Houessou, Picasso Houessou-Dossou, Développeur web, Développeur backend, développeur frontend, frontend, backend, HTML, CSS, symfony, laravel, wordpress, développeur wordpress, développeur PHP, développeur vue.js, création de site web au bénin, web designer au bénin, développeur d'API, création de site web à cotonou, refonte de site web",
+            "description": "Bienvenue sur mon site. Je suis un jeune développeur et administrateur réseau informatique"
+        },
         "hero": {
             "web": "Développeur Web.",
             "network": "Administrateur Réseau.",
@@ -21,12 +25,13 @@
         "Email :": "Email : ",
         "Téléphone :": "Téléphone",
         "Education": "Education",
+        "Expériences": "Expériences",
         "Compétences": "Compétences",
         "Télécharger mon CV": "Télécharger mon CV",
         "Licence en Informatique de Gestion": "",
         "education": {
             "bepc": {
-                "title": "",
+                "title": "Brevet d'Etude du Premier Cycle",
                 "subtitle": "Collège d’Enseignement Général Albarika",
                 "description": "Le CEG Albarika est situé dans la ville de Parakou, République du Bénin.J'y ai obtenu mon BEPC"
             },
@@ -82,6 +87,12 @@
             "seo": "SEO"
         },
         "services": {
+            "brief": {
+                "title": "Services",
+                "subtitle": "Services",
+                "description": "Mes compétences et les services que j'offre"
+
+            },
             "network": {
                 "title": "réseau",
                 "description": "Installation et configuration de réseau de PME."
@@ -110,6 +121,10 @@
         }
     },
     "en": {
+        "head": {
+            "keywords": "Picasso Houessou, Picasso Houessou-Dossou, Développeur web, Développeur backend, développeur frontend, frontend, backend, HTML, CSS, symfony, laravel, wordpress, développeur wordpress, développeur PHP, développeur vue.js, création de site web au bénin, web designer au bénin, développeur d'API, création de site web à cotonou, refonte de site web",
+            "description": "Welcome to my website. I am a young developer and network administrator"
+        },
         "hero": {
             "web": "Web Developer.",
             "network": "Network Administrator.",
@@ -128,12 +143,13 @@
         "Email :": "Email:",
         "Téléphone :": "Phone",
         "Education": "Education",
+        "Expériences": "Experiences",
         "Compétences": "Skills",
         "Télécharger mon CV": "Download my resume",
         "Licence en Informatique de Gestion": "",
         "education": {
             "bepc": {
-                "title": "",
+                "title": "BEPC (former examination at the end of the first stage of secondary education)",
                 "subtitle": "Collège d’Enseignement Général Albarika (Secondary School)",
                 "description": "The CEG Albarika is located in the city of Parakou, Republic of Benin, where I obtained my BEPC."
             },
@@ -189,6 +205,12 @@
             "seo": "SEO"
         },
         "services": {
+            "brief": {
+                "title": "Services",
+                "subtitle": "Services",
+                "description": "My skills and the services I offer"
+
+            },
             "network": {
                 "title": "Network",
                 "description": "Installation and configuration of SME network."
@@ -220,7 +242,9 @@
 </i18n>
 
 <template>
+
     <div>
+
         <NavBar/>
         <section class="hero-wrap js-fullheight" id="home-section">
             <div class="overlay"></div>
@@ -228,16 +252,16 @@
                 <div class="row no-gutters slider-text js-fullheight justify-content-center align-items-center">
                     <div class="col-lg-8 col-md-6 ftco-animate d-flex align-items-center">
                         <div class="text text-center">
-                            <span class="subheading">{{ $t("myName") }}</span>
+                            <span class="subheading">{{ t("myName") }}</span>
                             <h1>Picasso Houessou</h1>
-                            <div class="d-inline-flex"><h2>{{ $t("Je suis un") }} </h2>
+                            <div class="d-inline-flex"><h2>{{ t("Je suis un") }} </h2>
                                 <VueWriter class=""
-                                           :array="[$t('hero.web'), $t('hero.network'), $t('hero.application')]"/>
+                                           :array="[t('hero.web'), t('hero.network'), t('hero.application')]"/>
                                 <!--
                                 <span
                                     class="txt-rotate"
                                     data-period="2000"
-                                    :data-rotate='"[" + "\"" + $t("hero.web") + "\"" +" ," + "\"" +  $t("hero.network") + "\"" + " ," + "\"" +  $t("hero.application") + "\"" + "]"'></span>  -->
+                                    :data-rotate='"[" + "\"" + t("hero.web") + "\"" +" ," + "\"" +  t("hero.network") + "\"" + " ," + "\"" +  t("hero.application") + "\"" + "]"'></span>  -->
                                 <!--
                                  <span
                                     class="txt-rotate"
@@ -271,23 +295,23 @@
                     <div class="col-md-6 col-lg-6 pl-md-5 py-5">
                         <div class="row justify-content-start pb-3">
                             <div class="col-md-12 heading-section ftco-animate">
-                                <h1 class="big">{{ $t("À Propos") }}</h1>
-                                <h2 class="mb-4">{{ $t("aboutMe.subtitle") }}</h2>
-                                <p>{{ $t("aboutMe.about") }}</p>
+                                <h1 class="big">{{ t("À Propos") }}</h1>
+                                <h2 class="mb-4">{{ t("aboutMe.subtitle") }}</h2>
+                                <p>{{ t("aboutMe.about") }}</p>
                                 <ul class="about-info mt-4 px-md-0 px-2">
-                                    <li class="d-flex"><span>{{ $t("Nom :") }}</span> <span>{{ aboutMe.name }}</span>
+                                    <li class="d-flex"><span>{{ t("Nom :") }}</span> <span>{{ aboutMe.name }}</span>
                                     </li>
-                                    <li class="d-flex"><span>{{ $t("Date de Naissance:") }}</span> <span>{{
+                                    <li class="d-flex"><span>{{ t("Date de Naissance:") }}</span> <span>{{
                                             aboutMe.birthday
                                         }}</span></li>
-                                    <li class="d-flex"><span>{{ $t("Adresse :") }}</span> <span>{{
+                                    <li class="d-flex"><span>{{ t("Adresse :") }}</span> <span>{{
                                             aboutMe.address
                                         }}</span>
                                     </li>
                                     <!--<li class="d-flex"><span>Zip code:</span> <span>{{ aboutMe.zipCode }}</span></li> -->
-                                    <li class="d-flex"><span>{{ $t("Email :") }}</span> <span>{{ aboutMe.email }}</span>
+                                    <li class="d-flex"><span>{{ t("Email :") }}</span> <span>{{ aboutMe.email }}</span>
                                     </li>
-                                    <li class="d-flex"><span>{{ $t("Téléphone :") }} </span> <span>{{
+                                    <li class="d-flex"><span>{{ t("Téléphone :") }} </span> <span>{{
                                             aboutMe.phone
                                         }}</span>
                                     </li>
@@ -301,8 +325,8 @@
                                     <span class="number" data-number="120">0</span>
                                     <span>Project complete</span>
                                 </p> -->
-                                <p ><a class="btn btn-primary py-3 px-3 " id="downloadMyCv" :href="item.url"
-                                      @click.prevent="downloadMyCv(item)">{{ $t("Télécharger mon CV") }}</a></p>
+                                <p><a class="btn btn-primary py-3 px-3 " id="downloadMyCv" :href="item.url"
+                                      @click.prevent="downloadMyCv(item)">{{ t("Télécharger mon CV") }}</a></p>
                             </div>
                         </div>
                     </div>
@@ -343,24 +367,24 @@
                     <div class="col-md-3">
                         <nav id="navi">
                             <ul>
-                                <li><a href="#page-1">{{ $t("Education") }}</a></li>
-                                <li><a href="#page-2">{{ $t("Expériences") }}</a></li>
-                                <li><a href="#page-3">{{ $t("Compétences") }}</a></li>
+                                <li><a href="#page-1">{{ t("Education") }}</a></li>
+                                <li><a href="#page-2">{{ t("Expériences") }}</a></li>
+                                <li><a href="#page-3">{{ t("Compétences") }}</a></li>
                             </ul>
                         </nav>
                     </div>
                     <div class="col-md-9">
                         <div class="page one" id="page-1">
-                            <h2 class="heading">{{ $t("Education") }}</h2>
+                            <h2 class="heading">{{ t("Education") }}</h2>
                             <div class="resume-wrap d-flex ftco-animate">
                                 <div class="icon d-flex align-items-center justify-content-center">
                                     <span class="flaticon-ideas"></span>
                                 </div>
                                 <div class="text pl-3">
                                     <span class="date">2018-2019</span>
-                                    <h2>{{ $t("education.licence.title") }}</h2>
-                                    <span class="position">{{ $t("education.licence.subtitle") }}</span>
-                                    <p>{{ $t("education.licence.description") }}</p>
+                                    <h2>{{ t("education.licence.title") }}</h2>
+                                    <span class="position">{{ t("education.licence.subtitle") }}</span>
+                                    <p>{{ t("education.licence.description") }}</p>
                                 </div>
                             </div>
                             <div class="resume-wrap d-flex ftco-animate">
@@ -369,9 +393,9 @@
                                 </div>
                                 <div class="text pl-3">
                                     <span class="date">2015-2016</span>
-                                    <h2>{{ $t("education.bac.title") }}</h2>
-                                    <span class="position">{{ $t("education.bac.subtitle") }}</span>
-                                    <p>{{ $t("education.bac.description") }}</p>
+                                    <h2>{{ t("education.bac.title") }}</h2>
+                                    <span class="position">{{ t("education.bac.subtitle") }}</span>
+                                    <p>{{ t("education.bac.description") }}</p>
                                 </div>
                             </div>
                             <div class="resume-wrap d-flex ftco-animate">
@@ -380,24 +404,24 @@
                                 </div>
                                 <div class="text pl-3">
                                     <span class="date">2014-2015</span>
-                                    <h2>{{ $t("education.bepc.title") }}</h2>
-                                    <span class="position">{{ $t("education.bepc.subtitle") }}</span>
-                                    <p>{{ $t("education.bepc.description") }}</p>
+                                    <h2>{{ t("education.bepc.title") }}</h2>
+                                    <span class="position">{{ t("education.bepc.subtitle") }}</span>
+                                    <p>{{ t("education.bepc.description") }}</p>
                                 </div>
                             </div>
                         </div>
 
                         <div class="page two" id="page-2">
-                            <h2 class="heading">{{ $t("Expérience") }}</h2>
+                            <h2 class="heading">{{ t("Expériences") }}</h2>
                             <div class="resume-wrap d-flex ftco-animate">
                                 <div class="icon d-flex align-items-center justify-content-center">
                                     <span class="flaticon-ideas"></span>
                                 </div>
                                 <div class="text pl-3">
                                     <span class="date">2020-2020</span>
-                                    <h2>{{ $t("experience.jeunesseInstitut.title") }}</h2>
-                                    <span class="position">{{ $t("experience.jeunesseInstitut.subtitle") }}</span>
-                                    <p>{{ $t("experience.jeunesseInstitut.description") }}.</p>
+                                    <h2>{{ t("experience.jeunesseInstitut.title") }}</h2>
+                                    <span class="position">{{ t("experience.jeunesseInstitut.subtitle") }}</span>
+                                    <p>{{ t("experience.jeunesseInstitut.description") }}.</p>
                                 </div>
                             </div>
                             <div class="resume-wrap d-flex ftco-animate">
@@ -406,9 +430,9 @@
                                 </div>
                                 <div class="text pl-3">
                                     <span class="date">2020-2020</span>
-                                    <h2>{{ $t("experience.self.title") }}</h2>
-                                    <span class="position">{{ $t("experience.self.subtitle") }} </span>
-                                    <p>{{ $t("experience.self.description") }}</p>
+                                    <h2>{{ t("experience.self.title") }}</h2>
+                                    <span class="position">{{ t("experience.self.subtitle") }} </span>
+                                    <p>{{ t("experience.self.description") }}</p>
                                 </div>
                             </div>
                             <div class="resume-wrap d-flex ftco-animate">
@@ -417,9 +441,9 @@
                                 </div>
                                 <div class="text pl-3">
                                     <span class="date">2019-2020</span>
-                                    <h2>{{ $t("experience.jscom.title") }}</h2>
-                                    <span class="position">{{ $t("experience.jscom.subtitle") }}</span>
-                                    <p>{{ $t("experience.jscom.description") }}.</p>
+                                    <h2>{{ t("experience.jscom.title") }}</h2>
+                                    <span class="position">{{ t("experience.jscom.subtitle") }}</span>
+                                    <p>{{ t("experience.jscom.description") }}.</p>
                                 </div>
                             </div>
                             <div class="resume-wrap d-flex ftco-animate">
@@ -428,30 +452,30 @@
                                 </div>
                                 <div class="text pl-3">
                                     <span class="date">2018-2019</span>
-                                    <h2>{{ $t("experience.hgtech.title") }}</h2>
-                                    <span class="position">{{ $t("experience.hgtech.subtitle") }}</span>
-                                    <p>{{ $t("experience.hgtech.description") }}</p>
+                                    <h2>{{ t("experience.hgtech.title") }}</h2>
+                                    <span class="position">{{ t("experience.hgtech.subtitle") }}</span>
+                                    <p>{{ t("experience.hgtech.description") }}</p>
                                 </div>
                             </div>
                         </div>
                         <div class="page three" id="page-3">
-                            <h2 class="heading">{{ $t("Compétences") }}</h2>
+                            <h2 class="heading">{{ t("Compétences") }}</h2>
                             <div class="row progress-circle mb-5">
-                                <Skill :skillName="$t('skill.php')" :percentage="80"></Skill>
-                                <Skill :skillName="$t('skill.javascript')" :percentage="70"></Skill>
-                                <Skill :skillName="$t('skill.cpp')" :percentage="60"></Skill>
-                                <Skill :skillName="$t('skill.windowsServer')" :percentage="70"></Skill>
-                                <Skill :skillName="$t('skill.linuxServer')" :percentage="75"></Skill>
-                                <Skill :skillName="$t('skill.virtualisation')" :percentage="70"></Skill>
+                                <Skill :skillName="t('skill.php')" :percentage="80"></Skill>
+                                <Skill :skillName="t('skill.javascript')" :percentage="70"></Skill>
+                                <Skill :skillName="t('skill.cpp')" :percentage="60"></Skill>
+                                <Skill :skillName="t('skill.windowsServer')" :percentage="70"></Skill>
+                                <Skill :skillName="t('skill.linuxServer')" :percentage="75"></Skill>
+                                <Skill :skillName="t('skill.virtualisation')" :percentage="70"></Skill>
 
                             </div>
                             <div class="row">
-                                <SkillBar :skillName="$t('skill.symfony')" :percentage="75"></SkillBar>
-                                <SkillBar :skill-name="$t('skill.vuejs')" :percentage="65"></SkillBar>
-                                <SkillBar :skill-name="$t('skill.nodejs')" :percentage="50"></SkillBar>
-                                <SkillBar :skill-name="$t('skill.qt')" :percentage="60"></SkillBar>
-                                <SkillBar :skill-name="$t('skill.wordpress')" :percentage="70"></SkillBar>
-                                <SkillBar :skill-name="$t('skill.seo')" :percentage="60"></SkillBar>
+                                <SkillBar :skillName="t('skill.symfony')" :percentage="75"></SkillBar>
+                                <SkillBar :skill-name="t('skill.vuejs')" :percentage="65"></SkillBar>
+                                <SkillBar :skill-name="t('skill.nodejs')" :percentage="50"></SkillBar>
+                                <SkillBar :skill-name="t('skill.qt')" :percentage="60"></SkillBar>
+                                <SkillBar :skill-name="t('skill.wordpress')" :percentage="70"></SkillBar>
+                                <SkillBar :skill-name="t('skill.seo')" :percentage="60"></SkillBar>
 
                             </div>
                         </div>
@@ -464,22 +488,20 @@
             <div class="container-fluid px-md-5">
                 <div class="row justify-content-center py-5 mt-5">
                     <div class="col-md-12 heading-section text-center ftco-animate">
-                        <h1 class="big big-2">{{ $t("Services") }}</h1>
-                        <h2 class="mb-4">{{ $t("Services") }}</h2>
-                        <p>{{ $t("Mes compétences et les services que j'offre") }}</p>
+                        <h1 class="big big-2">{{ t("services.brief.title") }}</h1>
+                        <h2 class="mb-4">{{ t("services.brief.title") }}</h2>
+                        <p>{{ t("services.brief.description") }}</p>
                     </div>
                 </div>
-                <div class="row">
-                    <ServiceCard :c-name="$t('services.network.title')"
-                                 :description="$t('services.network.description')"/>
-                    <ServiceCard :c-name="$t('services.web.title')" icon="flaticon-ideas"
-                                 :description="$t('services.web.description')"/>
-                    <ServiceCard :c-name="$t('services.desktop.title')" icon="flaticon-innovation"
-                                 :description="$t('services.desktop.title')"/>
-                    <ServiceCard class="offset-md-4" :c-name="$t('services.training.title')" icon="flaticon-idea"
-                                 :description="$t('services.training.description')"/>
-
-
+                <div class="row ">
+                    <ServiceCard :c-name="t('services.network.title')"
+                                 :description="t('services.network.description')"/>
+                    <ServiceCard :c-name="t('services.web.title')" icon="flaticon-ideas"
+                                 :description="t('services.web.description')"/>
+                    <ServiceCard :c-name="t('services.desktop.title')" icon="flaticon-innovation"
+                                 :description="t('services.desktop.title')"/>
+                    <ServiceCard class="offset-md-4" :c-name="t('services.training.title')" icon="flaticon-idea"
+                                 :description="t('services.training.description')"/>
                 </div>
             </div>
         </section>
@@ -488,9 +510,9 @@
             <div class="container-fluid px-md-0">
                 <div class="row no-gutters justify-content-center pb-5">
                     <div class="col-md-12 heading-section text-center ftco-animate">
-                        <h1 class="big big-2">{{ $t("Accueil") }}</h1>
-                        <h2 class="mb-4">{{ $t("Mes Projets") }}</h2>
-                        <p>{{ $t("Quelques réalisations de Picasso") }}</p>
+                        <h1 class="big big-2">{{ t("Accueil") }}</h1>
+                        <h2 class="mb-4">{{ t("Mes Projets") }}</h2>
+                        <p>{{ t("Quelques réalisations de Picasso") }}</p>
                     </div>
                 </div>
                 <div class="row no-gutters">
@@ -501,7 +523,7 @@
                 </div>
                 <div class="d-flex justify-content-center align-items-center p-4">
                     <router-link :to="{name: 'Portfolio' }" class="btn btn-primary py-3 px-3">
-                        {{ $t("Voir Mes Réalisations") }}
+                        {{ t("Voir Mes Réalisations") }}
                     </router-link>
                 </div>
             </div>
@@ -601,11 +623,11 @@
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-md-7 ftco-animate text-center">
-                        <h2 v-html="$t('contact.title')" @click.prevent="test"></h2>
-                        <p>{{ $t("contact.description") }}</p>
+                        <h2 v-html="t('contact.title')" @click.prevent="test"></h2>
+                        <p>{{ t("contact.description") }}</p>
                         <p class="mb-0">
                             <router-link :to="{name: 'Contact', hash: '#contactUsForm' } "
-                                         class="btn btn-primary py-3 px-5">{{ $t("contact.button") }}
+                                         class="btn btn-primary py-3 px-5">{{ t("contact.button") }}
                             </router-link>
                         </p>
                     </div>
@@ -676,43 +698,25 @@
 
 </style>
 <script>
-import jQuery from "jquery";
-
-/*
-    var $ = require("./../assets/js/jquery.min.js" ) ;
-    global.$ = global.jQuery= window.jQuery = $ ;
-
-
- import("./../assets/js/jquery.easing.1.3.js") ;
- import("./../assets/js/jquery.waypoints.min.js") ;
- import("./../assets/js/jquery.stellar.min.js") ;
- import("./../assets/js/owl.carousel.min.js") ;
- import("./../assets/js/jquery.magnific-popup.min.js") ;
- var AOS = require("./../assets/js/aos.js") ;
- import("./../assets/js/jquery.animateNumber.min.js") ;
- import("./../assets/js/scrollax.min.js") ;
- */
-// @ is an alias to /src
-//import HelloWorld from '@/components/HelloWorld.vue'
+import $ from "jquery";
+import {useHead} from '@vueuse/head'
 import NavBar from "@/components/HomeNavBar.vue";
-
 import Footer from "../components/Footer.vue";
 import Skill from "../components/Skill.vue";
 import axios from "./../js/axios";
 import SkillBar from "../components/SkillBar.vue";
 import ServiceCard from "../components/ServiceCard.vue";
 import PortfolioItem from "../components/PortfolioItem.vue";
-//import {useI18n} from "vue-i18n";
-//import Portfolio from "../components/Portfolio";
-// import BlogCard from "../components/BlogCard";
-import VueWriter from 'vue-writer'
 
-const CV_URL= "https://backend.picassohouessou.com/cv/download";
+import VueWriter from 'vue-writer'
+import {useI18n} from "vue-i18n";
+
+// @ is an alias to /src
 //const CV_URL= "http://127.0.0.1:8000/cv/download";
 //const CV_URL = "/cv/download";
+const CV_URL = "https://backend.picassohouessou.com/cv/download";
 
-var $ = jQuery;
-
+//var $ = jQuery;
 export default {
     name: "Home",
     components: {
@@ -726,24 +730,43 @@ export default {
         Skill,
         VueWriter,
     },
-    /*
-        setup() {
-            const {t, locale} = useI18n({
-                inheritLocale: true,
-                useScope: 'local'
-            })
-            return {t}
-        },
-        */
+    setup() {
+        console.log(this)
+        const { locale, t } = useI18n({
+            inheritLocale: true
+        });
+
+        useHead({
+            title: "Picasso Houessou | Accueil",
+            meta: [
+                {
+                    name: `author`,
+                    content: `Picasso Houessou`,
+                },
+                {
+                    name: `keywords`,
+                    content: ``,
+                },
+                {
+                    name: `description`,
+                    content: t("head.description"),
+                },
+            ],
+        }) ;
+return {t};
+    },
+
     mounted() {
+
+        goHere();
         fullHeight();
         //loadTxt();
-        resumeAnimate($);
+        //resumeAnimate($);
     },
 
     data() {
         return {
-            //textToRotate: [$t("hero.web"), $t("hero.network"), $t("hero.application") ],
+            //textToRotate: [t("hero.web"), t("hero.network"), t("hero.application") ],
             /*
             hero: {
                 web: this.t('hero.web'),
@@ -751,6 +774,7 @@ export default {
                 application:this.t('hero.application')
             },
             */
+
             aboutMe: {
                 name: "Picasso Houessou",
                 birthday: "04 Avril 1998",
@@ -758,11 +782,13 @@ export default {
                 zipCode: "none",
                 email: "houessoupicasso@yahoo.fr",
                 phone: "+29995718340",
+
             },
             item: {
                 url: CV_URL,
                 //label: t("Télécharger mon CV"),
-            },
+            }
+            ,
             portfolios: [
                 {
                     "url": "https://annefornet-immobilier.wimtec.fun/",
@@ -781,18 +807,14 @@ export default {
                     "image": "sylvielitaudon.jpg",
                     "title": "Sylvie Litaudon",
                     "category": "Ecole de danse"
-
                 }
             ]
-        };
+        }   ;
     },
     methods: {
-        test(event) {
-
-        },
         downloadMyCv({url, label}) {
             this.$Progress.start();
-            axios.get(url+"?lang="+this.$i18n.locale, {responseType: "blob"})
+            axios.get(url + "?lang=" + this.$i18n.locale, {responseType: "blob"})
                 .then((response) => {
                     const blob = new Blob([response.data], {type: "application/pdf"});
                     const link = document.createElement("a");
@@ -806,14 +828,28 @@ export default {
                     console.log(error);
                     this.$Progress.finish()
                 });
-        },
-    },
+        }
+    }
+};
+
+var goHere = function () {
+
+    $('.mouse-icon').on('click', function (event) {
+
+        event.preventDefault();
+
+        $('html,body').animate({
+            scrollTop: $('.goto-here').offset().top
+        }, 500, 'easeInOutExpo');
+
+        return false;
+    });
 };
 
 var fullHeight = function () {
     $(".js-fullheight").css("height", $(window).height());
     $(window).resize(function () {
-        $(".js-fullheight").css("height", $(window).height());
+        $(".js-fullheight").css ("height", $(window).height());
     });
 };
 //fullHeight();

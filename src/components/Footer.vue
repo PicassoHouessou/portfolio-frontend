@@ -38,8 +38,8 @@
             <div class="row mb-5">
                 <div class="col-md">
                     <div class="ftco-footer-widget mb-4">
-                        <h2 class="ftco-heading-2">{{ $t("title") }}</h2>
-                        <p>{{ $t("description") }}</p>
+                        <h2 class="ftco-heading-2">{{ t("title") }}</h2>
+                        <p>{{ t("description") }}</p>
                         <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
                             <li class="ftco-animate"><a href="http://github.com/picassoHouessou"><span
                                 class="icon-github"></span></a></li>
@@ -51,26 +51,26 @@
                 </div>
                 <div class="col-md">
                     <div class="ftco-footer-widget mb-4 ml-md-4">
-                        <h2 class="ftco-heading-2">{{ $t("Liens utiles") }}</h2>
+                        <h2 class="ftco-heading-2">{{ t("Liens utiles") }}</h2>
                         <ul class="list-unstyled">
                             <li>
                                 <router-link :to="{name: 'Home'} "><span
-                                    class="icon-long-arrow-right mr-2"></span>{{ $t("Accueil") }}
+                                    class="icon-long-arrow-right mr-2"></span>{{ t("Accueil") }}
                                 </router-link>
                             </li>
                             <li>
                                 <router-link :to="{name: 'Home', hash: '#about-section' } "><span
-                                    class="icon-long-arrow-right mr-2"></span>{{ $t("À Propos") }}
+                                    class="icon-long-arrow-right mr-2"></span>{{ t("À Propos") }}
                                 </router-link>
                             </li>
                             <li>
                                 <router-link :to="{name: 'Home', hash: '#services-section' } "><span
-                                    class="icon-long-arrow-right mr-2"></span>{{ $t("Services") }}
+                                    class="icon-long-arrow-right mr-2"></span>{{ t("Services") }}
                                 </router-link>
                             </li>
                             <li>
                                 <router-link :to="{name: 'Home', hash: '#projects-section' } " href="#"><span
-                                    class="icon-long-arrow-right mr-2"></span>{{ $t("Projets") }}
+                                    class="icon-long-arrow-right mr-2"></span>{{ t("Projets") }}
                                 </router-link>
                             </li>
                             <li>
@@ -87,22 +87,22 @@
                         <ul class="list-unstyled">
                             <li>
                                 <router-link :to="{name: 'Home', hash: '#services-section' } "><span
-                                    class="icon-long-arrow-right mr-2"></span>{{ $t("Réseau") }}
+                                    class="icon-long-arrow-right mr-2"></span>{{ t("Réseau") }}
                                 </router-link>
                             </li>
                             <li>
                                 <router-link :to="{name: 'Home', hash: '#services-section' } " href="#"><span
-                                    class="icon-long-arrow-right mr-2"></span>{{ $t("Développement Web") }}
+                                    class="icon-long-arrow-right mr-2"></span>{{ t("Développement Web") }}
                                 </router-link>
                             </li>
                             <li>
                                 <router-link :to="{name: 'Home', hash: '#services-section' } " href="#"><span
-                                    class="icon-long-arrow-right mr-2"></span>{{ $t("Développement d'Application") }}
+                                    class="icon-long-arrow-right mr-2"></span>{{ t("Développement d'Application") }}
                                 </router-link>
                             </li>
                             <li>
                                 <router-link :to="{name: 'Home', hash: '#services-section' } " href="#"><span
-                                    class="icon-long-arrow-right mr-2"></span>{{ $t("Formation") }}
+                                    class="icon-long-arrow-right mr-2"></span>{{ t("Formation") }}
                                 </router-link>
                             </li>
 
@@ -111,7 +111,7 @@
                 </div>
                 <div class="col-md">
                     <div class="ftco-footer-widget mb-4">
-                        <h2 class="ftco-heading-2">{{ $t("Contact") }} </h2>
+                        <h2 class="ftco-heading-2">{{ t("Contact") }} </h2>
                         <div class="block-23 mb-3">
                             <ul>
                                 <li><span class="icon icon-map-marker"></span><span class="text">{{ address }}</span>
@@ -130,7 +130,7 @@
                 <div class="col-md-12 text-center">
 
                     <p>
-                        Copyright &copy; {{ date }} {{ $t("Tous les droits réservés") }} | <a
+                        Copyright &copy; {{ date }} {{ t("Tous les droits réservés") }} | <a
                         href="https://picassohouessou.com">picassoHouessou</a>
                     </p>
                 </div>
@@ -142,6 +142,8 @@
 </template>
 
 <script>
+import {useI18n} from "vue-i18n";
+
 export default {
     name: "Footer",
     data() {
@@ -150,7 +152,13 @@ export default {
             contact: '+22995718340',
             email: 'houessoupicasso@yahoo.fr',
             address: 'Fifadji, Cotonou Rép. Bénin'
-        }
+         }
+    },
+    setup () {
+        const {  t } = useI18n({
+            inheritLocale: true
+        });
+        return {t}
     },
     methods: {
         click() {

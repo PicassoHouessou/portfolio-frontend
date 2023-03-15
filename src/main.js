@@ -1,8 +1,10 @@
-import { createApp } from "vue";
+//import { createApp } from "vue";
 import { createPinia } from "pinia";
 
+import {ViteSSG} from "vite-ssg";
 import App from "./App.vue";
-import router from "./router";
+//import router from "./router";
+import routes from "./router/routes";
 import VueProgressBar from "@aacassandra/vue3-progressbar";
 import VueCookies from 'vue3-cookies';
 import { createI18n } from 'vue-i18n';
@@ -11,6 +13,8 @@ import { createI18n } from 'vue-i18n';
 
 import en from './../locales/en.json'
 import fr from './../locales/fr.json'
+import {createHead} from "@vueuse/head";
+
 
 
 
@@ -32,7 +36,8 @@ const options = {
 
 const i18n = createI18n({
     locale: 'fr', // set locale
-    legacy: true,
+    //legacy: true,
+    legacy: false,
     fallbackLocale: 'fr', // set fallback locale
     globalInjection: true,
    messages : {
@@ -81,6 +86,7 @@ router.beforeEach(async (to, from, next) => {
     return next()
 })
 */
+/*
 const app = createApp(App);
 
 app.use(i18n);
@@ -91,3 +97,59 @@ app.use(VueProgressBar, options )
 app.use(VueCookies)
 
 app.mount("#app");
+*/
+
+// `export const createApp` is required instead of the original `createApp(App).mount('#app')`
+export const createApp = ViteSSG(
+    // the root component
+    App,
+    // vue-router options
+    {
+        mode: 'history',
+        base: import.meta.env.BASE_URL,
+        routes,
+        scrollBehavior (to,from, savedPosition) {
+            if (to.hash) {
+                return {
+                    el: to.hash
+                    // , offset: { x: 0, y: 10 }
+                }
+            }
+            if (savedPosition) {
+                return savedPosition
+            } else {
+                return { top: 0 }
+            }
+        }
+    },
+    // function to have custom setups
+    ({ app, router, routes, isClient, initialState }) => {
+        // install plugins etc.
+/*
+        const head = createHead()
+        app.use(head)
+*/
+        app.use(i18n);
+        const pinia = createPinia();
+        app.use(pinia);
+        /*
+        // Refer to
+        // https://github.com/antfu/vite-ssg/blob/main/README.md#state-serialization
+        // for other serialization strategies.
+        if (isClient)
+            pinia.state.value = (initialState.pinia) || {}
+
+        else
+            initialState.pinia = pinia.state.value
+        */
+        //app.use(router);
+
+        app.use(VueProgressBar, options )
+        app.use(VueCookies)
+
+
+
+
+       // return { head }
+    },
+)
