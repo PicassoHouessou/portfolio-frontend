@@ -130,7 +130,7 @@
                 <div class="col-md-12 text-center">
 
                     <p>
-                        Copyright &copy; {{ date }} {{ t("Tous les droits réservés") }} | <a
+                        Copyright &copy; 2021 {{ t("Tous les droits réservés") }} | <a
                         href="https://picassohouessou.com">picassoHouessou</a>
                     </p>
                 </div>

@@ -9,6 +9,8 @@ fr:
         resume: "Résumé"
         portfolio: "Portfolio"
         contact: "Contact"
+        french: "Francais"
+        english: "Anglais"
 
 en:
     menu:
@@ -19,6 +21,8 @@ en:
         resume: "Summary"
         portfolio: "Portfolio"
         contact: "Contact"
+        french: "French"
+        english: "English"
 </i18n>
 
 
@@ -78,8 +82,8 @@ en:
                                 <!--
                                 <option v-for="locale in $i18n.availableLocales" :key="`locale-${locale}`" :value="locale">{{ locale }}</option>
  -->
-                                <option value="fr">Français</option>
-                                <option value="en">English</option>
+                                <option value="fr">{{t("menu.french")}}</option>
+                                <option value="en">{{t("menu.english")}}</option>
 
                             </select>
 
@@ -123,6 +127,13 @@ export default {
             // change to some real logic
             const locales = availableLocales
             //locale.value = locales[(locales.indexOf(locale.value) + 1) % locales.length]
+            if (availibleLocales.includes(usersLanguage)) {
+  this.$i18n.locale = language;
+} else {
+  this.$i18n.locale = 'en';
+}
+            
+
             locale.value = "en";
         }
         return { t};

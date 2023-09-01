@@ -398,17 +398,7 @@
                                     <p>{{ t("education.bac.description") }}</p>
                                 </div>
                             </div>
-                            <div class="resume-wrap d-flex ftco-animate">
-                                <div class="icon d-flex align-items-center justify-content-center">
-                                    <span class="flaticon-ideas"></span>
-                                </div>
-                                <div class="text pl-3">
-                                    <span class="date">2014-2015</span>
-                                    <h2>{{ t("education.bepc.title") }}</h2>
-                                    <span class="position">{{ t("education.bepc.subtitle") }}</span>
-                                    <p>{{ t("education.bepc.description") }}</p>
-                                </div>
-                            </div>
+                            
                         </div>
 
                         <div class="page two" id="page-2">
