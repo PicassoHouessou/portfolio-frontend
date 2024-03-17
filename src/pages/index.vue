@@ -589,7 +589,7 @@
               <!-- Single Item -->
               <div v-for="post in posts" :key="post.id" class="pf-item">
                 <div class="overlay-content">
-                  <img src="assets/img/800x600.png" alt="thumb">
+                  <NuxtImg :src="getTranslation(unref(post))?.image ?? 'assets/img/800x600.png'" />
                   <div class="content">
                     <div class="title">
                       <span>{{ getTranslation(unref(post))?.title }}</span>
