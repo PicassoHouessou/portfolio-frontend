@@ -54,7 +54,7 @@
                     <div class="col-lg-10 ftco-animate d-flex align-items-center">
                         <div class="text text-center">
                             <h1 class="mb-3 bread">Blog Single Post</h1>
-                            <p class="breadcrumbs"><span class="mr-2"><router-link :to="{name: 'Home' }">Home <i class="ion-ios-arrow-forward"></i></router-link></span> <span class="mr-2"><router-link :to="{ name: 'Contact'}">Blog <i class="ion-ios-arrow-forward"></i></router-link></span> <span>Contact Me <i class="ion-ios-arrow-forward"></i></span></p>
+                            <p class="breadcrumbs"><span class="mr-2"><router-link :to="{name: 'index' }">Home <i class="ion-ios-arrow-forward"></i></router-link></span> <span class="mr-2"><router-link :to="{ name: 'Contact'}">Blog <i class="ion-ios-arrow-forward"></i></router-link></span> <span>Contact Me <i class="ion-ios-arrow-forward"></i></span></p>
                         </div>
                     </div>
                 </div>
@@ -81,7 +81,7 @@
                 <div class="row no-gutters block-9">
                     <div class="col-md-6 order-md-last d-flex">
                         <div class="col-md-12">
-                            <VeeForm v-slot="{ invalid, handleSubmit, reset }" as="div">
+                            <VeeForm v-slot="{  handleSubmit, reset }" as="div">
                                 <form @reset.prevent="reset" @submit="handleSubmit($event, submit)" method="post"
                                       class="bg-light p-4 p-md-5 contact-form" id="contactUsForm"
                                       novalidate="novalidate">
@@ -185,14 +185,7 @@
     color: #dc3545;
 }
 
-/*
-    .submit-contact {
-        transition: transform 400ms;
-        &:hover {
-            background-color: red !important;
-            transform: scale(1.01);
-        }
-    }*/
+
 
 //La photo de Picasso
 .photo-picasso {
@@ -213,8 +206,7 @@ import en from '@vee-validate/i18n/dist/locale/en.json';
 import fr from '@vee-validate/i18n/dist/locale/fr.json';
 import {email, required, min, max} from '@vee-validate/rules';
 import {useI18n} from 'vue-i18n'
-import {useHead} from "@vueuse/head";
-
+//
 defineRule('required', required);
 defineRule('email', email);
 defineRule('min', min);

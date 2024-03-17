@@ -78,7 +78,7 @@
 
 </style>
 
-<script>
+<script setup lang="ts">
 /*
 export default {
   name: 'App',
@@ -93,6 +93,7 @@ export default {
 
   }
 }
+
 
  */
 

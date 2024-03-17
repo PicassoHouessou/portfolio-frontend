@@ -103,7 +103,6 @@ import "bootstrap";
 
 import {useStore} from '@/stores/root'
 import {useI18n} from "vue-i18n";
-import {useHead} from "@vueuse/head";
 
 export default {
     name: 'App',

@@ -70,7 +70,7 @@ export const truncate = (str?: string, length: number = 30) => {
     return str.length > 10 ? str.substring(0, length) + "..." : str;
 };
 
-export const generateUrl = (path: string, params: any): string => {
+export const generateUrl = (path: string, params?: any): string => {
     let url = path;
 
     if (typeof params === "undefined" || params === null) {
@@ -93,4 +93,29 @@ export const generateUrl = (path: string, params: any): string => {
 
     return `${API_URL}${url}`;
 };
+
+
+export const getTranslation = (input: any, locale?: string, returnDefault?:boolean, property?:string)=> {
+
+    if(property && property in input){
+        const translation = input?.property?.find((trans: any) => trans?.locale?.code === (locale??"en"));
+        return translation ? translation : returnDefault ? input?.translations?.[0]: null;
+    }else if (input?.translations) {
+        const translation = input?.translations?.find((trans: any) => trans?.locale?.code === (locale??"en"));
+        return translation ? translation : returnDefault ? input?.translations?.[0]: null;
+
+    }else if(input?.contents) {
+        const translation = input.contents.find((trans: any) => trans?.locale?.code === (locale??"en"));
+        return translation ? translation : returnDefault ? input?.contents?.[0]: null;
+    }
+    else
+    {
+        return null;
+    }
+
+
+
+
+};
+
 

@@ -1,201 +1,76 @@
-
-<i18n lang="yaml">
-fr:
-    menu:
-        menu: "Menu"
-        home: "Accueil"
-        about: "À Propos"
-        services: "Services"
-        resume: "Résumé"
-        portfolio: "Portfolio"
-        contact: "Contact"
-        french: "Francais"
-        english: "Anglais"
-
-en:
-    menu:
-        menu: "Menu"
-        home: "Home"
-        about: "About Me"
-        services: "Services"
-        resume: "Summary"
-        portfolio: "Portfolio"
-        contact: "Contact"
-        french: "French"
-        english: "English"
-</i18n>
-
-
 <template>
-    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
-        <div class="container">
-            <router-link :to="{name: 'Home'}" class="navbar-brand"><span>p</span>icassoHouessou</router-link>
-            <button aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation"
-                    class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" data-target="#ftco-nav"
-                    data-toggle="collapse"
-                    type="button">
-                <span class="oi oi-menu"></span> Menu
-            </button>
+  <!-- Header
+============================================= -->
+  <header id="home">
+    <!-- Start Navigation -->
+    <nav class="navbar mobile-sidenav onepage-menu mobile-nav-only attr-border navbar-sticky navbar-default validnavs navbar-fixed dark no-background">
 
-            <div class="collapse navbar-collapse" id="ftco-nav">
-                <ul class="navbar-nav nav ml-auto">
-                    <li class="nav-item">
-                        <router-link :to="{name: 'Home',  hash: '#home-section'}" class="nav-link">
-                            <span>{{ t("menu.home") }}</span>
-                        </router-link>
-                    </li>
-                    <li class="nav-item">
-                        <router-link :to="{name: 'Home',  hash: '#about-section'}" class="nav-link">
-                            <span>{{ t("menu.about") }}</span>
-                        </router-link>
-                    </li>
-                    <li class="nav-item">
-                        <router-link :to="{name: 'Home',  hash: '#resume-section'}" class="nav-link">
-                            <span>{{ t("menu.resume") }}</span>
-                        </router-link>
-                    </li>
-                    <li class="nav-item">
-                        <router-link :to="{name: 'Home',  hash: '#services-section' } " class="nav-link">
-                            <span>{{ t("menu.services") }}</span></router-link>
-                    </li>
-                    <!-- A UTILISER PLUS TARD
-                    <li class="nav-item">
-                        <router-link :to="{name: 'Home',  hash: '#projects-section'}" class="nav-link">
-                            <span>Projects</span></router-link>
-                    </li>
-                    <li class="nav-item">
-                        <router-link :to="{name: 'Blog',  hash: '#blog-section'}" class="nav-link"><span>My Blog</span>
-                        </router-link>
-                    </li>
-                    -->
-                    <li class="nav-item">
-                        <router-link :to="{name: 'Portfolio' }" class="nav-link"><span>{{ t("menu.portfolio") }}</span>
-                        </router-link>
-                    </li>
-                    <li class="nav-item">
-                        <router-link :to="{name: 'Contact' }" class="nav-link"><span>{{ t("menu.contact") }}</span>
-                        </router-link>
-                        <!-- <a href="#contact-section" class="nav-link"><span>Contact</span></a>  --> </li>
-                    <li class="nav-item">
-                        <form>
-                            <select class="custom-select" v-model="$root.$i18n.locale">
-                                <!--
-                                <option v-for="locale in $i18n.availableLocales" :key="`locale-${locale}`" :value="locale">{{ locale }}</option>
- -->
-                                <option value="fr">{{t("menu.french")}}</option>
-                                <option value="en">{{t("menu.english")}}</option>
 
-                            </select>
+      <div class="container d-flex justify-content-between align-items-center">
 
-                        </form>
-                    </li>
-
-                </ul>
-            </div>
+        <!-- Start Header Navigation -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-bs-toggle="offcanvas" data-bs-target="#navbar-menu">
+            <i class="fa fa-bars"></i>
+          </button>
+            <NuxtLink class="navbar-brand" to="/">
+            <img src="assets/img/logo.png" class="logo" alt="Logo">
+          </NuxtLink>
         </div>
+        <!-- End Header Navigation -->
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="offcanvas offcanvas-start" tabindex="-1" id="navbar-menu" aria-labelledby="offcanvasNavbarLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title"> <img src="assets/img/logo.png" alt="Logo"></h5>
+
+            <button type="button" class="navbar-toggle" data-bs-toggle="offcanvas" data-bs-target="#navbar-menu">
+              <i class="fa fa-times"></i>
+            </button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="nav navbar-nav navbar-right" data-in="fadeInDown" data-out="fadeOutUp">
+              <li>
+                <a class="smooth-menu" href="#home">{{ t("Accueil") }}</a>
+              </li>
+              <li>
+                <a class="smooth-menu" href="#expertise">{{ t("Expertise") }}</a>
+              </li>
+              <li>
+                <a class="smooth-menu" href="#portfolio">{{ t("Portfolio") }}</a>
+              </li>
+              <li>
+                <a class="smooth-menu" href="#about">{{ t("A propos") }}</a>
+              </li>
+              <li>
+                <a class="smooth-menu" href="#contact">{{ t("Contact") }}</a>
+              </li>
+
+            </ul>
+
+          </div>
+        </div>
+      </div>
+      <!-- Overlay screen for menu -->
+      <div class="overlay-screen"></div>
+      <!-- End Overlay screen for menu -->
     </nav>
+    <!-- End Navigation -->
+  </header>
+  <!-- End Header -->
 </template>
 
 
 <style lang="scss" >
 
-     a.nav-link.router-link-exact-active {
+     a.nav-link.NuxtLink-exact-active {
         color: #3e64ff !important;
 
         span {
             border-bottom: solid #3e64ff !important ;
         }
     }
-
-
-
-
 </style>
-<script>
-import $ from "jquery";
-import { useI18n } from 'vue-i18n'
-
-export default {
-    name: 'NavBar',
-    mounted() {
-        burgerMenu();
-        scrollWindow();
-    },
-    setup(){
-        const { t, availableLocales, locale } = useI18n()
-        const toggleLocales = () => {
-            // change to some real logic
-            const locales = availableLocales
-            //locale.value = locales[(locales.indexOf(locale.value) + 1) % locales.length]
-            if (availibleLocales.includes(usersLanguage)) {
-  this.$i18n.locale = language;
-} else {
-  this.$i18n.locale = 'en';
-}
-            
-
-            locale.value = "en";
-        }
-        return { t};
-    }
-}
-// Burger Menu
-// eslint-disable-next-line
-var burgerMenu = function () {
-
-    $('body').on('click', '.js-fh5co-nav-toggle', function (event) {
-
-        event.preventDefault();
-
-        if ($('#ftco-nav').is(':visible')) {
-            $(this).removeClass('active');
-        } else {
-            $(this).addClass('active');
-        }
-
-
-    });
-
-};
-
-// scroll
-// eslint-disable-next-line
-var scrollWindow = function () {
-    $(window).scroll(function () {
-        var $w = $(this),
-            st = $w.scrollTop(),
-            navbar = $('.ftco_navbar'),
-            sd = $('.js-scroll-wrap');
-
-        if (st > 150) {
-            if (!navbar.hasClass('scrolled')) {
-                navbar.addClass('scrolled');
-            }
-        }
-        if (st < 150) {
-            if (navbar.hasClass('scrolled')) {
-                navbar.removeClass('scrolled sleep');
-            }
-        }
-        if (st > 350) {
-            if (!navbar.hasClass('awake')) {
-                navbar.addClass('awake');
-            }
-
-            if (sd.length > 0) {
-                sd.addClass('sleep');
-            }
-        }
-        if (st < 350) {
-            if (navbar.hasClass('awake')) {
-                navbar.removeClass('awake');
-                navbar.addClass('sleep');
-            }
-            if (sd.length > 0) {
-                sd.removeClass('sleep');
-            }
-        }
-    });
-};
-
+<script setup>
+        const { t } = useI18n()
 </script>

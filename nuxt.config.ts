@@ -1,5 +1,5 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
-
+const path = require('path');
 export default defineNuxtConfig({
   devtools: { enabled: true },
   typescript
@@ -8,12 +8,37 @@ export default defineNuxtConfig({
         : true
   },
   srcDir: 'src/',
+
+  dir:{public: path.join(__dirname, 'public'),
+
+  },
+  //publicDir:'public',
   modules: [
       '@nuxtjs/i18n',
-    "@pinia/nuxt",    '@vee-validate/nuxt',
+    "@pinia/nuxt",
+    '@vee-validate/nuxt',
+    '@nuxtjs/color-mode'
   ],
   i18n: {
-    vueI18n: './i18n.config.ts' // if you are using custom path, default
+    locales: [
+      {
+        code: 'en',
+         iso: 'en-US',
+        name:"English"
+      },
+      {
+        code: 'fr',
+          iso: 'fr-FR',
+        name:"Français"
+      }
+    ],
+    defaultLocale: 'en',
+    detectBrowserLanguage: {
+      useCookie: true,
+      cookieKey: 'i18n_redirected',
+      redirectOn: 'root' // recommended
+    },
+    vueI18n: path.join(__dirname, 'i18n.config.ts') // if you are using custom path, default
   },
 app:{
   rootId: 'wrapper'

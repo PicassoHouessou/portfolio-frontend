@@ -19,7 +19,7 @@
                 <div class="col-md-7 ftco-animate text-center">
                     <h2>{{ t("La page que vous demandée semble introuvable") }}</h2>
                     <p class="mb-0">
-                        <router-link :to="{name: 'Home' } "
+                        <router-link :to="{name: 'index' } "
                                      class="btn btn-primary py-3 px-5">{{ t("Retour à l'accueil") }}
                         </router-link>
                     </p>
