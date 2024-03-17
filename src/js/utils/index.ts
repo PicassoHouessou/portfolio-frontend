@@ -99,14 +99,15 @@ export const getTranslation = (input: any, locale?: string, returnDefault?:boole
 
     if(property && property in input){
         const translation = input?.property?.find((trans: any) => trans?.locale?.code === (locale??"en"));
-        return translation ? translation : returnDefault ? input?.translations?.[0]: null;
+        return translation ? translation :  typeof returnDefault=="undefined"|| returnDefault===true ? input?.property?.[0]: null;
     }else if (input?.translations) {
         const translation = input?.translations?.find((trans: any) => trans?.locale?.code === (locale??"en"));
-        return translation ? translation : returnDefault ? input?.translations?.[0]: null;
+        console.log(translation)
+        return translation ? translation : typeof returnDefault=="undefined"|| returnDefault===true ? input?.translations?.[0]: null;
 
     }else if(input?.contents) {
         const translation = input.contents.find((trans: any) => trans?.locale?.code === (locale??"en"));
-        return translation ? translation : returnDefault ? input?.contents?.[0]: null;
+        return translation ? translation : typeof returnDefault=="undefined"|| returnDefault===true ? input?.contents?.[0]: null;
     }
     else
     {

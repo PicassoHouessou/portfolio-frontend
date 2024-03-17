@@ -1,71 +1,72 @@
 <template>
-    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
-        <div class="container">
-            <router-link :to="{name: 'index'}" class="navbar-brand"><span>p</span>icassoHouessou</router-link>
-            <button aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation"
-                    class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" data-target="#ftco-nav"
-                    data-toggle="collapse"
-                    type="button">
-                <span class="oi oi-menu"></span> {{ t("menu.menu") }}
-            </button>
+  <!-- Header
+============================================= -->
+  <header id="home">
+    <!-- Start Navigation -->
+    <nav class="navbar mobile-sidenav onepage-menu mobile-nav-only attr-border navbar-sticky navbar-default validnavs navbar-fixed dark no-background">
 
-            <div class="collapse navbar-collapse" id="ftco-nav">
-                <ul class="navbar-nav nav ml-auto">
-                    <li class="nav-item">
-                        <router-link :to="{name: 'index',  hash: '#home-section'}" class="nav-link">
-                            <span>{{ t("menu.home") }}</span>
-                        </router-link>
-                    </li>
-                    <li class="nav-item">
-                        <router-link :to="{name: 'index',  hash: '#about-section'}" class="nav-link">
-                            <span>{{ t("menu.about") }}</span>
-                        </router-link>
-                    </li>
-                    <li class="nav-item">
-                        <router-link :to="{name: 'index',  hash: '#resume-section'}" class="nav-link">
-                            <span>{{ t("menu.resume") }}</span>
-                        </router-link>
-                    </li>
-                    <li class="nav-item">
-                        <router-link :to="{name: 'index',  hash: '#services-section' } " class="nav-link">
-                            <span>{{ t("menu.services") }}</span></router-link>
-                    </li>
-                    <!-- A UTILISER PLUS TARD
-                    <li class="nav-item">
-                        <router-link :to="{name: 'index',  hash: '#projects-section'}" class="nav-link">
-                            <span>Projects</span></router-link>
-                    </li>
-                    <li class="nav-item">
-                        <router-link :to="{name: 'Blog',  hash: '#blog-section'}" class="nav-link"><span>My Blog</span>
-                        </router-link>
-                    </li>
-                    -->
-                    <li class="nav-item">
-                        <router-link :to="{name: 'Portfolio' }" class="nav-link"><span>{{ t("menu.portfolio") }}</span>
-                        </router-link>
-                    </li>
-                    <li class="nav-item">
-                        <router-link :to="{name: 'Contact' }" class="nav-link"><span>{{ t("menu.contact") }}</span>
-                        </router-link>
-                        <!-- <a href="#contact-section" class="nav-link"><span>Contact</span></a>  --> </li>
-                    <li class="nav-item">
-                        <form>
-                            <select class="custom-select" v-model="$i18n.locale">
-                                <!--
-                                <option v-for="locale in $i18n.availableLocales" :key="`locale-${locale}`" :value="locale">{{ locale }}</option>
- -->
-                                <option value="fr">Français</option>
-                                <option value="en">English</option>
+      <div class="container d-flex justify-content-between align-items-center">
 
-                            </select>
-
-                        </form>
-                    </li>
-
-                </ul>
-            </div>
+        <!-- Start Header Navigation -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-bs-toggle="offcanvas" data-bs-target="#navbar-menu">
+            <i class="fa fa-bars"></i>
+          </button>
+          <NuxtLink class="navbar-brand" to="/">
+            <img src="assets/img/logo.png" class="logo" alt="Logo">
+          </NuxtLink>
         </div>
+        <!-- End Header Navigation -->
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="offcanvas offcanvas-start" tabindex="-1" id="navbar-menu" aria-labelledby="offcanvasNavbarLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title"> <img src="assets/img/logo.png" alt="Logo"></h5>
+
+            <button type="button" class="navbar-toggle" data-bs-toggle="offcanvas" data-bs-target="#navbar-menu">
+              <i class="fa fa-times"></i>
+            </button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="nav navbar-nav navbar-right" data-in="fadeInDown" data-out="fadeOutUp">
+              <li>
+                <NuxtLink :to="localePath({ name: '/', hash: '#home' })" class="smooth-menu">
+                  {{ t("Accueil") }}
+                </NuxtLink>
+              </li>
+              <li>
+                <NuxtLink :to="localePath({ name: '/', hash: '#services' })" class="smooth-menu">
+                  {{ t("Services") }}
+                </NuxtLink>
+              </li>
+              <li>
+                <NuxtLink :to="localePath({ name: '/', hash: '#services' })" class="smooth-menu">
+                  {{ t("A Propos") }}
+                </NuxtLink>
+              </li>
+              <li>
+                <NuxtLink :to="localePath({ name: '/', hash: '#portfolio' })" class="smooth-menu">
+                  {{ t("Portfolio") }}
+                </NuxtLink>
+              </li>
+              <li>
+                <NuxtLink :to="localePath({ name: '/', hash: '#contact' })" class="smooth-menu">
+                  {{ t("Contact") }}
+                </NuxtLink>
+              </li>
+
+            </ul>
+
+          </div>
+        </div>
+      </div>
+      <!-- Overlay screen for menu -->
+      <div class="overlay-screen"></div>
+      <!-- End Overlay screen for menu -->
     </nav>
+    <!-- End Navigation -->
+  </header>
+
 </template>
 
 <style lang="scss" scoped>
@@ -77,51 +78,13 @@ a.nav-link.router-link-exact-active {
     }
 }
 </style>
-<script>
+<script setup lang="ts">
+const localePath = useLocalePath();
 
-import {useI18n} from 'vue-i18n'
-export default {
-    name: 'NavBar',
-    mounted() {
-
-    },
-
-    setup() {
-        const {t, locale, availableLocales, d} = useI18n(
-            {
-             inheritLocale: true,
-            //useScope: 'local'
-        } )
-
-        return {t, locale, availableLocales}
-    }
-
-}
-
-
-
+const {t} = useI18n(
+    {
+      inheritLocale: true,
+      //useScope: 'local'
+    } );
 
 </script>
-
-<i18n lang="yaml">
-fr:
-    menu:
-        menu: "Menu"
-        home: "Accueil"
-        about: "À Propos"
-        services: "Services"
-        resume: "Résumé"
-        portfolio: "Portfolio"
-        contact: "Contact"
-
-en:
-    menu:
-        menu: "Menu"
-        home: "Home"
-        about: "About Me"
-        services: "Services"
-        resume: "Summary"
-        portfolio: "Portfolio"
-        contact: "Contact"
-</i18n>
-

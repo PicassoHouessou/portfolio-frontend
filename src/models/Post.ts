@@ -1,5 +1,6 @@
 import type {Locale} from "~/models/Locale";
 import type {User} from "~/models/User";
+import type {Category} from "~/models/Category";
 
 export interface PostType {
     id: string;
@@ -15,12 +16,13 @@ export interface Post {
     postType: PostType;
     contents: Array<PostContent>;
     user: User;
+    categories:Array<Category>
 }
 export interface PostContent {
     alias: string;
     id: string;
     title: string;
-    externalLink: string;
+    externalUrl: string;
     content: string;
     metaTitle: string;
     metaKeywords: string;

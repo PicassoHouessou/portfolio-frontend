@@ -14,10 +14,11 @@ export default defineNuxtConfig({
   },
   //publicDir:'public',
   modules: [
-      '@nuxtjs/i18n',
+    '@nuxtjs/i18n',
     "@pinia/nuxt",
     '@vee-validate/nuxt',
-    '@nuxtjs/color-mode'
+    '@nuxtjs/color-mode',
+    "@nuxt/image"
   ],
   i18n: {
     locales: [

@@ -16,10 +16,10 @@
     </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import {useI18n} from "vue-i18n";
 
-const { locale, t } = useI18n({
+const { t } = useI18n({
     inheritLocale: true
 });
 
@@ -41,7 +41,7 @@ const { locale, t } = useI18n({
 
 .loader {
     padding: 100px;
-    border: 6px solid blue;
+    border: 6px solid red;
     border-bottom-color: transparent;
     border-radius: 50%;
     animation: rotate-loader 1s infinite linear;

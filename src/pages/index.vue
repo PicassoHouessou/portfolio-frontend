@@ -588,30 +588,13 @@
             <div id="portfolio-grid" class="gallery-items colums-3">
               <!-- Single Item -->
               <div v-for="post in posts" :key="post.id" class="pf-item">
-                <div class="overlay-content">
-                  <NuxtImg :src="getTranslation(unref(post))?.image ?? 'assets/img/800x600.png'" />
+                <div class="overlay-content" data-bs-toggle="modal" data-bs-target="#projectSingleModal" @click="setCurrentPost(post)">
+<!--                  <img src="assets/img/800x600.png" alt="thumb">-->
+                  <NuxtImg :src="API+getTranslation(unref(post),locale)?.image?.contentUrl" :alt="getTranslation(unref(post), locale)?.title" role="button" />
                   <div class="content">
                     <div class="title">
-                      <span>{{ getTranslation(unref(post))?.title }}</span>
-                      <h5><a href="#" data-bs-toggle="modal" data-bs-target="#projectSingleModal">UI design</a></h5>
-                    </div>
-                    <a href="#" data-bs-toggle="modal" data-bs-target="#projectSingleModal"><i class="fas fa-arrow-right"></i></a>
-                  </div>
-                </div>
-              </div>
-
-
-
-
-              <!-- Single Item -->
-              <!-- Single Item -->
-              <div class="pf-item">
-                <div class="overlay-content">
-                  <img src="assets/img/800x600.png" alt="thumb">
-                  <div class="content">
-                    <div class="title">
-                      <span>Finance</span>
-                      <h5><a href="#" data-bs-toggle="modal" data-bs-target="#projectSingleModal">Entertainment Apps</a></h5>
+                      <span>{{ getTranslation(unref(post), locale)?.title }}</span>
+                      <h5><a href="#" data-bs-toggle="modal" data-bs-target="#projectSingleModal" @click="setCurrentPost(post)">UI design</a></h5>
                     </div>
                     <a href="#" data-bs-toggle="modal" data-bs-target="#projectSingleModal"><i class="fas fa-arrow-right"></i></a>
                   </div>
@@ -636,7 +619,7 @@
 
             <div class="project-details-items">
               <div class="project-thumb">
-                <img src="assets/img/1500x700.png" alt="Thumb">
+                <NuxtImg :src="API+getTranslation(unref(currentPost), locale)?.image?.contentUrl" :alt="getTranslation(unref(currentPost))?.title" sizes="sm:1024px md:1024px " />
               </div>
               <div class="top-info">
                 <div class="row">
@@ -645,21 +628,29 @@
                       <div class="content">
                         <ul class="project-basic-info">
                           <li>
-                            Client <span>validthemes</span>
+                            {{ t("Client") }} <span>{{ t("private") }}</span>
                           </li>
                           <li>
-                            Project Type <span>Website Growth</span>
+                            {{ t("Type De Projet") }} <span>{{ getCategories(unref(currentPost)!?.categories) }}</span>
+                          </li>
+                          <!--
+                          <li>
+                            {{ t("Date") }} <span>{{ t("25 February, 2023") }}</span>
                           </li>
                           <li>
-                            Date <span>25 February, 2023</span>
+                            {{ t("Adresse") }} <span>{{ t("") }}</span>
                           </li>
-                          <li>
-                            Address <span>New York United state</span>
-                          </li>
+                          -->
                         </ul>
                         <ul class="social">
                           <li>
-                            <h4>Share:</h4>
+                            <h4><button class="btn" @click="showProject(getTranslation(unref(currentPost))!?.externalUrl)">{{ ("Voir") }}</button></h4>
+                          </li>
+                        </ul>
+                        <!--
+                        <ul class="social">
+                          <li>
+                            <h4>{{ ("Partager") }}:</h4>
                           </li>
                           <li>
                             <a href="#"><i class="fab fa-facebook-f"></i></a>
@@ -674,43 +665,16 @@
                             <a href="#"><i class="fab fa-pinterest-p"></i></a>
                           </li>
                         </ul>
+                        -->
                       </div>
                     </div>
-                    <h2>Ongoing Website Maintenance</h2>
-                    <p>
-                      Netus lorem rutrum arcu dignissim at sit morbi phasellus nascetur eget urna potenti cum vestibulum cras. Tempor nonummy metus lobortis. Sociis velit etiam, dapibus. Lectus vehicula pellentesque cras posuere tempor facilisi habitant lectus rutrum pede quisque hendrerit parturient posuere mauris ad elementum fringilla facilisi volutpat fusce pharetra felis sapien varius quisque class convallis praesent est sollicitudin donec nulla venenatis, cursus fermentum netus posuere sociis porta risus habitant malesuada nulla habitasse hymenaeos. Viverra curabitur nisi vel sollicitudin dictum natoqu. Tempor nonummy metus lobortis. Sociis velit etiam, dapibus. Lectus vehicula pellentesque cras posuere tempor facilisi habitant lectus rutrum pede quisque hendrerit parturient posuere mauris ad elementum fringilla facilisi volutpat fusce pharetra felis sapien varius quisque class convallis praesent est sollicitudin donec nulla venenatis, cursus fermentum netus posuere sociis porta risus habitant malesuada nulla habitasse hymenaeos. Viverra curabitur nisi vel sollicitudin dictum.
-                    </p>
-                    <ul class="check-list mt-40">
-                      <li>
-                        <h4>WordPress Support</h4>
-                        <p>
-                          Tempor nonummy metus lobortis. Sociis velit etiam, dapibus. Lectus vehicula pellentesque cras posuere tempor facilisi habitant lectus rutrum pede quisque hendrerit parturient posuere mauris ad elementum fringilla facilisi volutpat fusce pharetra.
-                        </p>
-                      </li>
-                      <li>
-                        <h4>Social Media Management</h4>
-                        <p>
-                          Energy nonummy metus lobortis. Sociis velit etiam, dapibus. Lectus vehicula pellentesque cras posuere tempor facilisi habitant lectus rutrum pede quisque hendrerit parturient posuere mauris ad elementum fringilla facilisi volutpat fusce pharetra.
-                        </p>
-                      </li>
-                    </ul>
+                    <h2>{{ getTranslation(unref(currentPost), locale)?.title }}</h2>
                   </div>
                 </div>
               </div>
 
               <div class="main-content mt-40">
-
-                <p>
-                  Give lady of they such they sure it. Me contained explained my education. Vulgar as hearts by garret. Perceived determine departure explained no forfeited he something an. Contrasted dissimilar get joy you instrument out reasonably. Again keeps at no meant stuff. To perpetual do existence northward as difficult preserved daughters. Continued at up to zealously necessary breakfast. Surrounded sir motionless she end literature. Gay direction neglected but supported yet her.  Facilisis inceptos nec, potenti nostra aenean lacinia varius semper ant nullam nulla primis placerat facilisis. Netus lorem rutrum arcu dignissim at sit morbi phasellus nascetur eget urna potenti cum vestibulum cras. Tempor nonummy metus lobortis. Sociis velit etiam, dapibus. Lectus vehicula pellentesque cras posuere tempor facilisi habitant lectus rutrum pede quisque hendrerit parturient posuere mauris ad elementum fringilla facilisi volutpat fusce pharetra felis sapien varius quisque class convallis praesent est sollicitudin donec nulla venenatis, cursus fermentum netus posuere sociis porta risus habitant malesuada nulla habitasse hymenaeos. Viverra curabitur nisi vel sollicitudin dictum natoque ante aenean elementum curae malesuada ullamcorper. vivamus nonummy nisl posuere rutrum
-                </p>
-                <div class="row">
-                  <div class="col-lg-6 col-md-6">
-                    <img src="assets/img/800x600.png" alt="Thumb">
-                  </div>
-                  <div class="col-lg-6 col-md-6">
-                    <img src="assets/img/800x600.png" alt="Thumb">
-                  </div>
-                </div>
+                {{ getTranslation(unref(currentPost), locale)?.content }}
               </div>
             </div>
           </div>
@@ -734,7 +698,7 @@
         <div class="about-style-six col-lg-6 offset-lg-1">
           <h4 class="sub-title">{{ t("A Propos de moi") }}</h4>
           <h2 class="title">{{ t("Je développe des solutions")}}</h2>
-          <p>{{ getTranslation(unref(user))?.brief ??t("Ayant une passion pour l'informatique, j'ai suivi une formation en administration des systèmes et réseaux informatiques à l'École Nationale d'Économie Appliquée et de Management (ENEAM). J'ai développé une grande aisance dans les environnements Linux et Windows, ainsi que dans la virtualisation et le développement web en utilisant le framework Symfony avec le langage PHP. Je suis constamment animé par une soif de curiosité et je ne cesse de travailler et d'apprendre pour améliorer mes compétences et maintenir mes connaissances actualisées.")}}
+          <p>{{ getTranslation(unref(user), locale)?.brief ??t("Ayant une passion pour l'informatique, j'ai suivi une formation en administration des systèmes et réseaux informatiques à l'École Nationale d'Économie Appliquée et de Management (ENEAM). J'ai développé une grande aisance dans les environnements Linux et Windows, ainsi que dans la virtualisation et le développement web en utilisant le framework Symfony avec le langage PHP. Je suis constamment animé par une soif de curiosité et je ne cesse de travailler et d'apprendre pour améliorer mes compétences et maintenir mes connaissances actualisées.")}}
 
           </p>
           <div class="skill-list">
@@ -836,7 +800,7 @@
                       <li>
                         <h5>{{ ("Permis de conduire") }}</h5>
                         <p>
-                          {{ getTranslation(unref(user))?.driversLicense ?? ""}}
+                          {{ getTranslation(unref(user), locale)?.driversLicense ?? ""}}
                         </p>
                       </li>
                       <li>
@@ -1272,7 +1236,7 @@ import Typed from 'typed.js';
 import axios from "axios";
 import {useStore} from "~/stores/root";
 import {generateUrl, getTranslation} from "~/js/utils";
-import {API_URL, ApiRoutesWithoutPrefix} from "~/js/constant";
+import {API,API_URL, ApiRoutesWithoutPrefix} from "~/js/constant";
 import Testimony from "~/components/Testimony.vue";
 
 import {configure, defineRule, Form as VeeForm, Field} from "vee-validate";
@@ -1286,6 +1250,7 @@ import type {Experience,ExperienceTranslation} from "~/models/Experience";
 import type {Education,EducationTranslation} from "~/models/Education";
 import type {Post} from "~/models/Post";
 import type {User} from "~/models/User";
+import type {Category} from "~/models/Category";
 //
 defineRule('required', required);
 defineRule('email', email);
@@ -1298,6 +1263,12 @@ configure({
     fr,
   }),
 });
+
+definePageMeta
+({
+  layout
+      : 'home'
+})
 
 
 
@@ -1345,6 +1316,22 @@ const submit= async ()=> {
 const  item = {
   url: CV_URL,locale:locale
   //label: t("Télécharger mon CV"),
+}
+
+const currentPost = ref<Post|null>(null);
+
+
+const setCurrentPost=(post:Post)=>{
+  currentPost.value = unref(post);
+}
+
+const getCategories = (categories: Array<Category>)=>{
+  return categories?.map(obj => getTranslation(obj, locale.value)?.name).join(', ') ??"";
+}
+const router = useRouter();
+const showProject =(url:string)=>{
+  router.push({name: 'PortfolioView', params: {url: url}});
+
 }
 
 let experiences = ref<Array<Experience>>([]);

@@ -21,6 +21,7 @@ export enum ApiFormat {
     RAW_XML = "raw/xml",
 }
 
+export const API= "https://localhost:8000";
 export const API_URL= "https://localhost:8000/api";
 export enum ApiRoutesWithoutPrefix {
     USERS = "/users",
