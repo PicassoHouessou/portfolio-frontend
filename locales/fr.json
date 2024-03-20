@@ -1,5 +1,5 @@
 {
-    "hello": "",
+    "Salut": "Salut",
     "Menu": "Menu",
     "Accueil": "Accueil",
     "À Propos": "À Propos",
@@ -25,10 +25,6 @@
     },
     "myName": "Salut!Je m'appelle",
     "Je suis un": "Je suis un",
-    "Développeur Web": "",
-    "Administrateur Réseau": "",
-    "Développeur Application de Bureau": "",
-    "À Propos": "",
     "aboutMe": {
         "about": "Je suis un passionné de l’informatique. J’ai étudié l’administration des Systèmes et Réseaux Informatiques."
     },
@@ -89,14 +85,18 @@
     },
     "Développeur Wordpress": "",
     "Compétences": "",
-    "Services": "",
     "Mes compétences et les services que j'offre": "",
     "Développement Web": "",
-    "hero": {
-        "web": "Développeur Web.",
-        "network": "Administrateur Réseau.",
-        "application": "Développeur Application de Bureau."
-    },
+    "Développeur Web": "Développeur Web",
+    "Administrateur Réseau": "Administrateur Réseau",
+    "Développeur Application de Bureau": "Développeur Application de Bureau",
     "Voir Mes Réalisations": "",
-    "Développer un site et application web": "Développer un site et application web"
+    "Développer un site et application web": "Développer un site et application web",
+    "Je suis un jeune informaticien administrateur système et réseau. Je suis également un développeur web..": "Je suis un jeune informaticien administrateur système et réseau. Je suis également un développeur web..",
+    "Liens utiles":  "Liens utiles",
+    "Projets": "Projets",
+    "Réseau": "Réseau",
+    "Développement d'Application": "Développement d'Application",
+    "Formation": "Développement Web",
+    "Tous les droits réservés": "Tous les droits réservés"
 }

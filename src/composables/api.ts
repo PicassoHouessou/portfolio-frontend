@@ -3,7 +3,8 @@ import type {KeysOf} from "#app/composables/asyncData";
 import {API_URL} from "~/js/constant";
 export const useApi = async <T>(url:any, options?: UseFetchOptions<T> | undefined) => {
     const store =  useLocaleStore()
-  
+    const config = useRuntimeConfig();
+
     return useFetch(url, {
         key: url,
         server:false,

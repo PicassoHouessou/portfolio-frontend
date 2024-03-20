@@ -1,17 +1,20 @@
 <i18n>
 {
     "fr": {
+      "Embauchez moi maintenant": "Embauchez moi maintenant",
+      "Parlons-en ?":"Parlons-en ?",
+      "Développeur Full Stack":"Développeur Full Stack",
+      "+4 ans d'expérience":"+4 ans d'expérience",
+      "Mes compétences": "Mes compétences",
+      "A propos de moi": "A propos de moi",
+      "BIENVENUE": "BIENVENUE",
+      "Ce que j'offre": "Ce que j'offre",
+      "Je développe des solutions": "Je développe des solutions",
       "bienvenue": "bienvenue",
         "head": {
             "keywords": "Picasso Houessou, Picasso Houessou-Dossou, Développeur web, Développeur backend, développeur frontend, frontend, backend, HTML, CSS, symfony, laravel, wordpress, développeur wordpress, développeur PHP, développeur vue.js, création de site web au bénin, web designer au bénin, développeur d'API, création de site web à cotonou, refonte de site web",
             "description": "Bienvenue sur mon site. Je suis un jeune développeur et administrateur réseau informatique"
         },
-        "hero": {
-            "web": "Développeur Web.",
-            "network": "Administrateur Réseau.",
-            "application": "Développeur Application de Bureau"
-        },
-        "myName": "Salut!Je m'appelle",
         "Je suis un": "Je suis un",
         "aboutMe": {
             "title": "À Propos",
@@ -27,50 +30,7 @@
         "Expériences": "Expériences",
         "Compétences": "Compétences",
         "Télécharger mon CV": "Télécharger mon CV",
-        "Licence en Informatique de Gestion": "",
-        "education": {
-            "bepc": {
-                "title": "Brevet d'Etude du Premier Cycle",
-                "subtitle": "Collège d’Enseignement Général Albarika",
-                "description": "Le CEG Albarika est situé dans la ville de Parakou, République du Bénin.J'y ai obtenu mon BEPC"
-            },
-            "bac": {
-                "title": "Baccalauréat Scientifique (série D)",
-                "subtitle": "Collège d’Enseignement Général Albarika",
-                "description": "Le CEG Albarika est situé dans la ville de Parakou, République du Bénin. J'y ai obtenu mon BAC"
-            },
-            "licence": {
-                "title": "Licence en Informatique de Gestion",
-                "subtitle": "ENEAM UAC",
-                "description": "Durant 3 années j'ai étudié l'Informatique de Gestion et en fin de cycle je me suis spécialisé en Administration des Réseaux Informatiques"
-            }
-        },
-        "experience": {
-            "jeunesseInstitut": {
-                "date": "",
-                "title": "Formateur",
-                "subtitle": "Jeunesse Institut",
-                "description": "A dispensé des cours en informatique générale"
-            },
-            "hgtech": {
-                "date": "",
-                "title": "Développeur Wordpress",
-                "subtitle": "",
-                "description": "Stage : maintenance, administration sous Windows Server, développement de site web en PHP et avec Wordpress"
-            },
-            "jscom": {
-                "date": "",
-                "title": "Développeur PHP",
-                "subtitle": "JSCOM BENIN",
-                "description": "Stage : atelier de formation, préparation et rédaction de mémoire de fin d’étude pour l’obtention de la licence"
-            },
-            "self": {
-                "date": "",
-                "title": "Formateur",
-                "subtitle": "A son propre compte",
-                "description": "A dispensé des cours en informatique générale"
-            }
-        },
+        "Licence en Informatique de Gestion": "Licence en Informatique de Gestion",
         "skill": {
             "php": "PHP",
             "javascript": "Javascript",
@@ -85,111 +45,57 @@
             "wordpress": "Wordpress",
             "seo": "SEO"
         },
-        "services": {
-            "brief": {
-                "title": "Services",
-                "subtitle": "Services",
-                "description": "Mes compétences et les services que j'offre"
-
-            },
-            "network": {
-                "title": "réseau",
-                "description": "Installation et configuration de réseau de PME."
-            },
-            "web": {
-                "title": "Développement Web",
-                "description": "Je conçois tout type de site web."
-            },
-            "desktop": {
-                "title": "Développement d'application",
-                "description": "Développement d'applications de bureaux multiplateforme."
-            },
-            "training": {
-                "title": "Formation",
-                "description": "Apprentissage de l'informatique bureautique et de la création de site web."
-            }
-        },
+      "Travaux récents": "Travaux récents",
+      "Regardez mon portfolio et":"Regardez mon portfolio et",
+      "donnez moi votre avis":  "donnez moi votre avis",
+      "Application Web": "Application Web",
+      "Conception et développement de sites web et d'applications web robustes, garantissant une performance fiable et une expérience utilisateur exceptionnelle.":  "Conception et développement de sites web et d'applications web robustes, garantissant une performance fiable et une expérience utilisateur exceptionnelle.",
         "Accueil": "Accueil",
         "Mes Projets": "Mes Projets",
         "Quelques réalisations de Picasso": "Quelques réalisations de Picasso",
         "Voir Mes Réalisations": "Voir Mes Réalisations",
-        "contact": {
-            "title": "Je suis Disponible en freelance",
-            "description": "Très ouvert je suis disponible pour travailler en équipe ou en solo vos projets.",
-            "button": "Me Contacter"
-        }
+      "Ayant une passion pour l'informatique, j'ai suivi une formation en administration des systèmes et réseaux informatiques à l'École Nationale d'Économie Appliquée et de Management (ENEAM). J'ai développé une grande aisance dans les environnements Linux et Windows, ainsi que dans la virtualisation et le développement web en utilisant le framework Symfony avec le langage PHP. Je suis constamment animé par une soif de curiosité et je ne cesse de travailler et d'apprendre pour améliorer mes compétences et maintenir mes connaissances actualisées.": "ayant une passion pour l'informatique, j'ai suivi une formation en administration des systèmes et réseaux informatiques à l'école nationale d'économie appliquée et de management (eneam). j'ai développé une grande aisance dans les environnements linux et windows, ainsi que dans la virtualisation et le développement web en utilisant le framework symfony avec le langage php. je suis constamment animé par une soif de curiosité et je ne cesse de travailler et d'apprendre pour améliorer mes compétences et maintenir mes connaissances actualisées.",
+      "Si vous avez un projet en tête et souhaitez discuter ou me recruter, n'hésitez pas à laisser un message pour que nous puissions en discuter.": "Si vous avez un projet en tête et souhaitez discuter ou me recruter, n'hésitez pas à laisser un message pour que nous puissions en discuter."
     },
     "en": {
+      "Voir":"See",
+      "Client": "Client",
+      "Type De Projet": "Project Type",
+      "Développeur WordPress professionnel": "Professional WordPress developer",
+      "Disponible": "Available",
+      "Embauchez moi maintenant": "Hire me now",
+      "Parlons-en ?": "Let's talk",
+      "Je suis":"I am",
+      "disponible":"free",
+      "pour":"for",
+      "du Freelance":"Freelance Work",
+      "Développeur Full Stack":"Full Stack Developer",
+      "+4 ans d'expérience":"+4 years experience",
+      "Mes compétences": "My skills",
+      "A propos de moi": "About me",
+      "Je développe des solutions": "I develop solutions",
+      "BIENVENUE": "WELCOME",
       "bienvenue": "welcome",
         "head": {
             "keywords": "Picasso Houessou, Picasso Houessou-Dossou, Développeur web, Développeur backend, développeur frontend, frontend, backend, HTML, CSS, symfony, laravel, wordpress, développeur wordpress, développeur PHP, développeur vue.js, création de site web au bénin, web designer au bénin, développeur d'API, création de site web à cotonou, refonte de site web",
             "description": "Welcome to my website. I am a young developer and network administrator"
         },
-        "hero": {
-            "web": "Web Developer.",
-            "network": "Network Administrator.",
-            "application": "Desktop Application Developer"
-        },
-        "myName": "Hi! My name is",
-        "Je suis un": "I am a",
-        "aboutMe": {
-            "title": "About Me",
-            "subtitle": "About Me",
-            "about": "I am passionate about computers. I studied Computer Systems and Networks Administration."
-        },
+      "Regardez mon portfolio et":"Look at my portfolio and",
+      "donnez moi votre avis":  "give me your feedback",
         "Nom :": "Name:",
         "Date de Naissance:": "Date of Birth:",
         "Adresse :": "Address:",
+"Permis de conduire": "Driving license",
+      "Adresse": "Address",
         "Email :": "Email:",
+      "Téléphone": "Phone",
         "Téléphone :": "Phone",
         "Education": "Education",
         "Expériences": "Experiences",
         "Compétences": "Skills",
+        "Date de Naissance": "Date of birth",
         "Télécharger mon CV": "Download my resume",
         "Licence en Informatique de Gestion": "",
-        "education": {
-            "bepc": {
-                "title": "BEPC (former examination at the end of the first stage of secondary education)",
-                "subtitle": "Collège d’Enseignement Général Albarika (Secondary School)",
-                "description": "The CEG Albarika is located in the city of Parakou, Republic of Benin, where I obtained my BEPC."
-            },
-            "bac": {
-                "title": "Scientific Baccalaureate (series D)",
-                "subtitle": "Collège d’Enseignement Général Albarika (Secondary School)",
-                "description": "CEG Albarika is located in the city of Parakou, Republic of Benin. I obtained my baccalaureate there"
-            },
-            "licence": {
-                "title": "Bachelor's degree in Computer Science",
-                "subtitle": "ENEAM UAC",
-                "description": "During 3 years I studied Computer Management and at the end of the cycle I specialized in Computer Network Administration"
-            }
-        },
-        "experience": {
-            "jeunesseInstitut": {
-                "date": "",
-                "title": "Trainer",
-                "subtitle": "Jeunesse Institut",
-                "description": "Taught courses in general computer science"
-            },
-            "hgtech": {
-                "date": "",
-                "title": "Wordpress Developer",
-                "subtitle": "",
-                "description": "Internship: maintenance, administration under Windows Server, website development in PHP and with Wordpress"
-            },
-            "jscom": {
-                "date": "",
-                "title": "PHP Developer",
-                "subtitle": "JSCOM BENIN",
-                "description": "Internship: training workshop, preparation and writing of thesis for the degree"
-            },
-            "self": {
-                "date": "",
-                "title": "Trainer",
-                "subtitle": "Self-employed",
-                "description": "Taught courses in general computer science"
-            }
-        },
         "skill": {
             "php": "PHP",
             "javascript": "Javascript",
@@ -204,39 +110,27 @@
             "wordpress": "Wordpress",
             "seo": "SEO"
         },
-        "services": {
-            "brief": {
-                "title": "Services",
-                "subtitle": "Services",
-                "description": "My skills and the services I offer"
-
-            },
-            "network": {
-                "title": "Network",
-                "description": "Installation and configuration of SME network."
-            },
-            "web": {
-                "title": "Web Development",
-                "description": "I design any type of website."
-            },
-            "desktop": {
-                "title": "Application development",
-                "description": "Development of cross-platform desktop APPLICATIONS."
-            },
-            "training": {
-                "title": "Training",
-                "description": "Learn how to use computers and create a website."
-            }
-        },
+      "Nom": "Name",
+      "Béninoise": "Beninese",
+      "Citoyenneté": "Citizenship",
+      "Votre email": "Your email address",
+      "Objet": "Subject",
+      "Me Contacter": "Contact Me",
+      "Votre nom": "Your name",
+      "Me contacter": "Contact me",
+      "Entrez votre message ici": "Enter your message here",
+      "Ce que j'offre": "What I offer",
+      "Travaux récents": "Recent work",
+"Projets Complétés": "Completed Projects",
         "Accueil": "Home",
         "Mes Projets": "My Projects",
         "Quelques réalisations de Picasso": "Some of Picasso's achievements",
         "Voir Mes Réalisations": "See My Work",
-        "contact": {
-            "title": "I am Available in freelance",
-            "description": "Very open-minded I am available to work in team or solo your projects.",
-            "button": "Contact Us"
-        }
+      "Conception et développement de sites web et d'applications web robustes, garantissant une performance fiable et une expérience utilisateur exceptionnelle.":  "Design and development of robust websites and web applications, guaranteeing reliable performance and an exceptional user experience.",
+      "Offre de formations en informatique axées sur le développement web, garantissant une acquisition de compétences solides et une expertise pratique dans le web design.": "IT training courses focused on web development, guaranteeing the acquisition of solid skills and practical expertise in web design.",
+      "Conception et création d'applications mobiles solides, offrant une performance stable et une expérience utilisateur remarquable sur une gamme variée de dispositifs.":"Design and build robust mobile applications, offering stable performance and outstanding user experience on a wide range of devices.",
+"Ayant une passion pour l'informatique, j'ai suivi une formation en administration des systèmes et réseaux informatiques à l'École Nationale d'Économie Appliquée et de Management (ENEAM). J'ai développé une grande aisance dans les environnements Linux et Windows, ainsi que dans la virtualisation et le développement web en utilisant le framework Symfony avec le langage PHP. Je suis constamment animé par une soif de curiosité et je ne cesse de travailler et d'apprendre pour améliorer mes compétences et maintenir mes connaissances actualisées.": "With a passion for IT, I trained in computer systems and network administration at the École Nationale d'Économie Appliquée et de Management (ENEAM). I've developed a great deal of expertise in Linux and Windows environments, as well as in virtualization and web development using the Symfony framework and the PHP language. I'm constantly driven by a thirst for curiosity and never stop working and learning to improve my skills and keep my knowledge up to date.",
+      "Si vous avez un projet en tête et souhaitez discuter ou me recruter, n'hésitez pas à laisser un message pour que nous puissions en discuter.": "If you have a project in mind and would like to discuss or recruit me, please don't hesitate to leave a message so that we can discuss it."
     }
 }
 </i18n>
@@ -248,44 +142,44 @@
     <header class="header-fixed">
       <div class="f-flex">
         <div class="logo">
-          <a href="#home"><img src="assets/img/logo-icon.svg" alt="Logo"></a>
+          <NuxtLink href="#home"></NuxtLink>
         </div>
         <div class="menu">
           <ul class="nav">
             <li>
               <a class="smooth-menu" href="#home">
                 <i class="fas fa-home"></i>
-                <div class="menu-name">Home</div>
+                <div class="menu-name">{{ t("accueil") }}</div>
               </a>
             </li>
             <li>
               <a class="smooth-menu" href="#services">
                 <i class="fas fa-cog"></i>
-                <div class="menu-name">Services</div>
+                <div class="menu-name">{{ t("Services") }}</div>
               </a>
             </li>
             <li>
               <a class="smooth-menu" href="#portfolio">
                 <i class="fas fa-briefcase"></i>
-                <div class="menu-name">Portfolio</div>
+                <div class="menu-name">{{ t("Portfolio") }}</div>
               </a>
             </li>
             <li>
               <a class="smooth-menu" href="#about">
                 <i class="fas fa-user"></i>
-                <div class="menu-name">About</div>
+                <div class="menu-name">{{ t("A Propos") }}</div>
               </a>
             </li>
             <li>
               <a class="smooth-menu" href="#resume">
                 <i class="fas fa-file-alt"></i>
-                <div class="menu-name">Resume</div>
+                <div class="menu-name">{{ t("Résumé") }}</div>
               </a>
             </li>
             <li>
               <a class="smooth-menu" href="#contact">
                 <i class="fas fa-comments"></i>
-                <div class="menu-name">Contact</div>
+                <div class="menu-name">{{ t("Contact") }}</div>
               </a>
             </li>
             <li><ColorModePicker/></li>
@@ -310,7 +204,7 @@
       <div class="double-items">
         <div class="row align-center">
           <div class="col-lg-6 info">
-            <h1 class="text-invisible">WELCOME</h1>
+            <h1 class="text-invisible">{{ t("BIENVENUE") }}</h1>
             <h2>{{ t("Salut") }} <img src="assets/img/shape/4.png" alt="Icon"> {{ t("C'est") }} <span>Picasso</span></h2>
 
 
@@ -328,7 +222,7 @@
             <div class="button mt-55">
 <!--              <a class="btn btn-md circle btn-dark" href="#resume">{{ t("Télécharger mon CV") }}</a>-->
               <a class="btn btn-md circle btn-dark" id="downloadMyCv" :href="item.url"
-                 @click.prevent="downloadMyCv(item)">{{ t("Télécharger mon CV") }}</a>
+                 @click.prevent="downloadMyCv(CV_URL,locale)">{{ t("Télécharger mon CV") }}</a>
             </div>
           </div>
 
@@ -342,9 +236,9 @@
         </div>
         <div class="personal-social">
           <ul>
-            <li class="facebook">
-              <a :href="store.socials.facebook" target="_blank">
-                <i class="fab fa-facebook-f"></i>
+            <li class="linkedin">
+              <a :href="store.socials.linkedin" target="_blank">
+                <i class="fab fa-linkedin"></i>
               </a>
             </li>
             <li class="github">
@@ -368,7 +262,7 @@
       <div class="row">
         <div class="col-lg-8 offset-lg-2">
           <div class="site-heading text-center">
-            <h4 class="sub-title">{{ ("Mes compétences") }}</h4>
+            <h4 class="sub-title">{{ t("Mes compétences") }}</h4>
             <h2 class="title">{{ t("Ce que j'offre") }} </h2>
             <div class="devider"></div>
           </div>
@@ -381,7 +275,7 @@
         <div class="service-style-one col-lg-4 col-md-6">
           <div class="service-style-one-item">
             <img src="assets/img/icon/1.png" alt="Icon">
-            <h4><a href="#" data-bs-toggle="modal" data-bs-target="#serviceSingleModal">{{ t("Application Web") }}</a></h4>
+            <h4>{{ t("Application Web") }}</h4>
             <p>{{ t("Conception et développement de sites web et d'applications web robustes, garantissant une performance fiable et une expérience utilisateur exceptionnelle.") }}
             </p>
           </div>
@@ -391,7 +285,7 @@
         <div class="service-style-one col-lg-4 col-md-6">
           <div class="service-style-one-item">
             <img src="assets/img/icon/2.png" alt="Icon">
-            <h4><a href="#" data-bs-toggle="modal" data-bs-target="#serviceSingleModal">{{ t("Application Mobile")}}</a></h4>
+            <h4>{{ t("Application Mobile")}}</h4>
             <p>{{t("Conception et création d'applications mobiles solides, offrant une performance stable et une expérience utilisateur remarquable sur une gamme variée de dispositifs.")}}
             </p>
           </div>
@@ -401,7 +295,7 @@
         <div class="service-style-one col-lg-4 col-md-6">
           <div class="service-style-one-item">
             <img src="assets/img/icon/4.png" alt="Icon">
-            <h4><a href="#" data-bs-toggle="modal" data-bs-target="#serviceSingleModal">{{ t("Formation") }}</a></h4>
+            <h4>{{ t("Formation") }}</h4>
             <p>{{t("Offre de formations en informatique axées sur le développement web, garantissant une acquisition de compétences solides et une expertise pratique dans le web design.")}}
             </p>
           </div>
@@ -410,131 +304,6 @@
       </div>
     </div>
 
-
-    <!-- Start Services Single Modal -->
-    <div class="modal fade" id="serviceSingleModal" tabindex="-1" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl">
-        <div class="modal-content">
-
-          <div class="modal-body">
-
-            <div class="modal-header">
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-
-            <div class="services-single-content">
-              <div class="thumb">
-                <img src="assets/img/1500x700.png" alt="Thumb">
-              </div>
-              <h2>Best influencer marketing services</h2>
-              <p>
-                We denounce with righteous indige nation and dislike men who are so beguiled and demo realized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue cannot foresee. These cases are perfectly simple and easy to distinguish. In a free hour, when our power of choice is untrammelled data structures manages data in technology.
-              </p>
-              <div class="features mt-40 mt-xs-30 mb-30 mb-xs-20">
-                <div class="row">
-                  <div class="col-lg-4 col-md-6">
-                    <div class="content">
-                      <h4>Included Services</h4>
-                      <ul class="feature-list-item">
-                        <li>Monthly SEO Task</li>
-                        <li>24/7 Alltime Supporting</li>
-                        <li>Turbo Boosting</li>
-                        <li>Expert Team Members</li>
-                      </ul>
-                    </div>
-                  </div>
-                  <div class="col-lg-8 col-md-6 mt-xs-30">
-                    <div class="content">
-                      <h4>The Challange</h4>
-                      <p>
-                        Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias. consequatur aut perferendis doloribus asperiores repellat. Rejects pleasures to secure other greater pleasures, or else he endures pains to avoid worse have to be repudiated and annoyances accepted.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <h4>What we do?</h4>
-              <p>
-                Nam libero tempore, cum soluta nobis est elig endi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repelle ndus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias. consequatur aut perferendis doloribus asperiores repellat. The wise man therefore always holds in these matters to this principle of selection: he rejects pleasures to secure other greater pleasures, or else he endures pains to avoid worse pains.  pleasures have to be repudiated and annoyances accepted.
-              </p>
-
-              <div class="faq-style-one mt-40">
-                <h3 class="mb-25">Common Question for this project</h3>
-                <div class="accordion" id="faqAccordion">
-                  <div class="accordion-item">
-                    <h2 class="accordion-header" id="headingOne">
-                      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                        Where can I get analytics help?
-                      </button>
-                    </h2>
-                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-parent="#faqAccordion">
-                      <div class="accordion-body">
-                        <p>
-                          Bennings appetite disposed me an at subjects an. To no indulgence diminution so discovered mr apartments. Are off under folly death wrote cause her way spite. Plan upon yet way get cold spot its week. Almost do am or limits hearts. Resolve parties but why she shewing. She sang know now minute exact dear open to reaching out.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="accordion-item">
-                    <h2 class="accordion-header" id="headingTwo">
-                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                        How much does data analytics costs?
-                      </button>
-                    </h2>
-                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-parent="#faqAccordion">
-                      <div class="accordion-body">
-                        <p>
-                          Cennings appetite disposed me an at subjects an. To no indulgence diminution so discovered mr apartments. Are off under folly death wrote cause her way spite. Plan upon yet way get cold spot its week. Almost do am or limits hearts. Resolve parties but why she shewing. She sang know now minute exact dear open to reaching out.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="accordion-item">
-                    <h2 class="accordion-header" id="headingThree">
-                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                        What kind of data is needed for analysis?
-                      </button>
-                    </h2>
-                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-parent="#faqAccordion">
-                      <div class="accordion-body">
-                        <p>
-                          Tennings appetite disposed me an at subjects an. To no indulgence diminution so discovered mr apartments. Are off under folly death wrote cause her way spite. Plan upon yet way get cold spot its week. Almost do am or limits hearts. Resolve parties but why she shewing. She sang know now minute exact dear open to reaching out.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="services-more mt-50">
-                <h3>Popular Services</h3>
-                <div class="row">
-                  <div class="col-md-6">
-                    <div class="item">
-                      <i class="flaticon-development"></i>
-                      <h4><a href="#">Speed Optimization</a></h4>
-                      <p>
-                        These cases are perfectly simple and easy to distinguish. In a free hour, when our power.
-                      </p>
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="item">
-                      <i class="flaticon-layers"></i>
-                      <h4><a href="#">Frondend Development</a></h4>
-                      <p>
-                        These cases are perfectly simple and easy to distinguish. In a free hour, when our power.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- End Services Single Modal -->
 
   </div>
   <!-- End Services -->
@@ -551,13 +320,14 @@
         <div class="row align-center">
           <div class="col-lg-5">
             <div class="left-info">
-              <h5 class="sub-title">Recent Work</h5>
-              <h2 class="title">Look at my portfolio and <br> give me your feedback</h2>
+              <h5 class="sub-title">{{ t("Travaux récents") }}</h5>
+              <h2 class="title">{{ t("Regardez mon portfolio et") }} <br> {{ t("donnez moi votre avis") }}</h2>
               <div class="heading-shape">
                 <img src="assets/img/shape/10.png" alt="Shape">
               </div>
             </div>
           </div>
+          <!--
           <div class="col-lg-6 offset-lg-1">
             <div class="right-info">
               <div class="fun-factor-default">
@@ -566,7 +336,7 @@
                     <div class="timer" data-to="276" data-speed="2000">276</div>
                     <div class="operator">K</div>
                   </div>
-                  <span class="medium">Completed Project</span>
+                  <span class="medium">{{ t("Projets Complétés") }}</span>
                 </div>
                 <div class="fun-fact">
                   <div class="counter">
@@ -578,6 +348,7 @@
               </div>
             </div>
           </div>
+          -->
         </div>
       </div>
     </div>
@@ -644,13 +415,13 @@
                         </ul>
                         <ul class="social">
                           <li>
-                            <h4><button class="btn" @click="showProject(getTranslation(unref(currentPost))!?.externalUrl)">{{ ("Voir") }}</button></h4>
+                            <h4><button class="btn" @click="showProject(getTranslation(unref(currentPost))!?.externalUrl)">{{ t("Voir") }}</button></h4>
                           </li>
                         </ul>
                         <!--
                         <ul class="social">
                           <li>
-                            <h4>{{ ("Partager") }}:</h4>
+                            <h4>{{ t("Partager") }}:</h4>
                           </li>
                           <li>
                             <a href="#"><i class="fab fa-facebook-f"></i></a>
@@ -696,7 +467,7 @@
           </div>
         </div>
         <div class="about-style-six col-lg-6 offset-lg-1">
-          <h4 class="sub-title">{{ t("A Propos de moi") }}</h4>
+          <h4 class="sub-title">{{ t("A propos de moi") }}</h4>
           <h2 class="title">{{ t("Je développe des solutions")}}</h2>
           <p>{{ getTranslation(unref(user), locale)?.brief ??t("Ayant une passion pour l'informatique, j'ai suivi une formation en administration des systèmes et réseaux informatiques à l'École Nationale d'Économie Appliquée et de Management (ENEAM). J'ai développé une grande aisance dans les environnements Linux et Windows, ainsi que dans la virtualisation et le développement web en utilisant le framework Symfony avec le langage PHP. Je suis constamment animé par une soif de curiosité et je ne cesse de travailler et d'apprendre pour améliorer mes compétences et maintenir mes connaissances actualisées.")}}
 
@@ -708,7 +479,7 @@
                   <i class="fab fa-wordpress"></i>
                 </div>
                 <div class="content">
-                  <h4>{{ ("Développeur WordPress professionnel") }}</h4>
+                  <h4>{{ t("Développeur WordPress professionnel") }}</h4>
                   <span>{{ t("+100 Réalisations") }}</span>
                 </div>
               </li>
@@ -798,7 +569,7 @@
                         </p>
                       </li>
                       <li>
-                        <h5>{{ ("Permis de conduire") }}</h5>
+                        <h5>{{ t("Permis de conduire") }}</h5>
                         <p>
                           {{ getTranslation(unref(user), locale)?.driversLicense ?? ""}}
                         </p>
@@ -1046,6 +817,7 @@
       <div class="row">
         <div class="col-lg-8 offset-lg-2">
           <div class="work-available">
+<!--            <h2 class="title" v-html="t('Je suis <strong> disponible</strong> pour <br> du Freelance')"></h2>-->
             <h2 class="title">{{ t("Je suis")}} <strong>{{ t("disponible") }}</strong> {{ t("pour") }} <br> {{ t("du Freelance")}}</h2>
             <a class="btn btn-md circle btn-theme smooth-menu" href="#contact">{{ t("Embauchez moi maintenant") }}</a>
           </div>
@@ -1095,7 +867,7 @@
                     <div class="form-group">
                       <Field name="email" rules="email|required" v-slot="{field, errors }">
                         <input
-                            class="form-control" :placeholder="t('Votre Email')"
+                            class="form-control" :placeholder="t('Votre email')"
                             type="email" v-bind="field" v-model="form.email"
                             :class="{'input-error': errors[0] }">
                         <span class="validation-error">{{ errors[0] }}</span>
@@ -1131,7 +903,7 @@
                 <div class="row">
                   <div class="col-lg-12">
                     <button type="submit" name="submit" id="submit">
-                      {{ "Me contacter" }}
+                      {{t( "Me contacter") }}
                     </button>
                   </div>
                 </div>
@@ -1175,7 +947,7 @@
                     <i class="fas fa-headphones-alt"></i>
                   </div>
                   <div class="info">
-                    <p>{{ "Téléphone" }}</p>
+                    <p>{{ t("Téléphone") }}</p>
                     <h5>
                       <a href="tel:{{user?.phoneNumber}}">{{user?.phoneNumber}}</a>
                     </h5>
@@ -1236,12 +1008,12 @@ import Typed from 'typed.js';
 import axios from "axios";
 import {useStore} from "~/stores/root";
 import {generateUrl, getTranslation} from "~/js/utils";
-import {API,API_URL, ApiRoutesWithoutPrefix} from "~/js/constant";
+import {API, API_URL, ApiRoutesWithoutPrefix, CV_URL} from "~/js/constant";
 import Testimony from "~/components/Testimony.vue";
 
 import {configure, defineRule, Form as VeeForm, Field} from "vee-validate";
 
-import {localize, setLocale as VeeSetLocale} from '@vee-validate/i18n';
+import {localize, setLocale, setLocale as VeeSetLocale} from '@vee-validate/i18n';
 import en from '@vee-validate/i18n/dist/locale/en.json';
 import fr from '@vee-validate/i18n/dist/locale/fr.json';
 import {email, required, min, max} from '@vee-validate/rules';
@@ -1264,16 +1036,18 @@ configure({
   }),
 });
 
+const localeStore =  useLocaleStore()
+watchEffect(()=>{
+setLocale(localeStore.locale);
+});
+
 definePageMeta
 ({
   layout
       : 'home'
 })
+const localePath = useLocalePath();
 
-
-
-//const CV_URL = "https://backend.picassohouessou.com/cv/download";
-const CV_URL= "http://127.0.0.1:8000/cv/download"
 const { locale,locales, t } = useI18n({
   inheritLocale: true
 });
@@ -1314,8 +1088,8 @@ const submit= async ()=> {
 }
 
 const  item = {
-  url: CV_URL,locale:locale
-  //label: t("Télécharger mon CV"),
+  url: CV_URL,
+  label: t("Télécharger mon CV"),
 }
 
 const currentPost = ref<Post|null>(null);
@@ -1330,7 +1104,8 @@ const getCategories = (categories: Array<Category>)=>{
 }
 const router = useRouter();
 const showProject =(url:string)=>{
-  router.push({name: 'PortfolioView', params: {url: url}});
+  const path = localePath({ path: '/portfolios/url?',params: {url: url} });
+  router.push(path);
 
 }
 
@@ -1348,7 +1123,7 @@ const { data:posts, pending, error, refresh } = await useApi<Array<Post>>(genera
 }));
 
 watchEffect( async () => {
-  if (user.value?.id) {
+  if (user?.value?.id) {
     const data =unref(user) as User;
     store.updateSocials({website:data.website,github:data.github,linkedin:data.linkedin});
     store.updateAboutMe( {
@@ -1356,14 +1131,15 @@ watchEffect( async () => {
       name: data.fullName ??'Picasso Houessou',
           birthday: data.birthdate ?? '04 Avril 1998',
           address: data.address??'62137 Coulogne, France',
-          zipCode: data.address?? 'none',
-          email: data.address?? 'houessoupicasso@yahoo.fr',
-          phone: data.address ?? '+29995718340',
+          email: data.email?? 'houessoupicasso@yahoo.fr',
+          phone: data.phoneNumber ?? '+29995718340',
           website:data.address ??  ""
     });
 
   }
 });
+
+
 
 
 
@@ -1388,8 +1164,9 @@ watchEffect( async () => {
 })
 
 onMounted(() => {
+
   const options = {
-    strings: ['<b> développeur frontend web</b>', '<b>ingénieur d\'application</b>', '<b>administrateur réseau</b>'],
+    strings: [`<b> ${t('Développeur frontend web')}</b>`, `<b>${t('Ingénieur d\'application')}</b>`, `<b>${t('Administrateur réseau')}</b>`],
     typespeed: 35,
     loop: true,
     backspeed: 35
@@ -1492,15 +1269,14 @@ const initialize=()=> {
 }
 
  */
-const downloadMyCv = ({url, label, locale="en"}:any) => {
-  //this.$Progress.start();
+const downloadMyCv = (url:string, locale="en") => {
 
-  axios.get(url + "?lang=" + locale, {responseType: "blob"})
+  axios.get(url + "?lang=" + unref(locale), {responseType: "blob"})
       .then((response) => {
           const blob = new Blob([response.data], {type: "application/pdf"});
           const link = document.createElement("a");
           link.href = URL.createObjectURL(blob);
-          link.download = label;
+          link.download = t("Mon CV");
           link.click();
           URL.revokeObjectURL(link.href);
          // this.$Progress.finish();

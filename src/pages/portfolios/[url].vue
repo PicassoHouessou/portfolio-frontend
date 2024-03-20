@@ -28,9 +28,9 @@
 
   <!-- Star Services Details Area
   ============================================= -->
-  <div class="services-details-area default-padding">
-    <div class="container-fluid">
-      <iframe :src="url" frameborder="0" width="100%" height="800" loading="eager"  @loadstart="onLoad"></iframe>
+  <div class="services-details-area default-padding max-height">
+    <div class="container-fluid p-0 m-0 max-height">
+      <iframe class="iframe" :src="url" frameborder="0" width="100%" height="auto" loading="eager"  @loadstart="onLoad"></iframe>
     </div>
   </div>
   <!-- End Services Details Area -->
@@ -59,3 +59,26 @@ watchEffect(()=>{
 const  onLoad=(frame:any)=> {
 };
 </script>
+<style scoped>
+.breadcrumb-area{
+  padding-top: 20px!important;
+  padding-bottom: 20px!important;
+}
+
+.default-padding{
+  padding-top:5px!important;
+  padding-bottom:0!important;
+  margin: 0!important;
+}
+.max-height{
+  height: 800px!important;
+  margin-bottom: 0!important;
+  margin-top: 0!important;
+}
+.iframe{
+  min-height: 800px;
+  height: max-content!important;
+}
+
+
+</style>

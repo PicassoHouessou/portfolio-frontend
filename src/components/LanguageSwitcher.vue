@@ -9,24 +9,6 @@
     </option>
   </select>
 
-  <!--
-  <div class="dropdown">
-              <button class="btn btn-outline-light dropdown-toggle" role="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                {{ locale }}
-              </button>
-    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-      <li class="dropdown-item" v-for="locale in locales" :key="locale.code">
-        <span>
-      <NuxtLink  :to="switchLocalePath(locale.code)">
-        {{ locale.name }}
-      </NuxtLink>
-          </span>
-      </li>
-    </ul>
-  </div>
-  -->
-
-
 </template>
 <style scoped>
 .form-select{

@@ -102,7 +102,6 @@ export const getTranslation = (input: any, locale?: string, returnDefault?:boole
         return translation ? translation :  typeof returnDefault=="undefined"|| returnDefault===true ? input?.property?.[0]: null;
     }else if (input?.translations) {
         const translation = input?.translations?.find((trans: any) => trans?.locale?.code === (locale??"en"));
-        console.log(translation)
         return translation ? translation : typeof returnDefault=="undefined"|| returnDefault===true ? input?.translations?.[0]: null;
 
     }else if(input?.contents) {

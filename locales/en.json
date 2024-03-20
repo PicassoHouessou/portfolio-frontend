@@ -1,5 +1,6 @@
 {
-    "hello": "",
+    "Salut": "Hello",
+    "C'est": "It is",
     "Menu": "Menu",
     "Accueil": "Home",
     "A propos": "About Me",
@@ -9,15 +10,9 @@
     "Contact": "Contact",
     "Français": "French",
     "Anglais": "English",
-    "menu": {
-        "menu": "Menu",
-        "home": "Home",
-        "about": "About Me",
-        "services": "Services",
-        "resume": "Summary",
-        "portfolio": "Portfolio",
-      "contact": "Contact Me"
-    },
+        "services": "services",
+      "Me contacter": "Contact Me",
+
     "contact": {
         "title": "",
         "description": "",
@@ -30,54 +25,34 @@
         "network": "Network Administrator",
         "application": ""
     },
-    "À Propos": "About Me",
-    "aboutMe": {
-        "about": ""
-    },
-    "Nom :": "",
-    "Date de Naissance:": "",
-    "Adresse :": "",
-    "Email :": "",
-    "Téléphone :": "",
-    "Education": "",
-    "education": {
-        "licence": {
-            "title": "",
-            "subtitle": "",
-            "description": ""
-        },
-        "bac": {
-            "description": ""
-        },
-        "bepc": {
-            "description": ""
-        }
-    },
+    "Administrateur réseau": "Network administrator",
+    "Développeur frontend web": "Frontend web developer",
+    "Ingénieur d'application": "Software Engineer",
+    "Application Mobile": "Mobile App",
+    "Application Web": "Web Application",
+    "Nom :": "Name",
+    "Date de Naissance:": "Date of Birth",
+    "Adresse :": "Address",
+    "Email :": "Email",
+    "Téléphone :": "Phone Number",
+    "Education": "Education",
     "Baccalauréat Scientifique(série D)": "",
     "Collège d’Enseignement Général Albarika": "",
-    "Expérience": "",
-    "Formateur": "",
-    "Jeunesse Institut": "",
-    "experience": {
-        "jeunesseInstitut": {
-            "description": ""
-        },
-        "self": {
-            "subtitle": "",
-            "description": ""
-        },
-        "jscom": {
-            "description": ""
-        },
-        "htech": {
-            "description": ""
-        }
-    },
-    "Développeur Wordpress": "",
-    "Compétences": "",
-    "Services": "",
-    "Mes compétences et les services que j'offre": "",
-    "Développement Web": "",
-    "Voir Mes Réalisations": "",
-    "Développer un site et application web": "Developing a website and web application"
+    "Expérience": "Experiences",
+    "Formateur": "Trainer",
+    "Jeunesse Institut": "Jeunesse Institut",
+    "Développeur Wordpress": "WordPress Developer",
+    "Compétences": "Skills",
+    "Mes compétences": "My Skills",
+    "Mes compétences et les services que j'offre": "My skills and the services I provide",
+    "Développement Web": "Web Development",
+    "Voir Mes Réalisations": "See My Projects",
+    "Développer un site et application web": "Developing a website and web application",
+    "À Propos": "About Us",
+    "Liens utiles":  "Useful Links",
+    "Projets": "Projects",
+    "Réseau": "Network",
+    "Développement d'Application": "Application Development",
+    "Formation": "Training",
+    "Tous les droits réservés": "All rights reserved"
 }
