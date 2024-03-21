@@ -221,7 +221,7 @@
             </h3>
             <div class="button mt-55">
 <!--              <a class="btn btn-md circle btn-dark" href="#resume">{{ t("Télécharger mon CV") }}</a>-->
-              <a class="btn btn-md circle btn-dark" id="downloadMyCv" :href="item.url"
+              <a class="btn btn-md circle btn-dark" id="downloadMyCv" :href="CV_URL"
                  @click.prevent="downloadMyCv(CV_URL,locale)">{{ t("Télécharger mon CV") }}</a>
             </div>
           </div>
@@ -352,107 +352,7 @@
         </div>
       </div>
     </div>
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12 gallery-content mb--15">
-          <div class="magnific-mix-gallery masonary">
-            <div id="portfolio-grid" class="gallery-items colums-3">
-              <!-- Single Item -->
-              <div v-for="post in posts" :key="post.id" class="pf-item">
-                <div class="overlay-content" data-bs-toggle="modal" data-bs-target="#projectSingleModal" @click="setCurrentPost(post)">
-<!--                  <img src="assets/img/800x600.png" alt="thumb">-->
-                  <NuxtImg :src="API+getTranslation(unref(post),locale)?.image?.contentUrl" :alt="getTranslation(unref(post), locale)?.title" role="button" />
-                  <div class="content">
-                    <div class="title">
-                      <span>{{ getTranslation(unref(post), locale)?.title }}</span>
-                      <h5><a href="#" data-bs-toggle="modal" data-bs-target="#projectSingleModal" @click="setCurrentPost(post)">UI design</a></h5>
-                    </div>
-                    <a href="#" data-bs-toggle="modal" data-bs-target="#projectSingleModal"><i class="fas fa-arrow-right"></i></a>
-                  </div>
-                </div>
-              </div>
-              <!-- End Single Item -->
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Start Projects Single Modal -->
-    <div class="modal fade" id="projectSingleModal" tabindex="-1" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl">
-        <div class="modal-content">
-          <div class="modal-body">
-
-            <div class="modal-header">
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-
-            <div class="project-details-items">
-              <div class="project-thumb">
-                <NuxtImg :src="API+getTranslation(unref(currentPost), locale)?.image?.contentUrl" :alt="getTranslation(unref(currentPost))?.title" sizes="sm:1024px md:1024px " />
-              </div>
-              <div class="top-info">
-                <div class="row">
-                  <div class="col-xl-12 left-info">
-                    <div class="project-info mt-md-50 mt-xs-40 mb-40">
-                      <div class="content">
-                        <ul class="project-basic-info">
-                          <li>
-                            {{ t("Client") }} <span>{{ t("private") }}</span>
-                          </li>
-                          <li>
-                            {{ t("Type De Projet") }} <span>{{ getCategories(unref(currentPost)!?.categories) }}</span>
-                          </li>
-                          <!--
-                          <li>
-                            {{ t("Date") }} <span>{{ t("25 February, 2023") }}</span>
-                          </li>
-                          <li>
-                            {{ t("Adresse") }} <span>{{ t("") }}</span>
-                          </li>
-                          -->
-                        </ul>
-                        <ul class="social">
-                          <li>
-                            <h4><button class="btn" @click="showProject(getTranslation(unref(currentPost))!?.externalUrl)">{{ t("Voir") }}</button></h4>
-                          </li>
-                        </ul>
-                        <!--
-                        <ul class="social">
-                          <li>
-                            <h4>{{ t("Partager") }}:</h4>
-                          </li>
-                          <li>
-                            <a href="#"><i class="fab fa-facebook-f"></i></a>
-                          </li>
-                          <li>
-                            <a href="#"><i class="fab fa-twitter"></i></a>
-                          </li>
-                          <li>
-                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                          </li>
-                          <li>
-                            <a href="#"><i class="fab fa-pinterest-p"></i></a>
-                          </li>
-                        </ul>
-                        -->
-                      </div>
-                    </div>
-                    <h2>{{ getTranslation(unref(currentPost), locale)?.title }}</h2>
-                  </div>
-                </div>
-              </div>
-
-              <div class="main-content mt-40">
-                {{ getTranslation(unref(currentPost), locale)?.content }}
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- End Projects Single Modal -->
+    <Portfolio items="9"/>
   </div>
   <!-- End Portfolio -->
 
@@ -668,7 +568,7 @@
                     <ul class="education-table">
                       <li v-for="experience in experiences" :key="experience.id">
                         <h4>{{ getTranslation(unref(experience),locale)?.title }}</h4>
-                        <h5>{{ getTranslation(unref(experience),locale)?.company }}</h5>
+                        <h5>{{ experience?.company }}</h5>
                         <span>{{ formatPeriod(experience?.startAt,experience?.endAt)  }} </span>
                         <p>
                           {{ getTranslation(unref(experience),locale)?.description }}
@@ -1009,8 +909,6 @@ import axios from "axios";
 import {useStore} from "~/stores/root";
 import {generateUrl, getTranslation} from "~/js/utils";
 import {API, API_URL, ApiRoutesWithoutPrefix, CV_URL} from "~/js/constant";
-import Testimony from "~/components/Testimony.vue";
-
 import {configure, defineRule, Form as VeeForm, Field} from "vee-validate";
 
 import {localize, setLocale, setLocale as VeeSetLocale} from '@vee-validate/i18n';
@@ -1048,11 +946,10 @@ definePageMeta
 })
 const localePath = useLocalePath();
 
-const { locale,locales, t } = useI18n({
+const { locale, t } = useI18n({
   inheritLocale: true
 });
 const store =useStore();
-
 
 const typedElement = ref(null);
 
@@ -1087,47 +984,23 @@ const submit= async ()=> {
 })
 }
 
-const  item = {
-  url: CV_URL,
-  label: t("Télécharger mon CV"),
-}
-
-const currentPost = ref<Post|null>(null);
-
-
-const setCurrentPost=(post:Post)=>{
-  currentPost.value = unref(post);
-}
-
-const getCategories = (categories: Array<Category>)=>{
-  return categories?.map(obj => getTranslation(obj, locale.value)?.name).join(', ') ??"";
-}
 const router = useRouter();
-const showProject =(url:string)=>{
-  const path = localePath({ path: '/portfolios/url?',params: {url: url} });
-  router.push(path);
 
-}
 
 let experiences = ref<Array<Experience>>([]);
 let educations = ref<Array<Education>>([]);
 
 const userId = 2
 
-
 const { data:user } = await useApi<User>(generateUrl(`${ApiRoutesWithoutPrefix.USERS}/${userId}`));
-const { data:posts, pending, error, refresh } = await useApi<Array<Post>>(generateUrl(`${ApiRoutesWithoutPrefix.POSTS}`,{
-  author:userId,
-  "type.name":"project",
-  isEnabled:true,itemsPerPage:10
-}));
-
 watchEffect( async () => {
   if (user?.value?.id) {
     const data =unref(user) as User;
+    store.updateId(data.id);
     store.updateSocials({website:data.website,github:data.github,linkedin:data.linkedin});
-    store.updateAboutMe( {
-      ...store.aboutMe,
+    store.updateUser( {
+      ...store.user,
+      id:data.id,
       name: data.fullName ??'Picasso Houessou',
           birthday: data.birthdate ?? '04 Avril 1998',
           address: data.address??'62137 Coulogne, France',
@@ -1146,7 +1019,9 @@ watchEffect( async () => {
 watchEffect( async () => {
   if (user.value?.id) {
    const  id = user.value.id
-    const { data } = await useApi<Array<Experience>>(`${ApiRoutesWithoutPrefix.USERS}/${id}${ApiRoutesWithoutPrefix.EXPERIENCES}`);
+    const { data } = await useApi<Array<Experience>>(generateUrl(`${ApiRoutesWithoutPrefix.USERS}/${id}${ApiRoutesWithoutPrefix.EXPERIENCES}`,{
+      "order[startAt]":"desc"
+    }));
     experiences.value = unref(data)?? []
   } else {
     experiences.value = []
@@ -1156,7 +1031,9 @@ watchEffect( async () => {
 watchEffect( async () => {
   if (user.value?.id) {
     const  id=  user.value.id;
-    const { data } = await useApi<Array<Education>>(`${ApiRoutesWithoutPrefix.USERS}/${id}${ApiRoutesWithoutPrefix.EDUCATIONS}`);
+    const { data } = await useApi<Array<Education>>(generateUrl(`${ApiRoutesWithoutPrefix.USERS}/${id}${ApiRoutesWithoutPrefix.EDUCATIONS}`,{
+      "order[startAt]":"desc"
+    }));
     educations.value = unref(data)??[];
   } else {
     educations.value = []

@@ -12,6 +12,7 @@ export interface ExperienceTranslation {
 
 export interface Experience{
     id:number;
+    company:string;
     startAt:string;
     endAt:string;
     locationType:LocationType;

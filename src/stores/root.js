@@ -4,9 +4,11 @@ export const useStore = defineStore('main', {
 
     state() {
         return {
+
             socials:{facebook:"http://www.facebook.com/picasso.houessou.5",linkedin:"https://www.linkedin.com/in/picassohouessou/", github:"http://github.com/picassoHouessou" },
             author: 'Picasso Houessou',
-            aboutMe: {
+            user: {
+                id:2,
                 name: 'Picasso Houessou',
                 birthday: '04 Avril 1998',
                 address: '62137 Coulogne, France',
@@ -21,12 +23,15 @@ export const useStore = defineStore('main', {
         }
     },
     actions: {
+        updateId(id){
+            this.id = id
+        },
         updateSocials(socials){
 
             this.socials = socials
         },
-        updateAboutMe(aboutMe){
-            this.aboutMe = aboutMe
+        updateUser(user){
+            this.user = user
         },
         updateAuthor(){
 

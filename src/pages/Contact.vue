@@ -256,7 +256,7 @@ export default {
     },
     computed: {
         aboutMe() {
-            return this.store.aboutMe;
+            return this.store.user;
         }
 
     },

@@ -48,10 +48,10 @@ const {locale, t} = useI18n({
 });
 const route= useRoute()
 
-const url= ref(route.params.url as string ??"");
+const url= ref(route.query.url as string ??"");
 
 watchEffect(()=>{
-  const urlParam = route.params.url;
+  const urlParam = route.query.url;
   if(urlParam){
     url.value = urlParam as string
   }

@@ -1,7 +1,19 @@
 <template>
-    <div>
-        <Portfolio/>
+  <div class="breadcrumb-area shadow dark bg-cover text-center text-light" style="background-image: url(assets/img/2440x1578.png);">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 col-md-12">
+          <h1>{{ t("Mes Projets") }}</h1>
+          <ul class="breadcrumb">
+            <li><NuxtLink href="/"><i class="fas fa-home"></i> {{ t("Accueil") }}</NuxtLink></li>
+            <li>{{ t("Projets") }}</li>
+          </ul>
+        </div>
+      </div>
     </div>
+  </div>
+
+  <Portfolio/>
 
 </template>
 <style lang="scss" scoped>
@@ -10,19 +22,8 @@
 <script setup lang="ts">
 import Portfolio from "../../components/Portfolio.vue";
 import {useI18n} from "vue-i18n";
-import type {Post} from "~/models/Post";
-import {generateUrl} from "~/js/utils";
-import {ApiRoutesWithoutPrefix} from "~/js/constant";
 
-const userId = 2
-const { data:posts, pending, error, refresh } = await useApi<Array<Post>>(generateUrl(`${ApiRoutesWithoutPrefix.POSTS}`,{
-  author:userId,
-  "type.name":"project",
-  isEnabled:true,itemsPerPage:10
-}));
-
-
-const { locale,locales, t } = useI18n({
+const {  t } = useI18n({
   inheritLocale: true
 });
 
@@ -35,7 +36,6 @@ useHead({
                 }
             ],
         });
-
 </script>
 
 <i18n>
