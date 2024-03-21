@@ -45,7 +45,7 @@
           <!-- Start Atribute Navigation -->
           <div class="attr-nav">
             <ul>
-              <li class="button"><a href="">{{t("Télécharger mon CV")}}</a></li>
+              <li class="button"><CVButton/></li>
             </ul>
           </div>
           <!-- End Atribute Navigation -->
@@ -76,7 +76,29 @@
         }
     }
 </style>
-<script setup>
+<script setup lang="ts">
+import CVButton from "~/components/CVButton.vue";
+
 const localePath = useLocalePath();
         const { locale,t } = useI18n()
+
+const downloadMyCv = async (url: string, locale: string = "en" ): Promise<void> => {
+  try {
+    const { data: response} = await useApi<Blob>(url + `?lang=${locale}`, {
+      responseType: "blob"
+    });
+    if (response.value){
+      const blob = new Blob([await response.value.arrayBuffer()], { type: "application/pdf" });
+      const link = document.createElement("a");
+      link.href = URL.createObjectURL(blob);
+      link.download = t("Mon CV"); // Assuming $t is your translation function
+      link.click();
+      URL.revokeObjectURL(link.href);
+    }else{
+      throw new Error(t("Fichier indisponible"))
+    }
+  } catch (error) {
+    console.error(error);
+  }
+};
 </script>

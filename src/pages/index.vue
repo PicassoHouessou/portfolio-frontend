@@ -221,8 +221,7 @@
             </h3>
             <div class="button mt-55">
 <!--              <a class="btn btn-md circle btn-dark" href="#resume">{{ t("Télécharger mon CV") }}</a>-->
-              <a class="btn btn-md circle btn-dark" id="downloadMyCv" :href="CV_URL"
-                 @click.prevent="downloadMyCv(CV_URL,locale)">{{ t("Télécharger mon CV") }}</a>
+              <CVButton class="btn btn-md circle btn-dark" />
             </div>
           </div>
 
@@ -352,7 +351,7 @@
         </div>
       </div>
     </div>
-    <Portfolio items="9"/>
+    <Portfolio :items="9"/>
   </div>
   <!-- End Portfolio -->
 
@@ -921,6 +920,7 @@ import type {Education,EducationTranslation} from "~/models/Education";
 import type {Post} from "~/models/Post";
 import type {User} from "~/models/User";
 import type {Category} from "~/models/Category";
+import CVButton from "~/components/CVButton.vue";
 //
 defineRule('required', required);
 defineRule('email', email);
@@ -1146,25 +1146,7 @@ const initialize=()=> {
 }
 
  */
-const downloadMyCv = (url:string, locale="en") => {
 
-  axios.get(url + "?lang=" + unref(locale), {responseType: "blob"})
-      .then((response) => {
-          const blob = new Blob([response.data], {type: "application/pdf"});
-          const link = document.createElement("a");
-          link.href = URL.createObjectURL(blob);
-          link.download = t("Mon CV");
-          link.click();
-          URL.revokeObjectURL(link.href);
-         // this.$Progress.finish();
-      })
-      .catch((error) => {
-          console.log(error);
-         // this.$Progress.finish()
-      });
-
-
-}
 const getYear = (date?: string): string => {
 
   return date? new Date(date).getFullYear() as unknown as string: "";

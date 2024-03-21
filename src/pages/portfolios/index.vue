@@ -12,8 +12,8 @@
       </div>
     </div>
   </div>
-
-  <Portfolio/>
+<div class="default-padding">
+  <Portfolio/></div>
 
 </template>
 <style lang="scss" scoped>

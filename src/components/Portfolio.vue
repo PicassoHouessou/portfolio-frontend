@@ -1,16 +1,3 @@
-<i18n>{
-    "fr": {
-        "Accueil": "Accueil",
-        "Mes Projets": "Mes Projets",
-        "Quelques réalisations de Picasso": "Quelques réalisations de Picasso"
-    },
-    "en": {
-        "Accueil": "Home",
-        "Mes Projets": "My Projects",
-        "Quelques réalisations de Picasso": "Some of Picasso's achievements"
-    }
-}
-</i18n>
 <template>
   <!-- Start Projects Single Modal -->
   <div class="modal fade" id="projectSingleModal" tabindex="-1" aria-hidden="true">
@@ -101,7 +88,7 @@
                 <div class="content">
                   <div class="title">
                     <span>{{ getTranslation(unref(post), locale)?.title }}</span>
-                    <h5><a href="#" data-bs-toggle="modal" data-bs-target="#projectSingleModal" @click="setCurrentPost(post)">{{ getCategories(unref(currentPost)!?.categories) }}</a></h5>
+                    <h5><a href="#" data-bs-toggle="modal" data-bs-target="#projectSingleModal" @click="setCurrentPost(post)">{{ getCategories(unref(post)!?.categories) }}</a></h5>
                   </div>
                   <a href="#" data-bs-toggle="modal" data-bs-target="#projectSingleModal"><i class="fas fa-arrow-right"></i></a>
                 </div>
@@ -117,7 +104,6 @@
 </template>
 
 <script setup lang="ts">
-import PortfolioItem from "./PortfolioItem.vue";
 import {useI18n} from "vue-i18n";
 import {API, ApiRoutesWithoutPrefix} from "~/js/constant";
 import {generateUrl, getTranslation} from "~/js/utils";
@@ -183,5 +169,7 @@ watchEffect( async () => {
 </script>
 
 <style scoped>
-
+.pointer{
+  cursor: pointer;
+}
 </style>
