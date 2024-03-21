@@ -37,8 +37,7 @@
                       </ul>
                       <ul class="social">
                         <li>
-                          <!--                            <h4><NuxtLinkLocale :to="localePath({ path: `/portfolios/${encodeURIComponent(getTranslation(unref(currentPost))!?.externalUrl)}` })">{{ t("Voir") }}</NuxtLinkLocale></h4>-->
-                          <h4><button class="btn" @click="showProject(getTranslation(unref(currentPost))!?.externalUrl)">{{ t("Voir") }}</button></h4>
+                          <h4><button class="btn" @click="showProject(getTranslation(unref(currentPost))!?.externalUrl)">{{ t("Aperçu en direct") }}</button></h4>
                         </li>
                       </ul>
                       <!--
@@ -85,7 +84,7 @@
             <div v-for="post in posts" :key="post.id" class="pf-item">
               <div class="overlay-content" data-bs-toggle="modal" data-bs-target="#projectSingleModal" @click="setCurrentPost(post)">
                 <NuxtImg :src="API+getTranslation(unref(post),locale)?.image?.contentUrl" :alt="getTranslation(unref(post), locale)?.title" role="button" />
-                <div class="content">
+                <div class="content pointer">
                   <div class="title">
                     <span>{{ getTranslation(unref(post), locale)?.title }}</span>
                     <h5><a href="#" data-bs-toggle="modal" data-bs-target="#projectSingleModal" @click="setCurrentPost(post)">{{ getCategories(unref(post)!?.categories) }}</a></h5>
@@ -163,7 +162,6 @@ watchEffect( async () => {
     posts.value = []
   }
 })
-
 
 
 </script>
