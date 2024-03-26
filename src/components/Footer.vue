@@ -17,13 +17,12 @@
           </ul>
         </div>
         <div class="col-lg-6 ">
-          <p>&copy; 2021 Picasso Houessou. {{ t("Tous les droits réservés") }}</p>
+          <p>&copy; 2024 Picasso Houessou. {{ t("Tous les droits réservés") }}</p>
         </div>
         <div class="col-lg-2 text-end"><LanguageSwitcher/></div>
       </div>
     </div>
   </footer>
-  <!-- End Footer -->
 
 </template>
 
