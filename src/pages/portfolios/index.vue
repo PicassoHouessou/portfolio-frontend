@@ -1,5 +1,5 @@
 <template>
-  <div class="breadcrumb-area shadow dark bg-cover text-center text-light" style="background-image: url(assets/img/2440x1578.png);">
+  <div class="breadcrumb-area shadow dark bg-cover text-center text-light" style="background-image: url(assets/img/background.jpg);">
     <div class="container">
       <div class="row">
         <div class="col-lg-12 col-md-12">
