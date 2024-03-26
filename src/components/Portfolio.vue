@@ -11,7 +11,7 @@
 
           <div class="project-details-items">
             <div class="project-thumb">
-              <NuxtImg :src="API+getTranslation(unref(currentPost), locale)?.image?.contentUrl" :alt="getTranslation(unref(currentPost))?.title" sizes="sm:1024px md:1024px " width="1028" height="450" />
+              <NuxtImg :src="config.public.baseURL+getTranslation(unref(currentPost), locale)?.image?.contentUrl" :alt="getTranslation(unref(currentPost))?.title" sizes="sm:1024px md:1024px " width="1028" height="450" />
               <!--                width="1028" height="450"-->
             </div>
             <div class="top-info">
@@ -83,7 +83,7 @@
             <!-- Single Item -->
             <div v-for="post in posts" :key="post.id" class="pf-item">
               <div class="overlay-content" data-bs-toggle="modal" data-bs-target="#projectSingleModal" @click="setCurrentPost(post)">
-                <NuxtImg :src="API+getTranslation(unref(post),locale)?.image?.contentUrl" :alt="getTranslation(unref(post), locale)?.title" role="button" />
+                <NuxtImg :src="config.public.baseURL+getTranslation(unref(post),locale)?.image?.contentUrl" :alt="getTranslation(unref(post), locale)?.title" role="button" />
                 <div class="content pointer">
                   <div class="title">
                     <span>{{ getTranslation(unref(post), locale)?.title }}</span>
@@ -104,12 +104,14 @@
 
 <script setup lang="ts">
 import {useI18n} from "vue-i18n";
-import {API, ApiRoutesWithoutPrefix} from "~/js/constant";
+import { ApiRoutesWithoutPrefix} from "~/js/constant";
 import {generateUrl, getTranslation} from "~/js/utils";
 import type {Post} from "~/models/Post";
 import {useStore} from "~/stores/root";
 import {ref} from "vue";
 import type {Category} from "~/models/Category";
+
+const config = useRuntimeConfig()
 
 const props =defineProps<{
   items?: number

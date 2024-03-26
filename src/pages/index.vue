@@ -904,24 +904,22 @@ $padding : 0 !important;
 import { ref, onMounted } from 'vue';
 import Swiper from 'swiper/bundle';
 import Typed from 'typed.js';
-import axios from "axios";
 import {useStore} from "~/stores/root";
 import {generateUrl, getTranslation} from "~/js/utils";
-import {API, API_URL, ApiRoutesWithoutPrefix, CV_URL} from "~/js/constant";
+import { ApiRoutesWithoutPrefix} from "~/js/constant";
 import {configure, defineRule, Form as VeeForm, Field} from "vee-validate";
-
 import {localize, setLocale, setLocale as VeeSetLocale} from '@vee-validate/i18n';
 import en from '@vee-validate/i18n/dist/locale/en.json';
 import fr from '@vee-validate/i18n/dist/locale/fr.json';
 import {email, required, min, max} from '@vee-validate/rules';
 import ColorModePicker from "~/components/ColorModePicker.vue";
-import type {Experience,ExperienceTranslation} from "~/models/Experience";
-import type {Education,EducationTranslation} from "~/models/Education";
-import type {Post} from "~/models/Post";
+import type {Experience} from "~/models/Experience";
+import type {Education} from "~/models/Education";
 import type {User} from "~/models/User";
-import type {Category} from "~/models/Category";
 import CVButton from "~/components/CVButton.vue";
-//
+
+const config = useRuntimeConfig()
+
 defineRule('required', required);
 defineRule('email', email);
 defineRule('min', min);

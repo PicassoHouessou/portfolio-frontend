@@ -1,5 +1,5 @@
 
-import {API_URL, ApiRoutesWithoutPrefix} from "../constant";
+import { ApiRoutesWithoutPrefix} from "../constant";
 
 export const extractIntegerFromIRI = (iri: string): number | null => {
     // Regular expression to find a single number in the IRI
@@ -24,7 +24,7 @@ const isUUID = (str: string): boolean => {
 export const generateIRI = (
     baseString: ApiRoutesWithoutPrefix,
     id: number | string | object,
-    prefix: string = API_URL
+    prefix: string = ""
 ): string | object => {
     if (typeof id === "object") {
         return id;
@@ -91,7 +91,8 @@ export const generateUrl = (path: string, params?: any): string => {
     }
 
 
-    return `${API_URL}${url}`;
+    return `${url}`;
+    // return `${API_URL}${url}`;
 };
 
 

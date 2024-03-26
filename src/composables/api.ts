@@ -1,6 +1,5 @@
 import type {UseFetchOptions} from "#app";
 import type {KeysOf} from "#app/composables/asyncData";
-import {API_URL} from "~/js/constant";
 import axios from "axios";
 export const useApi = async <T>(url:any, options?: UseFetchOptions<T> | undefined) => {
     const store =  useLocaleStore()
@@ -9,7 +8,7 @@ export const useApi = async <T>(url:any, options?: UseFetchOptions<T> | undefine
     return useFetch(url, {
         key: url,
         server:false,
-        baseURL:API_URL ,
+        baseURL:config.public.apiUrl ,
         ...options,
         headers: {
             ...(options?.headers || {}),

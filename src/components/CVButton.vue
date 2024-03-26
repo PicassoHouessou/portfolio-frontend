@@ -1,13 +1,12 @@
 
 <template>
-  <a :class="props.class" :href="CV_URL"
-     @click.prevent="downloadMyCv(CV_URL,locale)">{{ t("Télécharger mon CV") }}</a>
+  <a :class="props.class" :href="config.public.baseURL+'/cv/download'"
+     @click.prevent="downloadMyCv(config.public.baseURL+'/cv/download',locale)">{{ t("Télécharger mon CV") }}</a>
 
 </template>
 
 <script setup lang="ts">
-
-import {CV_URL} from "~/js/constant";
+const config = useRuntimeConfig()
 
 const { locale, t } = useI18n({
   inheritLocale: true

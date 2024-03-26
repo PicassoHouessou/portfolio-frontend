@@ -46,7 +46,9 @@ app:{
   },
   runtimeConfig: {
     public: {
-      baseURL: process.env.BASE_URL || 'https://localhost:8000/api',
+      baseURL: process.env.BASE_URL || 'https://localhost:8000',
+      apiUrl : process.env.API_URL,
+      cvUrl :  process.env.CV_URL,
       sentry: {
         dsn: process.env.SENTRY_DSN||'',
         environment: process.env.SENTRY_ENVIRONMENT||'development',
