@@ -1,6 +1,7 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 const path = require('path');
 export default defineNuxtConfig({
+  ssr: false,
   devtools: { enabled: true },
   typescript
       : {
@@ -8,11 +9,8 @@ export default defineNuxtConfig({
         : true
   },
   srcDir: 'src/',
-
-  dir:{public: path.join(__dirname, 'public'),
-
+  dir:{public: path.join(__dirname, 'public')
   },
-  //publicDir:'public',
   modules: [
     '@nuxtjs/i18n',
     "@pinia/nuxt",
@@ -54,5 +52,4 @@ app:{
       }
     },
   },
-
   })
