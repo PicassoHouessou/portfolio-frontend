@@ -2629,7 +2629,7 @@ header.header-fixed .video .video-play-button {
 	transform: inherit;
 	padding: 0;
 	top: auto;
-	background: var(--color-priumary);
+	background: var(--color-primary);
 }
 
 header.header-fixed .video .video-play-button i {
@@ -4561,7 +4561,7 @@ xclip
 	overflow: hidden;
 	vertical-align: middle;
 }
-*/
+
 
 .cd-headline.clip .cd-words-wrapper::after {
 	content: '';
