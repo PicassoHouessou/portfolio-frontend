@@ -1,7 +1,5 @@
-<script setup>
-import NavBar from "~/components/NavBar.vue";
+<script setup lang="js">
 import Footer from "~/components/Footer.vue";
-
 const route = useRoute()
 const { t } = useI18n()
 const head = useLocaleHead({

@@ -11,9 +11,6 @@
 
 .feather {
   position: relative;
-  /*
-  top: 0px;
-  */
   cursor: pointer;
 
   margin: 0;
@@ -43,16 +40,4 @@ const handleClick=()=>{
       colorMode.preference='light'}
 }
 }
-/*
-
-  if(!colorMode.unknown){
-    if( "light" === colorMode.preference|| 'light'===colorMode.value ){
-      colorMode.preference = 'dark'
-    }else if("dark" === colorMode.preference) {
-      colorMode.preference = 'system'
-    }else{
-      colorMode.preference='light'}
-}
-}
- */
 </script>

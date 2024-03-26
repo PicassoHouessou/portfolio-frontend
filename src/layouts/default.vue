@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="js">
 import NavBar from "~/components/NavBar.vue";
 import Footer from "~/components/Footer.vue";
 
