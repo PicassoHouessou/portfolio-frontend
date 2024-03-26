@@ -1156,6 +1156,9 @@ const formatPeriod=(date1?:string, date2?:string ):string =>{
     const year1 = new Date(date1).getFullYear()
     const year2 = new Date(date2).getFullYear()
     return `${year1} - ${year2}`;
+  }else if(date1){
+    const year1 = new Date(date1).getFullYear()
+    return `${year1} - ${t("Présent")}`;
   }
   return "";
 }
