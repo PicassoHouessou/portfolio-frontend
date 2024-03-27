@@ -15,16 +15,9 @@
     "Contact": "Contact",
     "Français": "French",
     "Anglais": "English",
-        "services": "services",
-      "Me contacter": "Contact Me",
-
-    "contact": {
-        "title": "",
-        "description": "",
-        "button": ""
-    },
-    "myName": "",
-    "Je suis un": "",
+    "services": "services",
+    "Me contacter": "Contact Me",
+    "Je suis un": "I am a",
     "hero": {
         "web": "Web Developer.",
         "network": "Network Administrator",

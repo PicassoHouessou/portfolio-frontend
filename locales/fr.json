@@ -21,12 +21,7 @@
         "portfolio": "Portfolio",
         "contact": "Contact"
     },
-    "contact": {
-        "title": "Je suis <span>Disponible</span> en freelance",
-        "description": "Très ouvert je suis disponible pour travailler en équipe ou en solo vos projets.",
-        "button": "Me Contacter"
-    },
-    "myName": "Salut!Je m'appelle",
+    "Très ouvert je suis disponible pour travailler en équipe ou en solo vos projets.": "Très ouvert je suis disponible pour travailler en équipe ou en solo vos projets.",
     "Je suis un": "Je suis un",
     "aboutMe": {
         "about": "Je suis un passionné de l’informatique. J’ai étudié l’administration des Systèmes et Réseaux Informatiques."
