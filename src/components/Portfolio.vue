@@ -37,7 +37,7 @@
                       </ul>
                       <ul class="social">
                         <li>
-                          <h4><button class="btn" @click="showProject(getTranslation(unref(currentPost))!?.externalUrl)">{{ t("Aperçu en direct") }}</button></h4>
+                          <button class="btn btn-md circle btn-theme" @click="showProject(getTranslation(unref(currentPost))!?.externalUrl)">{{ t("Aperçu en direct") }}</button>
                         </li>
                       </ul>
                       <!--

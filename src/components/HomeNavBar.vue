@@ -44,11 +44,10 @@
                 </NuxtLink>
               </li>
               <li>
-                <NuxtLink :to="localePath({ name: '/', hash: '#contact' })" class="smooth-menu">
+                <NuxtLink :to="localePath({ path: '/', hash: '#contact' })" class="smooth-menu">
                   {{ t("Contact") }}
                 </NuxtLink>
               </li>
-
             </ul>
 
           </div>
