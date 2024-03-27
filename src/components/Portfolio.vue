@@ -1,55 +1,175 @@
-<i18n>{
-    "fr": {
-        "Accueil": "Accueil",
-        "Mes Projets": "Mes Projets",
-        "Quelques réalisations de Picasso": "Quelques réalisations de Picasso"
-    },
-    "en": {
-        "Accueil": "Home",
-        "Mes Projets": "My Projects",
-        "Quelques réalisations de Picasso": "Some of Picasso's achievements"
-    }
-}
-</i18n>
 <template>
-    <section class="ftco-section ftco-project" id="projects-section">
-        <div class="container-fluid px-md-0">
-            <div class="row no-gutters justify-content-center pb-5">
-                <div class="col-md-12 heading-section text-center ftco-animate">
-                    <h1 class="big big-2">{{ $t("Accueil") }}</h1>
-                    <h2 class="mb-4">{{ $t("Mes Projets") }}</h2>
-                    <p>{{ $t("Quelques réalisations de Picasso") }}</p>
-                </div>
+  <!-- Start Projects Single Modal -->
+  <div class="modal fade" id="projectSingleModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl">
+      <div class="modal-content">
+        <div class="modal-body">
+
+          <div class="modal-header">
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" ref="closeButton"></button>
+          </div>
+
+          <div class="project-details-items">
+            <div class="project-thumb">
+              <NuxtImg :src="config.public.baseURL+getTranslation(unref(currentPost), locale)?.image?.contentUrl" :alt="getTranslation(unref(currentPost))?.title" sizes="sm:1024px md:1024px " width="1028" height="450" />
+              <!--                width="1028" height="450"-->
             </div>
-            <div class="row no-gutters">
-                <div class="col-md-4" v-for="portfolio in portfolios" :key="portfolio.url">
-                    <PortfolioItem :title="portfolio.title" :url="portfolio.url" :category="portfolio.category"
-                                   :image="portfolio.image"/>
+            <div class="top-info">
+              <div class="row">
+                <div class="col-xl-12 left-info">
+                  <div class="project-info mt-md-50 mt-xs-40 mb-40">
+                    <div class="content">
+                      <ul class="project-basic-info">
+                        <li>
+                          {{ t("Client") }} <span>{{ t("private") }}</span>
+                        </li>
+                        <li>
+                          {{ t("Type De Projet") }} <span>{{ getCategories(unref(currentPost)!?.categories) }}</span>
+                        </li>
+                        <!--
+                        <li>
+                          {{ t("Date") }} <span>{{ t("25 February, 2023") }}</span>
+                        </li>
+                        <li>
+                          {{ t("Adresse") }} <span>{{ t("") }}</span>
+                        </li>
+                        -->
+                      </ul>
+                      <ul class="social">
+                        <li>
+                          <button class="btn btn-md circle btn-theme" @click="showProject(getTranslation(unref(currentPost))!?.externalUrl)">{{ t("Aperçu en direct") }}</button>
+                        </li>
+                      </ul>
+                      <!--
+                      <ul class="social">
+                        <li>
+                          <h4>{{ t("Partager") }}:</h4>
+                        </li>
+                        <li>
+                          <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        </li>
+                        <li>
+                          <a href="#"><i class="fab fa-twitter"></i></a>
+                        </li>
+                        <li>
+                          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        </li>
+                        <li>
+                          <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                        </li>
+                      </ul>
+                      -->
+                    </div>
+                  </div>
+                  <h2>{{ getTranslation(unref(currentPost), locale)?.title }}</h2>
                 </div>
+              </div>
             </div>
+
+            <div class="main-content mt-40">
+              {{ getTranslation(unref(currentPost), locale)?.content }}
+            </div>
+          </div>
         </div>
-    </section>
+      </div>
+    </div>
+  </div>
+  <!-- End Projects Single Modal -->
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 gallery-content mb--15">
+        <div class="magnific-mix-gallery masonary">
+          <div id="portfolio-grid" class="gallery-items colums-3">
+            <!-- Single Item -->
+            <div v-for="post in posts" :key="post.id" class="pf-item">
+              <div class="overlay-content" data-bs-toggle="modal" data-bs-target="#projectSingleModal" @click="setCurrentPost(post)">
+                <NuxtImg :src="config.public.baseURL+getTranslation(unref(post),locale)?.image?.contentUrl" :alt="getTranslation(unref(post), locale)?.title" role="button" />
+                <div class="content pointer">
+                  <div class="title">
+                    <span>{{ getTranslation(unref(post), locale)?.title }}</span>
+                    <h5><a href="#" data-bs-toggle="modal" data-bs-target="#projectSingleModal" @click="setCurrentPost(post)">{{ getCategories(unref(post)!?.categories) }}</a></h5>
+                  </div>
+                  <a href="#" data-bs-toggle="modal" data-bs-target="#projectSingleModal"><i class="fas fa-arrow-right"></i></a>
+                </div>
+              </div>
+            </div>
+            <!-- End Single Item -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
 </template>
 
-<script>
-import portfolios from "../js/portfolio";
+<script setup lang="ts">
+import {useI18n} from "vue-i18n";
+import { ApiRoutesWithoutPrefix} from "~/js/constant";
+import {generateUrl, getTranslation} from "~/js/utils";
+import type {Post} from "~/models/Post";
+import {useStore} from "~/stores/root";
+import {ref} from "vue";
+import type {Category} from "~/models/Category";
 
-import PortfolioItem from "./PortfolioItem.vue";
+const config = useRuntimeConfig()
 
-export default {
-    name: "Portfolio",
-    components: {
-        PortfolioItem
-    },
-    data() {
-        return {
-            portfolios
-        }
-    }
+const props =defineProps<{
+  items?: number
+}>()
+
+
+const { locale, t } = useI18n({
+    inheritLocale: true
+});
+
+const router = useRouter();
+const localePath = useLocalePath();
+
+const store =useStore();
+
+
+const currentPost = ref<Post|null>(null);
+
+const setCurrentPost=(post:Post)=>{
+  currentPost.value = unref(post);
 }
+
+const getCategories = (categories: Array<Category>)=>{
+  return categories?.map(obj => getTranslation(obj, locale.value)?.name).join(', ') ??"";
+}
+
+const closeButton: Ref<HTMLButtonElement | null> = ref(null);
+const showProject =(url:string)=>{
+  closeButton.value!.click();
+  const path = localePath({ path: '/portfolios/see',query:{url :url}  });
+  router.push(path);
+
+}
+
+let posts = ref<Array<Post>>([]);
+
+
+watchEffect( async () => {
+  if (store.user?.id) {
+    const  id =  store.user?.id
+    const items = props?.items ? props?.items :20 ;
+    const { data, pending, error, refresh } = await useApi<Array<Post>>(generateUrl(`${ApiRoutesWithoutPrefix.POSTS}`,{
+      author:id,
+      "type.name":"project",
+      isEnabled:true,
+       itemsPerPage: items
+    }));
+    posts.value = unref(data)?? []
+  } else {
+    posts.value = []
+  }
+})
+
+
 </script>
 
 <style scoped>
-
+.pointer{
+  cursor: pointer;
+}
 </style>

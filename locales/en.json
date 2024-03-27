@@ -1,70 +1,57 @@
 {
-  "hello": "",
-  "Menu": "",
-  "home": "",
-  "about": "About Me",
-  "resume": "",
-  "services": "",
-  "portfolio": "",
-  "contact": {
-    "title": "",
-    "description": "",
-    "button": ""
-  },
-  "myName": "",
-  "Je suis un": "",
-  "hero": {
-    "web": "",
-    "network": "",
-    "application": ""
-  },
-  "À Propos": "",
-  "aboutMe": {
-    "about": ""
-  },
-  "Nom :": "",
-  "Date de Naissance:": "",
-  "Adresse :": "",
-  "Email :": "",
-  "Téléphone :": "",
-  "Education": "",
-  "education": {
-    "licence": {
-      "title": "",
-      "subtitle": "",
-      "description": ""
+    "Présent":"Present",
+    "Maintenant":"Now",
+    "Télécharger mon CV": "Download my resume",
+    "Voir": "See",
+    "Aperçu en direct": "Live Preview",
+    "Salut": "Hello",
+    "C'est": "It is",
+    "Menu": "Menu",
+    "Accueil": "Home",
+    "A Propos": "About Me",
+    "A propos": "About me",
+    "Services": "Services",
+    "Résumé": "Summary",
+    "Portfolio": "Portfolio",
+    "Contact": "Contact",
+    "Français": "French",
+    "Anglais": "English",
+    "services": "services",
+    "Me contacter": "Contact Me",
+    "Je suis un": "I am a",
+    "hero": {
+        "web": "Web Developer.",
+        "network": "Network Administrator",
+        "application": ""
     },
-    "bac": {
-      "description": ""
-    },
-    "bepc": {
-      "description": ""
-    }
-  },
-  "Baccalauréat Scientifique(série D)": "",
-  "Collège d’Enseignement Général Albarika": "",
-  "Expérience": "",
-  "Formateur": "",
-  "Jeunesse Institut": "",
-  "experience": {
-    "jeunesseInstitut": {
-      "description": ""
-    },
-    "self": {
-      "subtitle": "",
-      "description": ""
-    },
-    "jscom": {
-      "description": ""
-    },
-    "htech": {
-      "description": ""
-    }
-  },
-  "Développeur Wordpress": "",
-  "Compétences": "",
-  "Services": "",
-  "Mes compétences et les services que j'offre": "",
-  "Développement Web": "",
-  "Voir Mes Réalisations": ""
+    "Administrateur réseau": "Network administrator",
+    "Développeur frontend web": "Frontend web developer",
+    "Ingénieur d'application": "Software Engineer",
+    "Application Mobile": "Mobile App",
+    "Application Web": "Web Application",
+    "Nom :": "Name",
+    "Date de Naissance:": "Date of Birth",
+    "Adresse :": "Address",
+    "Email :": "Email",
+    "Téléphone :": "Phone Number",
+    "Education": "Education",
+    "Baccalauréat Scientifique(série D)": "",
+    "Collège d’Enseignement Général Albarika": "",
+    "Expérience": "Experiences",
+    "Formateur": "Trainer",
+    "Jeunesse Institut": "Jeunesse Institut",
+    "Développeur Wordpress": "WordPress Developer",
+    "Compétences": "Skills",
+    "Mes compétences": "My Skills",
+    "Mes compétences et les services que j'offre": "My skills and the services I provide",
+    "Développement Web": "Web Development",
+    "Voir Mes Réalisations": "See My Projects",
+    "Développer un site et application web": "Developing a website and web application",
+    "À Propos": "About Us",
+    "Liens utiles":  "Useful Links",
+    "Projets": "Projects",
+    "Réseau": "Network",
+    "Développement d'Application": "Application Development",
+    "Formation": "Training",
+    "Tous les droits réservés": "All rights reserved"
 }

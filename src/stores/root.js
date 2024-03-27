@@ -4,15 +4,17 @@ export const useStore = defineStore('main', {
 
     state() {
         return {
+
+            socials:{facebook:"http://www.facebook.com/picasso.houessou.5",linkedin:"https://www.linkedin.com/in/picassohouessou/", github:"http://github.com/picassoHouessou" },
             author: 'Picasso Houessou',
-            aboutMe: {
+            user: {
+                id:2,
                 name: 'Picasso Houessou',
                 birthday: '04 Avril 1998',
-                address: 'Fifadji, Cotonou Rép. Bénin',
-                zipCode: 'none',
+                address: '62137 Coulogne, France',
                 email: 'houessoupicasso@yahoo.fr',
                 phone: '+29995718340',
-                website: document.baseURI
+                website: ""
             },
             alertMessage: {
                 show: false,
@@ -21,6 +23,22 @@ export const useStore = defineStore('main', {
         }
     },
     actions: {
+        updateId(id){
+            this.id = id
+        },
+        updateSocials(socials){
+
+            this.socials = socials
+        },
+        updateUser(user){
+            this.user = user
+        },
+        updateAuthor(){
+
+        },
+
+
+
         updateAlertMessage(amount) {
             if (typeof amount == 'string') {
                 this.alertMessage.show = true;
@@ -36,52 +54,3 @@ export const useStore = defineStore('main', {
         }
     },
 });
-/*
-export default new Vuex.Store({
-
-  state () {
-    return {
-      author: 'Picasso Houessou',
-      aboutMe: {
-        name: 'Picasso Houessou',
-        birthday: '04 Avril 1998',
-        address: 'Fifadji, Cotonou Rép. Bénin',
-        zipCode: 'none',
-        email: 'houessoupicasso@yahoo.fr',
-        phone: '+29995718340',
-        website: document.baseURI
-      },
-      alertMessage:{
-        show : false ,
-        message: '',
-      }
-    }
-  },
-  mutations: {
-    INCREASE_ALERT_Message(state, payload) {
-      state.alertMessage.show = true ;
-      state.alertMessage.message = payload ;
-
-    },
-    CLOSE_ALERT(state) {
-      state.alertMessage.show = false ;
-      state.alertMessage.message = '' ;
-    }
-  },
-  actions: {
-    alertMessage(context, amount) {
-      if ( typeof amount == 'string') {
-        context.commit('INCREASE_ALERT_Message', amount);
-        return ;
-      }
-
-      context.commit('INCREASE_ALERT_Message', amount.message);
-
-    },
-    closeAlert (context) {
-      context.commit('CLOSE_ALERT') ;
-    }
-  },
-  modules: {}
-})
-*/
