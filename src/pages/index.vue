@@ -1079,7 +1079,6 @@ onMounted(() => {
 
 
 const colorMode = useColorMode();
-
 useHead({
   title: "Picasso Houessou | Accueil",
   meta: [

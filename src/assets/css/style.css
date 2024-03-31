@@ -4551,9 +4551,9 @@ header.header-fixed .video-play-button.theme:after {
 xclip 
 
 -------------------------------- */
-
+/*
 .cd-headline.clip span {
-	//display: inline-block;
+	/*display: inline-block;*
 	padding: 0;
 }
 
@@ -4573,6 +4573,16 @@ xclip
 	background-color: var(--color-heading);
 	transform: translateY(-50%);
 }
+*/
+/* Cursor */
+.typed-cursor {
+	content: '';
+	width: 2px;
+	height: 80%!important;
+	border-color: var(--color-heading);
+	color:var(--color-heading)!important;
+}
+
 /*
 .cd-headline.clip b {
 	opacity: 0;
