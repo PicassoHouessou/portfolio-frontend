@@ -362,7 +362,7 @@
       <div class="row align-center">
         <div class="about-style-six col-lg-5">
           <div class="thumb">
-            <img class="wow fadeInUp" src="assets/img/illustration/3.png" alt="Thumb">
+            <img class="fadeInUp" src="assets/img/illustration/3.png" :alt="t('Picasso en toge')">
           </div>
         </div>
         <div class="about-style-six col-lg-6 offset-lg-1">
@@ -897,6 +897,22 @@ $padding : 0 !important;
     99% {
         background-color: transparent;
     }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.fadeInUp {
+  animation-name: fadeInUp;
 }
 
 </style>

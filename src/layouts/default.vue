@@ -9,7 +9,7 @@ const head = useLocaleHead({
   identifierAttribute: 'id',
   addSeoAttributes: true
 })
-const title = computed(() => t('layouts.title', { title: t(route.meta.title ?? 'TBD') }))
+const title = computed(() => t('layouts.title', { title: t(route.meta.title ?? 'Picasso Houessou') }))
 </script>
 
 <template>
