@@ -28,7 +28,7 @@ const {  t } = useI18n({
 });
 
 useHead({
-            title: "Picasso Houessou | Portfolio",
+            title: "Picasso Houessou -"+t("Mes projets"),
             meta: [
                 {
                     name: `description`,
@@ -43,13 +43,13 @@ useHead({
     "fr": {
         "head": {
             "keywords": "Picasso Houessou, Picasso Houessou-Dossou, Développeur web, Développeur backend, développeur frontend, frontend, backend, HTML, CSS, symfony, laravel, wordpress, développeur wordpress, développeur PHP, développeur vue.js, création de site web au bénin, web designer au bénin, développeur d'API, création de site web à cotonou, refonte de site web",
-            "description": "Voir tous les projets que j'ai réalisé"
+            "description": "Les projets sur lesquels j'ai travaillé ces dernières années"
         }
     },
     "en": {
         "head": {
             "keywords": "Picasso Houessou, Picasso Houessou-Dossou, Développeur web, Développeur backend, développeur frontend, frontend, backend, HTML, CSS, symfony, laravel, wordpress, développeur wordpress, développeur PHP, développeur vue.js, création de site web au bénin, web designer au bénin, développeur d'API, création de site web à cotonou, refonte de site web",
-            "description": "Picasso Houessou."
+            "description": "The projects I've worked on in recent years"
         }
     }
 }
