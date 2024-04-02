@@ -362,7 +362,7 @@
       <div class="row align-center">
         <div class="about-style-six col-lg-5">
           <div class="thumb">
-            <img class="wow fadeInUp" src="assets/img/illustration/3.png" alt="Thumb">
+            <img class="fadeInUp" src="assets/img/illustration/3.png" :alt="t('Picasso en toge')">
           </div>
         </div>
         <div class="about-style-six col-lg-6 offset-lg-1">
@@ -899,6 +899,22 @@ $padding : 0 !important;
     }
 }
 
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.fadeInUp {
+  animation-name: fadeInUp;
+}
+
 </style>
 <script setup lang="ts">
 import { ref, onMounted } from 'vue';
@@ -991,7 +1007,7 @@ let educations = ref<Array<Education>>([]);
 const userId = 2
 
 const { data:user } = await useApi<User>(generateUrl(`${ApiRoutesWithoutPrefix.USERS}/${userId}`));
-watchEffect( async () => {
+watch(user,  () => {
   if (user?.value?.id) {
     const data =unref(user) as User;
     store.updateId(data.id);
@@ -1000,17 +1016,15 @@ watchEffect( async () => {
       ...store.user,
       id:data.id,
       name: data.fullName ??'Picasso Houessou',
-          birthday: data.birthdate ?? '04 Avril 1998',
-          address: data.address??'62137 Coulogne, France',
-          email: data.email?? 'houessoupicasso@yahoo.fr',
-          phone: data.phoneNumber ?? '+29995718340',
-          website:data.address ??  ""
+      birthday: data.birthdate ?? '04 Avril 1998',
+      address: data.address??'62137 Coulogne, France',
+      email: data.email?? 'houessoupicasso@yahoo.fr',
+      phone: data.phoneNumber ?? '+29995718340',
+      website:data.address ??  ""
     });
 
   }
 });
-
-
 
 
 
@@ -1079,7 +1093,6 @@ onMounted(() => {
 
 
 const colorMode = useColorMode();
-
 useHead({
   title: "Picasso Houessou | Accueil",
   meta: [

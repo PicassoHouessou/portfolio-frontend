@@ -21,7 +21,7 @@
                     <div class="content">
                       <ul class="project-basic-info">
                         <li>
-                          {{ t("Client") }} <span>{{ t("private") }}</span>
+                          {{ t("Client") }} <span>{{ t("Privé") }}</span>
                         </li>
                         <li>
                           {{ t("Type De Projet") }} <span>{{ getCategories(unref(currentPost)!?.categories) }}</span>
