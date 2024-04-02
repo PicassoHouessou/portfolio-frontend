@@ -1007,7 +1007,7 @@ let educations = ref<Array<Education>>([]);
 const userId = 2
 
 const { data:user } = await useApi<User>(generateUrl(`${ApiRoutesWithoutPrefix.USERS}/${userId}`));
-watchEffect( async () => {
+watch(user,  () => {
   if (user?.value?.id) {
     const data =unref(user) as User;
     store.updateId(data.id);
@@ -1016,17 +1016,15 @@ watchEffect( async () => {
       ...store.user,
       id:data.id,
       name: data.fullName ??'Picasso Houessou',
-          birthday: data.birthdate ?? '04 Avril 1998',
-          address: data.address??'62137 Coulogne, France',
-          email: data.email?? 'houessoupicasso@yahoo.fr',
-          phone: data.phoneNumber ?? '+29995718340',
-          website:data.address ??  ""
+      birthday: data.birthdate ?? '04 Avril 1998',
+      address: data.address??'62137 Coulogne, France',
+      email: data.email?? 'houessoupicasso@yahoo.fr',
+      phone: data.phoneNumber ?? '+29995718340',
+      website:data.address ??  ""
     });
 
   }
 });
-
-
 
 
 
