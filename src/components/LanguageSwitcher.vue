@@ -22,8 +22,7 @@ padding-left: 0!important;
 import { watch } from 'vue'
 const { locales, locale, setLocale } = useI18n();
 import {useLocaleStore} from "~/stores/locale";
-const store = useLocaleStore()
-store.updateLocale(locale.value)
+const store = useLocaleStore();
 
 watch(locale, async () => {
   store.updateLocale(locale.value)
