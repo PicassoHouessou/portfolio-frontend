@@ -442,7 +442,7 @@
                       <li>
                         <h5>{{ t("Date de Naissance") }}</h5>
                         <p>
-                          {{ user?.birthdate ?? "" }}
+                          {{  user?.birthdate ? formatDate( user?.birthdate, locale) : "" }}
                         </p>
                       </li>
                       <li>
@@ -921,7 +921,7 @@ import { ref, onMounted } from 'vue';
 import Swiper from 'swiper/bundle';
 import Typed from 'typed.js';
 import {useStore} from "~/stores/root";
-import {generateUrl, getTranslation} from "~/js/utils";
+import {formatDate, generateUrl, getTranslation} from "~/js/utils";
 import { ApiRoutesWithoutPrefix} from "~/js/constant";
 import {configure, defineRule, Form as VeeForm, Field} from "vee-validate";
 import {localize, setLocale, setLocale as VeeSetLocale} from '@vee-validate/i18n';

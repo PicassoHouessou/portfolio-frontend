@@ -29,3 +29,11 @@ export enum ApiRoutesWithoutPrefix {
     POSTS="/posts"
 
 }
+export enum DATE_FORMAT {
+    LT = 'LT',
+    LTS = 'LTS',
+    DATE = 'LL',
+    DATETIME = 'LLLL',
+}
+export type Locale = 'fr' | 'en';
+export const defaultLocale = 'en';

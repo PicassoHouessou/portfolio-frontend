@@ -1,5 +1,17 @@
 
-import { ApiRoutesWithoutPrefix} from "../constant";
+import {ApiRoutesWithoutPrefix, DATE_FORMAT} from "../constant";
+import dayjs from 'dayjs';
+import type { ConfigType } from 'dayjs';
+import 'dayjs/locale/fr'; // Import the locale you want to use
+import localizedFormat from 'dayjs/plugin/localizedFormat'; // Import the localizedFormat plugin
+import { defaultLocale } from '../constant';
+import type { Locale } from '../constant';
+import relativeTime from 'dayjs/plugin/relativeTime';
+
+// Extend dayjs with the localizedFormat plugin
+dayjs.extend(localizedFormat);
+
+dayjs.extend(relativeTime);
 
 export const extractIntegerFromIRI = (iri: string): number | null => {
     // Regular expression to find a single number in the IRI
@@ -117,6 +129,36 @@ export const getTranslation = (input: any, locale?: string, returnDefault?:boole
 
 
 
+};
+export const capitalizeFirstLetter = (word?: string) => {
+    if (typeof word !== 'string') {
+        return '';
+    }
+    return word.charAt(0).toUpperCase() + word.slice(1);
+};
+
+export const formatDate = (
+    date: ConfigType,
+    locale: string = defaultLocale,
+    withHour = false,
+) => {
+    // This function should be used for converting ISO formatted dates to
+    // the 'DD/MM/YYYY' or 'DD/MM/YYYY hh:mm:ss' format used everywhere on the project.
+    if (!date || !dayjs(date).isValid()) {
+        return '-';
+    }
+
+    const formatedDate = dayjs(date)
+        .locale(locale)
+        .format(withHour ? DATE_FORMAT.DATETIME : DATE_FORMAT.DATE);
+    return locale == defaultLocale ? capitalizeFirstLetter(formatedDate) : formatedDate;
+};
+
+export const parseDate = (date: string, locale: Locale = defaultLocale) => {
+    let parsedDate = dayjs(date);
+    parsedDate = parsedDate.locale(locale);
+
+    return parsedDate.isValid() ? parsedDate : dayjs(date);
 };
 
 
