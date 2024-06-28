@@ -28,7 +28,7 @@ const {  t } = useI18n({
 });
 
 useHead({
-            title: "Picasso Houessou -"+t("Mes projets"),
+            title: t("Mes projets"),
             meta: [
                 {
                     name: `description`,

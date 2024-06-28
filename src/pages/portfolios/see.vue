@@ -1,9 +1,16 @@
-<i18n>{
-    "fr": {
-        "Prévisualisation": "Prévisualisation"
+<i18n>
+{
+    "fr": { "Prévisualisation": "Prévisualisation",
+        "head": {
+            "keywords": "Picasso Houessou, Picasso Houessou-Dossou, Développeur web, Développeur backend, développeur frontend, frontend, backend, HTML, CSS, symfony, laravel, wordpress, développeur wordpress, développeur PHP, développeur vue.js, création de site web au bénin, web designer au bénin, développeur d'API, création de site web à cotonou, refonte de site web",
+            "description": "Prévisualisation du projet"
+        }
     },
-    "en": {
-        "Prévisualisation": "Preview"
+    "en": { "Prévisualisation": "Preview",
+        "head": {
+            "keywords": "Picasso Houessou, Picasso Houessou-Dossou, Développeur web, Développeur backend, développeur frontend, frontend, backend, HTML, CSS, symfony, laravel, wordpress, développeur wordpress, développeur PHP, développeur vue.js, création de site web au bénin, web designer au bénin, développeur d'API, création de site web à cotonou, refonte de site web",
+            "description": "Project preview"
+        }
     }
 }
 </i18n>
@@ -49,6 +56,17 @@ const {locale, t} = useI18n({
 const route= useRoute()
 
 const url= ref(route.query.url as string ??"");
+
+
+useHead({
+    title: t("Mes projets"),
+    meta: [
+        {
+            name: `description`,
+            content: t("head.description"),
+        }
+    ],
+});
 
 watchEffect(()=>{
   const urlParam = route.query.url;

@@ -15,7 +15,8 @@ export default defineNuxtConfig({
     "@pinia/nuxt",
     '@vee-validate/nuxt',
     '@nuxtjs/color-mode',
-    "@nuxt/image"
+    "@nuxt/image",
+    "@nuxtjs/seo"
   ],
   i18n: {
     locales: [
@@ -39,7 +40,13 @@ export default defineNuxtConfig({
     vueI18n: path.join(__dirname, 'i18n.config.ts') // if you are using custom path, default
   },
 app:{
-  rootId: 'wrapper'
+  rootId: 'wrapper',
+  head:{
+    charset: 'utf-8',
+    viewport: 'width=device-width, initial-scale=1',
+  titleTemplate: '%siteName %separator %s'
+  }
+
   },
   runtimeConfig: {
     public: {
@@ -51,4 +58,12 @@ app:{
       }
     },
   },
+  site: {
+    url: process.env.BASE_URL || 'https://localhost:8000',
+    name: 'Picasso Houessou',
+    description: 'I am a Software Engineer with 4 years of experience',
+  },
+  seo: {
+    fallbackTitle: true
+  }
   })
