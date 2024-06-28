@@ -13,7 +13,7 @@
       "bienvenue": "bienvenue",
         "head": {
             "keywords": "Picasso Houessou, Picasso Houessou-Dossou, Développeur web, Développeur backend, développeur frontend, frontend, backend, HTML, CSS, symfony, laravel, wordpress, développeur wordpress, développeur PHP, développeur vue.js, création de site web au bénin, web designer au bénin, développeur d'API, création de site web à cotonou, refonte de site web",
-            "description": "Bienvenue sur mon site. Je suis un jeune développeur et administrateur réseau informatique"
+            "description": "Bienvenue sur mon site. Je suis un ingénieur informatique et administrateur réseau avec 4 ans d'expérience"
         },
         "Je suis un": "Je suis un",
         "aboutMe": {
@@ -78,7 +78,7 @@
       "bienvenue": "welcome",
         "head": {
             "keywords": "Picasso Houessou, Picasso Houessou-Dossou, Développeur web, Développeur backend, développeur frontend, frontend, backend, HTML, CSS, symfony, laravel, wordpress, développeur wordpress, développeur PHP, développeur vue.js, création de site web au bénin, web designer au bénin, développeur d'API, création de site web à cotonou, refonte de site web",
-            "description": "Welcome to my website. I am a young developer and network administrator"
+            "description": "Welcome to my website. I am a software engineer and network administrator with 4 years of experience."
         },
       "Regardez mon portfolio et":"Look at my portfolio and",
       "donnez moi votre avis":  "give me your feedback",
@@ -442,7 +442,7 @@
                       <li>
                         <h5>{{ t("Date de Naissance") }}</h5>
                         <p>
-                          {{ user?.birthdate ?? "" }}
+                          {{  user?.birthdate ? formatDate( user?.birthdate, locale) : "" }}
                         </p>
                       </li>
                       <li>
@@ -921,7 +921,7 @@ import { ref, onMounted } from 'vue';
 import Swiper from 'swiper/bundle';
 import Typed from 'typed.js';
 import {useStore} from "~/stores/root";
-import {generateUrl, getTranslation} from "~/js/utils";
+import {formatDate, generateUrl, getTranslation} from "~/js/utils";
 import { ApiRoutesWithoutPrefix} from "~/js/constant";
 import {configure, defineRule, Form as VeeForm, Field} from "vee-validate";
 import {localize, setLocale, setLocale as VeeSetLocale} from '@vee-validate/i18n';
@@ -1094,7 +1094,7 @@ onMounted(() => {
 
 const colorMode = useColorMode();
 useHead({
-  title: "Picasso Houessou | Accueil",
+  title: "Portfolio, Ingénieur informatique | Administrateur Réseau",
   meta: [
     {
       name: `author`,
@@ -1102,7 +1102,7 @@ useHead({
     },
     {
       name: `keywords`,
-      content: ``,
+      content: t(`keywords`),
     },
     {
       name: `description`,
