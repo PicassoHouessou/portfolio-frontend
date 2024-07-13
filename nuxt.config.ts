@@ -16,7 +16,8 @@ export default defineNuxtConfig({
     '@vee-validate/nuxt',
     '@nuxtjs/color-mode',
     "@nuxt/image",
-    "@nuxtjs/seo"
+    "@nuxtjs/seo",
+    "@nuxt/eslint"
   ],
   i18n: {
     locales: [
