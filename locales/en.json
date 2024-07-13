@@ -60,5 +60,9 @@
     "Réseau": "Network",
     "Développement d'Application": "Application Development",
     "Formation": "Training",
-    "Tous les droits réservés": "All rights reserved"
+    "Tous les droits réservés": "All rights reserved",
+    "Oups ! Cette page est introuvable.": "Oops! That page can’t be found.",
+    "Il se peut que la page que vous recherchez ait été supprimée, que son nom ait été modifié ou qu'elle soit temporairement indisponible.":"The page you are looking for might have been removed had its name changed or its temporarily unavailable.",
+    "Une erreur s'est produite. Veuillez réessayer. Si le problème persiste, contactez l'administrateur.": "An error has occurred. Please try again. If the problem persists, please contact the administrator.",
+    "Retour à l'accueil":"Back to home"
 }

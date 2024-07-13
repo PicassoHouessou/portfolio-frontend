@@ -10,7 +10,7 @@ export default withNuxt({
         '@typescript-eslint/explicit-module-boundary-types': 'off',
         '@typescript-eslint/dot-notation': 'off',
         '@typescript-eslint/no-explicit-any': 'off',
-        'typescript-eslint/ban-ts-comment': 'off',
+        '@typescript-eslint/ban-ts-comment': 'off',
        // "no-console": "error",
     },
 });

@@ -7,7 +7,7 @@ export default defineNuxtConfig({
     },
     srcDir: "src/",
     dir: { public: path.join(__dirname, "public") },
-    //@ts-expect-errorremove Type instantiation is excessively deep and possibly infinite warning
+    //@ts-ignore remove Type instantiation is excessively deep and possibly infinite warning
     modules: [
         "@nuxtjs/i18n",
         "@pinia/nuxt",
