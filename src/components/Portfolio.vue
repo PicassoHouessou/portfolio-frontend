@@ -155,7 +155,8 @@ watchEffect( async () => {
     const items = props?.items ? props?.items :20 ;
     const { data, pending, error, refresh } = await useApi<Array<Post>>(generateUrl(`${ApiRoutesWithoutPrefix.POSTS}`,{
       author:id,
-      "type.name":"project",
+      "type":1,
+     // "type.name":"project",
       isEnabled:true,
        itemsPerPage: items
     }));
