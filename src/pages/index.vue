@@ -964,8 +964,8 @@ const submit = async () => {
             } else {
                 store.updateAlertMessage(t('formErrorMessage'));
             }
-        } catch (e) {
-            console.log(e)
+            //eslint-disable-next-line
+        } finally {
         }
 
     })

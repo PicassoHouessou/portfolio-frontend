@@ -1,13 +1,12 @@
 import * as Sentry from '@sentry/node'
-import {
-    ProfilingIntegration,
-} from '@sentry/profiling-node'
-import { H3Error } from 'h3'
+import {ProfilingIntegration,} from '@sentry/profiling-node'
+import {H3Error} from 'h3'
 
 export default defineNitroPlugin((nitroApp) => {
-    const { public: { sentry } } = useRuntimeConfig()
+    const {public: {sentry}} = useRuntimeConfig()
 
     if (!sentry.dsn) {
+        //eslint-disable-next-line
         console.warn('Sentry DSN not set, skipping Sentry initialization')
         return
     }
