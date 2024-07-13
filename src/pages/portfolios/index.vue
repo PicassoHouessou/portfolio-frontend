@@ -5,7 +5,7 @@
         <div class="col-lg-12 col-md-12">
           <h1>{{ t("Mes Projets") }}</h1>
           <ul class="breadcrumb">
-            <li><NuxtLink href="/"><i class="fas fa-home"></i> {{ t("Accueil") }}</NuxtLink></li>
+            <li><NuxtLink href="/"><i class="fas fa-home"/> {{ t("Accueil") }}</NuxtLink></li>
             <li>{{ t("Projets") }}</li>
           </ul>
         </div>
@@ -16,9 +16,6 @@
   <Portfolio/></div>
 
 </template>
-<style lang="scss" scoped>
-
-</style>
 <script setup lang="ts">
 import Portfolio from "../../components/Portfolio.vue";
 import {useI18n} from "vue-i18n";
@@ -37,6 +34,9 @@ useHead({
             ],
         });
 </script>
+<style lang="scss" scoped>
+
+</style>
 
 <i18n>
 {

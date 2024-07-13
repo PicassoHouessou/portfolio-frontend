@@ -6,12 +6,12 @@
           <ul class="footer-social">
             <li class="linkedin">
               <a :href="store.socials.linkedin" target="_blank">
-                <i class="fab fa-linkedin"></i>
+                <i class="fab fa-linkedin"/>
               </a>
             </li>
             <li class="github">
               <a :href="store.socials.github" target="_blank">
-                <i class="fab fa-github"></i>
+                <i class="fab fa-github"/>
               </a>
             </li>
           </ul>

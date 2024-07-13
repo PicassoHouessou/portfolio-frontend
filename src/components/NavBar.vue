@@ -7,19 +7,19 @@
 
         <div class="navbar-header">
           <button type="button" class="navbar-toggle" data-bs-toggle="offcanvas" data-bs-target="#navbar-menu">
-            <i class="fa fa-bars"></i>
+            <i class="fa fa-bars"/>
           </button>
           <NuxtLink class="navbar-brand" to="/">
             <img src="assets/img/logo.png" class="logo" :alt="t('Logo')">
           </NuxtLink>
         </div>
 
-        <div class="offcanvas offcanvas-start" tabindex="-1" id="navbar-menu" aria-labelledby="offcanvasNavbarLabel">
+        <div id="navbar-menu" class="offcanvas offcanvas-start" tabindex="-1" aria-labelledby="offcanvasNavbarLabel">
           <div class="offcanvas-header">
             <h5 class="offcanvas-title"> <img src="assets/img/logo.png" alt="Logo"></h5>
 
             <button type="button" class="navbar-toggle" data-bs-toggle="offcanvas" data-bs-target="#navbar-menu">
-              <i class="fa fa-times"></i>
+              <i class="fa fa-times"/>
             </button>
           </div>
           <div class="offcanvas-body justify-content-center align-content-center">
@@ -61,7 +61,7 @@
         <!-- Main Nav -->
       </div>
       <!-- Overlay screen for menu -->
-      <div class="overlay-screen"></div>
+      <div class="overlay-screen"/>
       <!-- End Overlay screen for menu -->
     </nav>
   </header>
@@ -72,16 +72,6 @@
 </template>
 
 
-<style lang="scss" >
-
-     a.nav-link.NuxtLink-exact-active {
-        color: #3e64ff !important;
-
-        span {
-            border-bottom: solid #3e64ff !important ;
-        }
-    }
-</style>
 <script setup lang="ts">
 import CVButton from "~/components/CVButton.vue";
 
@@ -108,3 +98,13 @@ const downloadMyCv = async (url: string, locale: string = "en" ): Promise<void> 
   }
 };
 </script>
+<style lang="scss" >
+
+     a.nav-link.NuxtLink-exact-active {
+        color: #3e64ff !important;
+
+        span {
+            border-bottom: solid #3e64ff !important ;
+        }
+    }
+</style>

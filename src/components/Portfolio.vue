@@ -1,12 +1,12 @@
 <template>
   <!-- Start Projects Single Modal -->
-  <div class="modal fade" id="projectSingleModal" tabindex="-1" aria-hidden="true">
+  <div id="projectSingleModal" class="modal fade" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl">
       <div class="modal-content">
         <div class="modal-body">
 
           <div class="modal-header">
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" ref="closeButton"></button>
+            <button ref="closeButton" type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"/>
           </div>
 
           <div class="project-details-items">
@@ -89,7 +89,7 @@
                     <span>{{ getTranslation(unref(post), locale)?.title }}</span>
                     <h5><a href="#" data-bs-toggle="modal" data-bs-target="#projectSingleModal" @click="setCurrentPost(post)">{{ getCategories(unref(post)!?.categories) }}</a></h5>
                   </div>
-                  <a href="#" data-bs-toggle="modal" data-bs-target="#projectSingleModal"><i class="fas fa-arrow-right"></i></a>
+                  <a href="#" data-bs-toggle="modal" data-bs-target="#projectSingleModal"><i class="fas fa-arrow-right"/></a>
                 </div>
               </div>
             </div>
@@ -146,7 +146,7 @@ const showProject =(url:string)=>{
 
 }
 
-let posts = ref<Array<Post>>([]);
+const posts = ref<Array<Post>>([]);
 
 
 watchEffect( async () => {

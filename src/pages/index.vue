@@ -142,43 +142,43 @@
     <header class="header-fixed">
       <div class="f-flex">
         <div class="logo">
-          <NuxtLink href="#home"></NuxtLink>
+          <NuxtLink href="#home"/>
         </div>
         <div class="menu">
           <ul class="nav">
             <li>
               <a class="smooth-menu" href="#home">
-                <i class="fas fa-home"></i>
+                <i class="fas fa-home"/>
                 <div class="menu-name">{{ t("accueil") }}</div>
               </a>
             </li>
             <li>
               <a class="smooth-menu" href="#services">
-                <i class="fas fa-cog"></i>
+                <i class="fas fa-cog"/>
                 <div class="menu-name">{{ t("Services") }}</div>
               </a>
             </li>
             <li>
               <a class="smooth-menu" href="#portfolio">
-                <i class="fas fa-briefcase"></i>
+                <i class="fas fa-briefcase"/>
                 <div class="menu-name">{{ t("Portfolio") }}</div>
               </a>
             </li>
             <li>
               <a class="smooth-menu" href="#about">
-                <i class="fas fa-user"></i>
+                <i class="fas fa-user"/>
                 <div class="menu-name">{{ t("A Propos") }}</div>
               </a>
             </li>
             <li>
               <a class="smooth-menu" href="#resume">
-                <i class="fas fa-file-alt"></i>
+                <i class="fas fa-file-alt"/>
                 <div class="menu-name">{{ t("Résumé") }}</div>
               </a>
             </li>
             <li>
               <a class="smooth-menu" href="#contact">
-                <i class="fas fa-comments"></i>
+                <i class="fas fa-comments"/>
                 <div class="menu-name">{{ t("Contact") }}</div>
               </a>
             </li>
@@ -209,12 +209,11 @@
 
 
             <h3 class="title">
-                            <span class="header-caption" id="page-top">
+                            <span id="page-top" class="header-caption">
                                 <!-- type headline start-->
                                 <span class="cd-headline clip is-full-width">
                                     <!-- ROTATING TEXT -->
-                                    <span ref="typedElement" class="cd-words-wrapper">
-                                    </span>
+                                    <span ref="typedElement" class="cd-words-wrapper"/>
                                 </span>
                               <!-- type headline end -->
                             </span>
@@ -237,12 +236,12 @@
           <ul>
             <li class="linkedin">
               <a :href="store.socials.linkedin" target="_blank">
-                <i class="fab fa-linkedin"></i>
+                <i class="fab fa-linkedin"/>
               </a>
             </li>
             <li class="github">
               <a :href="store.socials.github" target="_blank">
-                <i class="fab fa-github"></i>
+                <i class="fab fa-github"/>
               </a>
             </li>
 
@@ -256,14 +255,14 @@
   <!-- Start Services
   ============================================= -->
   <div id="services" class="services-style-one-area box-layout default-padding bottom-less bg-light">
-    <div class="blur-bg"></div>
+    <div class="blur-bg"/>
     <div class="container">
       <div class="row">
         <div class="col-lg-8 offset-lg-2">
           <div class="site-heading text-center">
             <h4 class="sub-title">{{ t("Mes compétences") }}</h4>
             <h2 class="title">{{ t("Ce que j'offre") }} </h2>
-            <div class="devider"></div>
+            <div class="devider"/>
           </div>
         </div>
       </div>
@@ -375,7 +374,7 @@
             <ul>
               <li>
                 <div class="icon">
-                  <i class="fab fa-wordpress"></i>
+                  <i class="fab fa-wordpress"/>
                 </div>
                 <div class="content">
                   <h4>{{ t("Développeur WordPress professionnel") }}</h4>
@@ -384,7 +383,7 @@
               </li>
               <li>
                 <div class="icon">
-                  <i class="fas fa-layer-group"></i>
+                  <i class="fas fa-layer-group"/>
                 </div>
                 <div class="content">
                   <h4>{{t("Développeur Full Stack")}}</h4>
@@ -410,26 +409,26 @@
         <div class="row">
           <div class="col-xl-10 offset-xl-1">
 
-            <div class="nav nav-tabs text-center resume-tab-navs" id="nav-tab" role="tablist">
+            <div id="nav-tab" class="nav nav-tabs text-center resume-tab-navs" role="tablist">
 
-              <button class="nav-link active" id="nav-id-1" data-bs-toggle="tab" data-bs-target="#tab1" type="button" role="tab" aria-controls="tab1" aria-selected="true">
+              <button id="nav-id-1" class="nav-link active" data-bs-toggle="tab" data-bs-target="#tab1" type="button" role="tab" aria-controls="tab1" aria-selected="true">
                 {{ t("Biographie") }} <strong>01</strong>
               </button>
-              <button class="nav-link" id="nav-id-2" data-bs-toggle="tab" data-bs-target="#tab2" type="button" role="tab" aria-controls="tab2" aria-selected="false">
+              <button id="nav-id-2" class="nav-link" data-bs-toggle="tab" data-bs-target="#tab2" type="button" role="tab" aria-controls="tab2" aria-selected="false">
                 {{ t("Compétences") }} <strong>02</strong>
               </button>
-              <button class="nav-link" id="nav-id-3" data-bs-toggle="tab" data-bs-target="#tab3" type="button" role="tab" aria-controls="tab3" aria-selected="false">
+              <button id="nav-id-3" class="nav-link" data-bs-toggle="tab" data-bs-target="#tab3" type="button" role="tab" aria-controls="tab3" aria-selected="false">
                 {{ t("Expériences") }} <strong>03</strong>
               </button>
-              <button class="nav-link" id="nav-id-4" data-bs-toggle="tab" data-bs-target="#tab4" type="button" role="tab" aria-controls="tab4" aria-selected="false">
+              <button id="nav-id-4" class="nav-link" data-bs-toggle="tab" data-bs-target="#tab4" type="button" role="tab" aria-controls="tab4" aria-selected="false">
                 {{ t("Education") }} <strong>04</strong>
               </button>
 
             </div>
 
-            <div class="tab-content resume-tab-content" id="nav-tabContent">
+            <div id="nav-tabContent" class="tab-content resume-tab-content">
               <!-- Single Item -->
-              <div class="tab-pane fade show active" id="tab1" role="tabpanel" aria-labelledby="nav-id-1">
+              <div id="tab1" class="tab-pane fade show active" role="tabpanel" aria-labelledby="nav-id-1">
                 <div class="row">
                   <div class="col-lg-12">
                     <ul class="biography-table">
@@ -486,7 +485,7 @@
               <!-- End Single Item -->
 
               <!-- Single Item -->
-              <div class="tab-pane fade" id="tab2" role="tabpanel" aria-labelledby="nav-id-2">
+              <div id="tab2" class="tab-pane fade" role="tabpanel" aria-labelledby="nav-id-2">
                 <div class="row align-center">
                   <div class="col-lg-12">
                     <ul class="skill-table">
@@ -494,7 +493,7 @@
                         <div class="row align-center">
                           <div class="col-lg-2">
                             <div class="icon">
-                              <i class="fab fa-laravel"></i>
+                              <i class="fab fa-laravel"/>
                             </div>
                           </div>
                           <div class="col-lg-5">
@@ -504,7 +503,7 @@
                             <div class="progress-box">
                               <h5>95%</h5>
                               <div class="progress">
-                                <div class="progress-bar" role="progressbar" data-width="75"></div>
+                                <div class="progress-bar" role="progressbar" data-width="75"/>
                               </div>
                             </div>
                           </div>
@@ -515,7 +514,7 @@
                         <div class="row align-center">
                           <div class="col-lg-2">
                             <div class="icon">
-                              <i class="fab fa-react"></i>
+                              <i class="fab fa-react"/>
                             </div>
                           </div>
                           <div class="col-lg-5">
@@ -525,7 +524,7 @@
                             <div class="progress-box">
                               <h5>84%</h5>
                               <div class="progress">
-                                <div class="progress-bar" role="progressbar" data-width="84"></div>
+                                <div class="progress-bar" role="progressbar" data-width="84"/>
                               </div>
                             </div>
                           </div>
@@ -536,7 +535,7 @@
                         <div class="row align-center">
                           <div class="col-lg-2">
                             <div class="icon">
-                              <i class="fab fa-html5"></i>
+                              <i class="fab fa-html5"/>
                             </div>
                           </div>
                           <div class="col-lg-5">
@@ -546,7 +545,7 @@
                             <div class="progress-box">
                               <h5>92%</h5>
                               <div class="progress">
-                                <div class="progress-bar" role="progressbar" data-width="92"></div>
+                                <div class="progress-bar" role="progressbar" data-width="92"/>
                               </div>
                             </div>
                           </div>
@@ -560,7 +559,7 @@
               <!-- End Single Item -->
 
               <!-- Single Item -->
-              <div class="tab-pane fade" id="tab3" role="tabpanel" aria-labelledby="nav-id-3">
+              <div id="tab3" class="tab-pane fade" role="tabpanel" aria-labelledby="nav-id-3">
                 <div class="row">
                   <div class="col-lg-12">
 
@@ -580,7 +579,7 @@
               </div>
               <!-- End Single Item -->
               <!-- Single Item -->
-              <div class="tab-pane fade" id="tab4" role="tabpanel" aria-labelledby="nav-id-4">
+              <div id="tab4" class="tab-pane fade" role="tabpanel" aria-labelledby="nav-id-4">
                 <div class="row">
                   <div class="col-lg-12">
                     <ul class="education-table">
@@ -743,19 +742,21 @@
                 {{ t("Si vous avez un projet en tête et souhaitez discuter ou me recruter, n'hésitez pas à laisser un message pour que nous puissions en discuter.") }}
               </p>
               <VeeForm v-slot="{  handleSubmit, handleReset }" as="div">
-                <form @reset.prevent="handleReset" @submit="handleSubmit($event, submit)" method="post"
-                      class="contact-form" id="contactUsForm"
-                      novalidate="false">
+                <form
+id="contactUsForm" method="post" class="contact-form"
+                      novalidate="false" @reset.prevent="handleReset"
+                      @submit="handleSubmit($event, submit)">
 
                 <div class="row">
                   <div class="col-lg-12">
                     <div class="form-group">
-                      <Field name="name" rules="required" v-slot="{ field, errors }">
-                        <input :class="{'input-error': errors[0] }" class="form-control"
-                               :placeholder="t('Votre nom')" type="text" v-bind="field"
-                               v-model="form.fullName">
+                      <Field v-slot="{ field, errors }" name="name" rules="required">
+                        <input
+v-bind="field" v-model="form.fullName"
+                               :class="{'input-error': errors[0] }" class="form-control" :placeholder="t('Votre nom')"
+                               type="text">
                         <span class="validation-error">{{ errors[0] }}</span>
-                        <span class="alert-error"></span>
+                        <span class="alert-error"/>
                       </Field>
 
                     </div>
@@ -764,10 +765,10 @@
                 <div class="row">
                   <div class="col-lg-6">
                     <div class="form-group">
-                      <Field name="email" rules="email|required" v-slot="{field, errors }">
+                      <Field v-slot="{field, errors }" name="email" rules="email|required">
                         <input
-                            class="form-control" :placeholder="t('Votre email')"
-                            type="email" v-bind="field" v-model="form.email"
+                            v-bind="field" v-model="form.email"
+                            class="form-control" :placeholder="t('Votre email')" type="email"
                             :class="{'input-error': errors[0] }">
                         <span class="validation-error">{{ errors[0] }}</span>
                       </Field>
@@ -776,9 +777,10 @@
                   </div>
                   <div class="col-lg-6">
                     <div class="form-group">
-                      <Field name="subject" rules="required" v-slot="{ field, errors } ">
-                        <input class="form-control" :placeholder="t('Objet')"
-                               type="text" v-bind="field" v-model="form.subject"
+                      <Field v-slot="{ field, errors } " name="subject" rules="required">
+                        <input
+v-bind="field" v-model="form.subject"
+                               class="form-control" :placeholder="t('Objet')" type="text"
                                :class="{'input-error': errors[0] }">
                         <span class="validation-error">{{ errors[0] }}</span>
                       </Field>
@@ -788,12 +790,14 @@
                 <div class="row">
                   <div class="col-lg-12">
                     <div class="form-group comments">
-                      <Field name="message" rules="required|min:10|max:5000"
-                             v-slot="{field, errors } ">
-                                <textarea class="form-control" cols="30" id=""
-                                          :placeholder="t('Entrez votre message ici')"
-                                          rows="7" v-bind="field" v-model="form.message"
-                                          :class="{'input-error': errors[0] }"></textarea>
+                      <Field
+v-slot="{field, errors } " name="message"
+                             rules="required|min:10|max:5000">
+                                <textarea
+id="" v-bind="field" v-model="form.message"
+                                          class="form-control"
+                                          cols="30" :placeholder="t('Entrez votre message ici')" rows="7"
+                                          :class="{'input-error': errors[0] }"/>
                         <span class="validation-error">{{ errors[0] }}</span>
                       </Field>
                     </div>
@@ -801,14 +805,14 @@
                 </div>
                 <div class="row">
                   <div class="col-lg-12">
-                    <button type="submit" name="submit" id="submit">
+                    <button id="submit" type="submit" name="submit">
                       {{t( "Me contacter") }}
                     </button>
                   </div>
                 </div>
                 <!-- Alert Message -->
                 <div class="col-lg-12 alert-notification">
-                  <div id="message" class="alert-msg"></div>
+                  <div id="message" class="alert-msg"/>
                 </div>
               </form>
               </VeeForm>
@@ -820,7 +824,7 @@
               <ul>
                 <li class="contact-info-list wow fadeInUp">
                   <div class="icon">
-                    <i class="fas fa-envelope-open-text"></i>
+                    <i class="fas fa-envelope-open-text"/>
                   </div>
                   <div class="info">
                     <p> {{ t("Email") }}</p>
@@ -832,7 +836,7 @@
                 </li>
                 <li class="contact-info-list wow fadeInUp" data-wow-delay="300ms">
                   <div class="icon">
-                    <i class="fas fa-map-marker-alt"></i>
+                    <i class="fas fa-map-marker-alt"/>
                   </div>
                   <div class="info">
                     <p>{{ t("Adresse") }}</p>
@@ -843,7 +847,7 @@
                 </li>
                 <li class="contact-info-list wow fadeInUp" data-wow-delay="500ms">
                   <div class="icon">
-                    <i class="fas fa-headphones-alt"></i>
+                    <i class="fas fa-headphones-alt"/>
                   </div>
                   <div class="info">
                     <p>{{ t("Téléphone") }}</p>
@@ -865,57 +869,6 @@
 
 
 </template>
-<style lang="scss">
-$padding : 0 !important;
-/*
-.switcher{
-  padding-left: $padding ;
-  padding-right: $padding;
-  width: 100%;
-}
-*/
-.input-error {
-  border: solid 2px red !important;
-  margin-bottom: 5px;
-}
-
-.validation-error {
-  color: #dc3545;
-}
-//La photo de Picasso
-.photo-picasso {
-    background-color: #c6c6c6;
-}
-
-@keyframes blink {
-    49% {
-        background-color: black;
-    }
-    50% {
-        background-color: transparent;
-    }
-    99% {
-        background-color: transparent;
-    }
-}
-
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translate3d(0, 100%, 0);
-  }
-
-  to {
-    opacity: 1;
-    transform: translate3d(0, 0, 0);
-  }
-}
-
-.fadeInUp {
-  animation-name: fadeInUp;
-}
-
-</style>
 <script setup lang="ts">
 import { ref, onMounted } from 'vue';
 import Swiper from 'swiper/bundle';
@@ -1001,8 +954,8 @@ const submit= async ()=> {
 const router = useRouter();
 
 
-let experiences = ref<Array<Experience>>([]);
-let educations = ref<Array<Education>>([]);
+const experiences = ref<Array<Experience>>([]);
+const educations = ref<Array<Education>>([]);
 
 const userId = 2
 
@@ -1181,3 +1134,54 @@ const formatPeriod=(date1?:string, date2?:string ):string =>{
 
 
 </script>
+<style lang="scss">
+$padding : 0 !important;
+/*
+.switcher{
+  padding-left: $padding ;
+  padding-right: $padding;
+  width: 100%;
+}
+*/
+.input-error {
+  border: solid 2px red !important;
+  margin-bottom: 5px;
+}
+
+.validation-error {
+  color: #dc3545;
+}
+//La photo de Picasso
+.photo-picasso {
+    background-color: #c6c6c6;
+}
+
+@keyframes blink {
+    49% {
+        background-color: black;
+    }
+    50% {
+        background-color: transparent;
+    }
+    99% {
+        background-color: transparent;
+    }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.fadeInUp {
+  animation-name: fadeInUp;
+}
+
+</style>

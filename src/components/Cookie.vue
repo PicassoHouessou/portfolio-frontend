@@ -15,21 +15,22 @@
 </i18n>
 
 <template>
-    <div class="accept-cookie col-md-5 col-sm-8 col-11" v-if="cookieShow===false">
+    <div v-if="cookieShow===false" class="accept-cookie col-md-5 col-sm-8 col-11">
         <div class="container" @click="focus">
             <div class="row">
                 <div class="">
                     <div class="header"> {{ t("cookie.title") }}
-                        <button aria-label="Close" class="close text-light" @click.prevent="cookieShow=true"
-                                data-dismiss="alert"
-                                type="button">
+                        <button
+aria-label="Close" class="close text-light" data-dismiss="alert"
+                                type="button"
+                                @click.prevent="cookieShow=true">
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
                     <div>{{ t("cookie.description") }}
                     </div>
-                    <form @submit.prevent="submit" action=""><label for="acceptCookieInput" class="mr-2">#</label
-                    ><input id="acceptCookieInput" type="text" v-model="form.accept">
+                    <form action="" @submit.prevent="submit"><label for="acceptCookieInput" class="mr-2">#</label
+                    ><input id="acceptCookieInput" v-model="form.accept" type="text">
                     </form>
 
                 </div>
@@ -50,6 +51,12 @@ import {useI18n} from "vue-i18n";
 
 export default {
     name: "Cookie",
+    setup() {
+        const {t} = useI18n({
+            inheritLocale: true
+        });
+        return {t}
+    },
     data() {
         return {
             cookieShow: '',
@@ -57,12 +64,6 @@ export default {
                 accept: ''
             }
         }
-    },
-    setup() {
-        const {t} = useI18n({
-            inheritLocale: true
-        });
-        return {t}
     },
     // computed: {
     //     // eslint-disable-next-line vue/return-in-computed-property
@@ -101,17 +102,17 @@ export default {
             let cookieValue = this.$cookies.get('ACCEPT_COOKIES');
 
             if (cookieValue == null) {
-                // eslint-disable-next-line vue/no-side-effects-in-computed-properties
+                 
                 this.cookieShow = false;
             }
             cookieValue = parseInt(cookieValue);
             cookieValue = Boolean(cookieValue);
-            // eslint-disable-next-line vue/no-side-effects-in-computed-properties
+             
             this.cookieShow = cookieValue;
             return this.cookieShow;
         },
         submit() {
-            let accept = this.form.accept
+            const accept = this.form.accept
             if (accept === 'Y' || accept === 'y') {
                 this.$cookies.set('ACCEPT_COOKIES', 1)
                 this.cookieShow = true;

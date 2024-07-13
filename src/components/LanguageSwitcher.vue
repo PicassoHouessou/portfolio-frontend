@@ -1,5 +1,5 @@
 <template>
-  <select class="form-select" v-model="language">
+  <select v-model="language" class="form-select">
     <option
         v-for="item in locales"
         :key="typeof item === 'object' ? item.code : item"
@@ -10,18 +10,10 @@
   </select>
 
 </template>
-<style scoped>
-.form-select{
-  border:0;
-  border-radius: 0;/*
-padding-left: 0!important;
-  padding-right: 0!important;*/
-}
-</style>
 <script setup lang="ts">
 import { watch } from 'vue'
-const { locales, locale, setLocale } = useI18n();
 import {useLocaleStore} from "~/stores/locale";
+const { locales, locale, setLocale } = useI18n();
 const store = useLocaleStore();
 
 watch(locale, async () => {
@@ -35,4 +27,12 @@ const language = computed({
   },
 });
 </script>
+<style scoped>
+.form-select{
+  border:0;
+  border-radius: 0;/*
+padding-left: 0!important;
+  padding-right: 0!important;*/
+}
+</style>
 

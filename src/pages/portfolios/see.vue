@@ -24,7 +24,7 @@
         <div class="col-lg-12 col-md-12">
           <h1>{{ t("Prévisualisation") }}</h1>
           <ul class="breadcrumb">
-            <li><NuxtLink href="/"><i class="fas fa-home"></i> {{ t("Accueil") }}</NuxtLink></li>
+            <li><NuxtLink href="/"><i class="fas fa-home"/> {{ t("Accueil") }}</NuxtLink></li>
             <li>{{ t("Projet") }}</li>
           </ul>
         </div>
@@ -37,18 +37,12 @@
   ============================================= -->
   <div class="services-details-area default-padding max-height">
     <div class="container-fluid p-0 m-0 max-height">
-      <iframe class="iframe" :src="url" frameborder="0" width="100%" height="auto" loading="eager"  @loadstart="onLoad"></iframe>
+      <iframe class="iframe" :src="url" frameborder="0" width="100%" height="auto" loading="eager"  @loadstart="onLoad"/>
     </div>
   </div>
   <!-- End Services Details Area -->
 
 </template>
-<style lang="scss" scoped>
-.portfolio-view {
-    margin-bottom: 10px;
-}
-
-</style>
 <script setup lang="ts">
 const {locale, t} = useI18n({
   inheritLocale: true
@@ -77,6 +71,12 @@ watchEffect(()=>{
 const  onLoad=(frame:any)=> {
 };
 </script>
+<style lang="scss" scoped>
+.portfolio-view {
+    margin-bottom: 10px;
+}
+
+</style>
 <style scoped>
 .breadcrumb-area{
   padding-top: 20px!important;

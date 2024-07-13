@@ -10,7 +10,7 @@
           <div class="site-heading text-center">
             <h4 class="sub-title">{{ t("Mon Expertise") }}</h4>
             <h2 class="title">{{ "Avis des partenaires" }}</h2>
-            <div class="devider"></div>
+            <div class="devider"/>
           </div>
         </div>
       </div>
@@ -27,7 +27,7 @@
                 <div class="swiper-slide">
                   <div class="testimonial-style-one">
 
-                    <div class="item" v-for="testimony in data">
+                    <div v-for="testimony in data" class="item">
 
                       <div class="thumb">
                         <img src="/assets/img/team/1.png" alt="Thumb">

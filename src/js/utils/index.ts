@@ -1,11 +1,11 @@
 
-import {ApiRoutesWithoutPrefix, DATE_FORMAT} from "../constant";
+import { DATE_FORMAT} from "../constant";
 import dayjs from 'dayjs';
 import type { ConfigType } from 'dayjs';
 import 'dayjs/locale/fr'; // Import the locale you want to use
 import localizedFormat from 'dayjs/plugin/localizedFormat'; // Import the localizedFormat plugin
 import { defaultLocale } from '../constant';
-import type { Locale } from '../constant';
+import type { Locale ,ApiRoutesWithoutPrefix} from '../constant';
 import relativeTime from 'dayjs/plugin/relativeTime';
 
 // Extend dayjs with the localizedFormat plugin

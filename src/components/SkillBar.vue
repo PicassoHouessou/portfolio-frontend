@@ -3,7 +3,8 @@
         <div class="progress-wrap ftco-animate">
             <h3>{{ skillName }}</h3>
             <div class="progress">
-                <div aria-valuemax="100" aria-valuemin="0" :aria-valuenow="+percentage"
+                <div
+aria-valuemax="100" aria-valuemin="0" :aria-valuenow="+percentage"
                      class="progress-bar color-1" role="progressbar" :style="'width:'+percentage +'%;' ">
                     <span>{{ percentage }}%</span>
                 </div>
