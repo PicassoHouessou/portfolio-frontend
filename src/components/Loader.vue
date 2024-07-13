@@ -65,13 +65,14 @@ const props = defineProps({
     type: [String, Boolean],
     default: 'repeating-linear-gradient(to right,#00dc82 0%,#34cdfe 50%,#0047e1 100%)'
   },
+    // eslint-disable-next-line
   estimatedProgress: {
     type: Function as unknown as () => (duration: number, elapsed: number) => number,
     required: false
   }
 })
 
-const { progress, isLoading, start, finish, clear } = useLoadingIndicator({
+const {  isLoading } = useLoadingIndicator({
   duration: props.duration,
   throttle: props.throttle,
   estimatedProgress: props.estimatedProgress

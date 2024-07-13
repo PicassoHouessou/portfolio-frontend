@@ -16,8 +16,8 @@
 export default {
     name: "ContactCard", props: {
         cName: {
+            default:null,
             required: false,
-
             type: String
         },
         content: {

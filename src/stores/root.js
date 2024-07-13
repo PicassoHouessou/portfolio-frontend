@@ -48,7 +48,7 @@ export const useStore = defineStore('main', {
                 this.alertMessage.message = amount.message
             }
         },
-        closeAlert(context) {
+        closeAlert() {
             this.alertMessage.show = false;
             this.alertMessage.message = '';
         }

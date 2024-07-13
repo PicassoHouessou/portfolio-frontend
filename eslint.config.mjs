@@ -2,11 +2,15 @@
 import withNuxt from "./.nuxt/eslint.config.mjs";
 
 export default withNuxt({
+    ignores: [
+        "public/assets/**/*",
+        "src/assets/**/*"],
     rules: {
-        //'@typescript-eslint/explicit-module-boundary-types': 'off',
-        //'@typescript-eslint/dot-notation': 'off',
-        //'@typescript-eslint/no-explicit-any': 'off',
-        //'@typescript-eslint/ban-ts-comment': 'off',
-        "no-console": "error",
+        "vue/multi-word-component-names": "off",
+        '@typescript-eslint/explicit-module-boundary-types': 'off',
+        '@typescript-eslint/dot-notation': 'off',
+        '@typescript-eslint/no-explicit-any': 'off',
+        'typescript-eslint/ban-ts-comment': 'off',
+       // "no-console": "error",
     },
 });

@@ -153,7 +153,7 @@ watchEffect( async () => {
   if (store.user?.id) {
     const  id =  store.user?.id
     const items = props?.items ? props?.items :20 ;
-    const { data, pending, error, refresh } = await useApi<Array<Post>>(generateUrl(`${ApiRoutesWithoutPrefix.POSTS}`,{
+    const { data} = await useApi<Array<Post>>(generateUrl(`${ApiRoutesWithoutPrefix.POSTS}`,{
       author:id,
       "type":1,
      // "type.name":"project",

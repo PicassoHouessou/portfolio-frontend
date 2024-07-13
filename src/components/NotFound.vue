@@ -1,4 +1,4 @@
-<i18n xmlns="http://www.w3.org/1999/html">
+<i18n>
 {
     "fr": {
         "La page que vous demandée semble introuvable": "La page que vous demandée semble introuvable",
@@ -40,7 +40,7 @@ export default {
         NavBar
     },
     setup() {
-        const {locale, t} = useI18n({
+        const { t} = useI18n({
             inheritLocale: true
         });
         return {t};

@@ -871,13 +871,12 @@ id="" v-bind="field" v-model="form.message"
 </template>
 <script setup lang="ts">
 import { ref, onMounted } from 'vue';
-import Swiper from 'swiper/bundle';
 import Typed from 'typed.js';
 import {useStore} from "~/stores/root";
 import {formatDate, generateUrl, getTranslation} from "~/js/utils";
 import { ApiRoutesWithoutPrefix} from "~/js/constant";
 import {configure, defineRule, Form as VeeForm, Field} from "vee-validate";
-import {localize, setLocale, setLocale as VeeSetLocale} from '@vee-validate/i18n';
+import {localize, setLocale} from '@vee-validate/i18n';
 import en from '@vee-validate/i18n/dist/locale/en.json';
 import fr from '@vee-validate/i18n/dist/locale/fr.json';
 import {email, required, min, max} from '@vee-validate/rules';
@@ -886,8 +885,6 @@ import type {Experience} from "~/models/Experience";
 import type {Education} from "~/models/Education";
 import type {User} from "~/models/User";
 import CVButton from "~/components/CVButton.vue";
-
-const config = useRuntimeConfig()
 
 defineRule('required', required);
 defineRule('email', email);
@@ -906,12 +903,10 @@ watchEffect(()=>{
 setLocale(localeStore.locale);
 });
 
-definePageMeta
-({
+definePageMeta({
   layout
       : 'home'
 })
-const localePath = useLocalePath();
 
 const { locale, t } = useI18n({
   inheritLocale: true
@@ -931,8 +926,7 @@ const form =ref( {
 const submit= async ()=> {
   useAsyncData('/contact_uses', async ()=>{
     try{
-  const todo = await $fetch
-  (generateUrl('/contact_uses'), {
+  const todo = await $fetch(generateUrl('/contact_uses'), {
     method
         : 'POST',
     body
@@ -950,9 +944,6 @@ const submit= async ()=> {
 
 })
 }
-
-const router = useRouter();
-
 
 const experiences = ref<Array<Experience>>([]);
 const educations = ref<Array<Education>>([]);
@@ -1110,11 +1101,6 @@ const initialize=()=> {
 }
 
  */
-
-const getYear = (date?: string): string => {
-
-  return date? new Date(date).getFullYear() as unknown as string: "";
-};
 
 
 const formatPeriod=(date1?:string, date2?:string ):string =>{

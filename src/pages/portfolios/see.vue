@@ -44,7 +44,7 @@
 
 </template>
 <script setup lang="ts">
-const {locale, t} = useI18n({
+const { t} = useI18n({
   inheritLocale: true
 });
 const route= useRoute()
@@ -68,7 +68,7 @@ watchEffect(()=>{
     url.value = urlParam as string
   }
 });
-const  onLoad=(frame:any)=> {
+const  onLoad=()=> {
 };
 </script>
 <style lang="scss" scoped>

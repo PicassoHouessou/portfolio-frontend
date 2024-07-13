@@ -1,10 +1,9 @@
 
-import { DATE_FORMAT} from "../constant";
+import { DATE_FORMAT,defaultLocale} from "../constant";
 import dayjs from 'dayjs';
 import type { ConfigType } from 'dayjs';
 import 'dayjs/locale/fr'; // Import the locale you want to use
 import localizedFormat from 'dayjs/plugin/localizedFormat'; // Import the localizedFormat plugin
-import { defaultLocale } from '../constant';
 import type { Locale ,ApiRoutesWithoutPrefix} from '../constant';
 import relativeTime from 'dayjs/plugin/relativeTime';
 
@@ -49,9 +48,7 @@ export const generateIRI = (
         lastPart = parts[parts.length - 1];
 
         // Check if it matches UUID format
-        if (isUUID(lastPart)) {
-            lastPart = lastPart;
-        } else {
+        if (!isUUID(lastPart))  {
             const extractedNumber = parseInt(id.split("/").pop() || "");
             if (!isNaN(extractedNumber)) {
                 // If a valid number is extracted from the string, use it as the ID
@@ -162,3 +159,7 @@ export const parseDate = (date: string, locale: Locale = defaultLocale) => {
 };
 
 
+export const getYear = (date?: string): string => {
+
+    return date? new Date(date).getFullYear() as unknown as string: "";
+};
