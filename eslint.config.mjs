@@ -11,6 +11,7 @@ export default withNuxt({
         '@typescript-eslint/dot-notation': 'off',
         '@typescript-eslint/no-explicit-any': 'off',
         '@typescript-eslint/ban-ts-comment': 'off',
-       // "no-console": "error",
+        "vue/first-attribute-linebreak": "off"
+        // "no-console": "error",
     },
 });

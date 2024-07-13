@@ -62,7 +62,7 @@
 </template>
 
 <script setup lang="ts">
-import Swiper from 'swiper/bundle';
+//import Swiper from 'swiper/bundle';
 defineProps<{
   data: any
 

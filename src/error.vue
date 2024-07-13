@@ -59,5 +59,6 @@ const handleError = () => clearError({ redirect:localePath('/') })
             </div>
         </div>
         <!-- End 404 -->
+        <Footer/>
     </div>
 </template>
