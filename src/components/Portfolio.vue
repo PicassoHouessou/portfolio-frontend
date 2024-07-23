@@ -94,7 +94,8 @@
                                  @click="setCurrentPost(post)">
                                 <NuxtImg
                                     :src="config.public.backendUrl+getTranslation(unref(post),locale)?.image?.contentUrl"
-                                    :alt="getTranslation(unref(post), locale)?.title" role="button"/>
+                                    :alt="getTranslation(unref(post), locale)?.title" width="480" height="200"
+                                    role="button"/>
                                 <div class="content pointer">
                                     <div class="title">
                                         <span>{{ getTranslation(unref(post), locale)?.title }}</span>
