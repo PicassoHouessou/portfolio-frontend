@@ -1,7 +1,7 @@
 <template>
     <a
-        :class="props.class" :href="config.public.baseURL+'/cv/download'"
-        @click.prevent="downloadMyCv(config.public.baseURL+'/cv/download',locale)">{{ t("Télécharger mon CV") }}</a>
+        :class="props.class" :href="config.public.backendUrl+'/cv/download'"
+        @click.prevent="downloadMyCv(config.public.backendUrl+'/cv/download',locale)">{{ t("Télécharger mon CV") }}</a>
 
 </template>
 

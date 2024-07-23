@@ -1,12 +1,13 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 import path from "path";
+
 export default defineNuxtConfig({
-    devtools: { enabled: true },
+    devtools: {enabled: true},
     typescript: {
         typeCheck: true,
     },
     srcDir: "src/",
-    dir: { public: path.join(__dirname, "public") },
+    dir: {public: path.join(__dirname, "public")},
     //@ts-ignore remove Type instantiation is excessively deep and possibly infinite warning
     modules: [
         "@nuxtjs/i18n",
@@ -52,6 +53,7 @@ export default defineNuxtConfig({
     runtimeConfig: {
         public: {
             baseURL: process.env.BASE_URL || "https://localhost:8000",
+            backendUrl: process.env.BACKEND,
             apiUrl: process.env.API_URL,
             sentry: {
                 dsn: process.env.SENTRY_DSN || "",
