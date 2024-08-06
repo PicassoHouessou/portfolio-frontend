@@ -506,7 +506,7 @@
                             <!-- Single Item -->
                             <div id="tab2" class="tab-pane fade" role="tabpanel" aria-labelledby="nav-id-2">
                                 <div class="row align-center">
-                                    <div class="col-lg-12">
+                                    <div class="col-lg-6">
                                         <ul class="skill-table">
                                             <li>
                                                 <div class="row align-center">
@@ -515,18 +515,10 @@
                                                             <i class="fab fa-laravel"/>
                                                         </div>
                                                     </div>
-                                                    <div class="col-lg-5">
-                                                        <h4>{{ t("Développer un site et application web") }}</h4>
+                                                    <div class="col-lg-10">
+                                                        <h4>{{ t("Développement Backend") }}</h4>
                                                     </div>
-                                                    <div class="col-lg-5">
-                                                        <div class="progress-box">
-                                                            <h5>95%</h5>
-                                                            <div class="progress">
-                                                                <div class="progress-bar" role="progressbar"
-                                                                     data-width="75"/>
-                                                            </div>
-                                                        </div>
-                                                    </div>
+
                                                 </div>
                                             </li>
 
@@ -537,17 +529,8 @@
                                                             <i class="fab fa-react"/>
                                                         </div>
                                                     </div>
-                                                    <div class="col-lg-5">
-                                                        <h4>Front-End with React</h4>
-                                                    </div>
-                                                    <div class="col-lg-5">
-                                                        <div class="progress-box">
-                                                            <h5>84%</h5>
-                                                            <div class="progress">
-                                                                <div class="progress-bar" role="progressbar"
-                                                                     data-width="84"/>
-                                                            </div>
-                                                        </div>
+                                                    <div class="col-lg-10">
+                                                        <h4>{{ t("Développement Frontend") }}</h4>
                                                     </div>
                                                 </div>
                                             </li>
@@ -556,20 +539,42 @@
                                                 <div class="row align-center">
                                                     <div class="col-lg-2">
                                                         <div class="icon">
-                                                            <i class="fab fa-html5"/>
+                                                            <i class="fad fa-computer-classic"/>
                                                         </div>
                                                     </div>
-                                                    <div class="col-lg-5">
-                                                        <h4>Advance frontend development</h4>
+                                                    <div class="col-lg-10">
+                                                        <h4>{{ t("Administration Système") }}</h4>
                                                     </div>
-                                                    <div class="col-lg-5">
-                                                        <div class="progress-box">
-                                                            <h5>92%</h5>
-                                                            <div class="progress">
-                                                                <div class="progress-bar" role="progressbar"
-                                                                     data-width="92"/>
-                                                            </div>
+                                                </div>
+                                            </li>
+
+                                        </ul>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <ul class="skill-table">
+
+                                            <li>
+                                                <div class="row align-center">
+                                                    <div class="col-lg-2">
+                                                        <div class="icon">
+                                                            <i class="fad fa-mobile"/>
                                                         </div>
+                                                    </div>
+                                                    <div class="col-lg-10">
+                                                        <h4>{{ t("Développement Mobile") }}</h4>
+                                                    </div>
+                                                </div>
+                                            </li>
+
+                                            <li>
+                                                <div class="row align-center">
+                                                    <div class="col-lg-2">
+                                                        <div class="icon">
+                                                            <i class="fas fa-network-wired"/>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-10">
+                                                        <h4>{{ t("Administration Réseaux") }}</h4>
                                                     </div>
                                                 </div>
                                             </li>
@@ -840,8 +845,17 @@
                                         </div>
                                     </div>
                                     <!-- Alert Message -->
+
                                     <div class="col-lg-12 alert-notification">
-                                        <div id="message" class="alert-msg"/>
+                                        <div id="message" class="alert-msg">
+                                            <!-- Conditional rendering of success/error messages -->
+                                            <div v-if="submissionSuccess" class="border border-success p-2 mb-2">
+                                                {{ t('Merci pour votre message. Il a été envoyé.') }}
+                                            </div>
+                                            <div v-if="submissionError" class="border border-warning p-2 mb-2">
+                                                {{ t('Erreur lors de l\'envoi du message. Veuillez réessayer.') }}
+                                            </div>
+                                        </div>
                                     </div>
                                 </form>
                             </VeeForm>
@@ -942,39 +956,63 @@ const store = useStore();
 
 const typedElement = ref(null);
 
+
 const form = ref({
     message: '',
     fullName: '',
     email: '',
-    subject: '',
+    subject: 'ccc',
     // recaptcha: ''
 })
-
+form.value.message = "ddd"
+const submissionSuccess = ref(false);
+const submissionError = ref(false);
 const submit = async () => {
-    useAsyncData('/contact_uses', async () => {
-        try {
-            const todo = await $fetch(generateUrl('/contact_uses'), {
-                method: 'POST',
-                body: {
-                    ...form.value
+    submissionSuccess.value = false;
+    submissionError.value = false;
+    try {
+        const response = await useAsyncData(() =>
+            $fetch(
+                `${config.public.apiUrl}/${generateUrl(ApiRoutesWithoutPrefix.CONTACT_USES)}`,
+                {
+                    method: 'POST',
+                    body: {
+                        ...form.value,
+                    },
                 }
-            })
-            if (todo) {
-                store.updateAlertMessage(t("formSuccessMessage"));
-            } else {
-                store.updateAlertMessage(t('formErrorMessage'));
-            }
-            //eslint-disable-next-line
-        } finally {
-        }
+            )
+        );
 
-    })
-}
+        if (response.data) {
+            // Reset the form after successful submission
+            form.value = {
+                fullName: '',
+                email: '',
+                subject: '',
+                message: '',
+            };
+            submissionSuccess.value = true;
+        } else {
+            submissionError.value = true;
+        }
+    } catch (error) {
+        submissionError.value = true;
+    }
+};
+/*
+// Watch for changes in form data to clear submission messages
+watch(form, () => {
+    submissionSuccess.value = false;
+    submissionError.value = false;
+}, {deep: true});
+*/
+
 
 const experiences = ref<Array<Experience>>([]);
 const educations = ref<Array<Education>>([]);
 
 const userId = 2
+const config = useRuntimeConfig();
 
 const {data: user} = await useApi<User>(generateUrl(`${ApiRoutesWithoutPrefix.USERS}/${userId}`));
 watch(user, () => {
