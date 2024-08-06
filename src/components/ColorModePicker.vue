@@ -7,6 +7,19 @@
 
 </template>
 
+<script setup lang="ts">
+const colorMode = useColorMode();
+
+const handleClick=()=>{
+  if(!colorMode.unknown){
+    if( "light" === colorMode.preference|| 'light'===colorMode.value ){
+      colorMode.preference = 'dark'
+    }else
+    {
+      colorMode.preference='light'}
+}
+}
+</script>
 <style scoped>
 
 .feather {
@@ -28,16 +41,3 @@
 
 
 </style>
-<script setup lang="ts">
-const colorMode = useColorMode();
-
-const handleClick=()=>{
-  if(!colorMode.unknown){
-    if( "light" === colorMode.preference|| 'light'===colorMode.value ){
-      colorMode.preference = 'dark'
-    }else
-    {
-      colorMode.preference='light'}
-}
-}
-</script>

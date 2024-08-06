@@ -1,5 +1,5 @@
 import type {UseFetchOptions} from "#app";
-export const useApi = async <T>(url:any, options?: UseFetchOptions<T> | undefined) => {
+export const useApi = async <T>(url:string, options?: UseFetchOptions<T> | undefined) => {
     const store =  useLocaleStore()
     const config = useRuntimeConfig();
 

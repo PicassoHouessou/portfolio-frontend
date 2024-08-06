@@ -7,18 +7,18 @@
 
         <div class="navbar-header">
           <button type="button" class="navbar-toggle" data-bs-toggle="offcanvas" data-bs-target="#navbar-menu">
-            <i class="fa fa-bars"></i>
+            <i class="fa fa-bars"/>
           </button>
           <NuxtLink class="navbar-brand" to="/">
             <img src="assets/img/logo.png" class="logo" :alt="t('Logo')">
           </NuxtLink>
         </div>
-        <div class="offcanvas offcanvas-start" tabindex="-1" id="navbar-menu" aria-labelledby="offcanvasNavbarLabel">
+        <div id="navbar-menu" class="offcanvas offcanvas-start" tabindex="-1" aria-labelledby="offcanvasNavbarLabel">
           <div class="offcanvas-header">
             <h5 class="offcanvas-title"> <img src="assets/img/logo.png" alt="Logo"></h5>
 
             <button type="button" class="navbar-toggle" data-bs-toggle="offcanvas" data-bs-target="#navbar-menu">
-              <i class="fa fa-times"></i>
+              <i class="fa fa-times"/>
             </button>
           </div>
           <div class="offcanvas-body">
@@ -53,7 +53,7 @@
           </div>
         </div>
       </div>
-      <div class="overlay-screen"></div>
+      <div class="overlay-screen"/>
     </nav>
 
   </header>
@@ -62,15 +62,6 @@
 
 </template>
 
-<style lang="scss" scoped>
-a.nav-link.router-link-exact-active {
-    color: #3e64ff !important;
-
-    span {
-        border-bottom: solid #3e64ff !important ;
-    }
-}
-</style>
 <script setup lang="ts">
 const localePath = useLocalePath();
 
@@ -80,3 +71,12 @@ const {t} = useI18n(
     } );
 
 </script>
+<style lang="scss" scoped>
+a.nav-link.router-link-exact-active {
+    color: #3e64ff !important;
+
+    span {
+        border-bottom: solid #3e64ff !important ;
+    }
+}
+</style>

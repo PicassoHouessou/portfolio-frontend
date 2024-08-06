@@ -5,9 +5,9 @@
 
       <!-- Progress bar 1 -->
       <div class="progress mx-auto" :data-value="+percentage"><span class="progress-left">
-                        <span class="progress-bar border-primary"></span></span>
+                        <span class="progress-bar border-primary"/></span>
         <span class="progress-right">
-                        <span class="progress-bar border-primary"></span></span>
+                        <span class="progress-bar border-primary"/></span>
         <div class="progress-value w-100 h-100 rounded-circle d-flex align-items-center justify-content-center">
           <div class="h2 font-weight-bold">{{ +percentage }}<sup class="small">%</sup></div>
         </div>
@@ -38,7 +38,7 @@
 
 import jQuery from "jquery";
 
-var $ = jQuery;
+const $ = jQuery;
 export default {
   name: "Skill",
   props:{
@@ -60,9 +60,9 @@ export default {
 const loadPercentage = function () {
 
     $(".progress").each(function () {
-        var value = $(this).attr('data-value');
-        var left = $(this).find('.progress-left .progress-bar');
-        var right = $(this).find('.progress-right .progress-bar');
+        const value = $(this).attr('data-value');
+        const left = $(this).find('.progress-left .progress-bar');
+        const right = $(this).find('.progress-right .progress-bar');
 
         if (value > 0) {
             if (value <= 50) {

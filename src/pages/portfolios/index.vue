@@ -1,42 +1,48 @@
 <template>
-  <div class="breadcrumb-area shadow dark bg-cover text-center text-light" style="background-image: url(assets/img/background.jpg);">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12 col-md-12">
-          <h1>{{ t("Mes Projets") }}</h1>
-          <ul class="breadcrumb">
-            <li><NuxtLink href="/"><i class="fas fa-home"></i> {{ t("Accueil") }}</NuxtLink></li>
-            <li>{{ t("Projets") }}</li>
-          </ul>
+    <div>
+        <div
+class="breadcrumb-area shadow dark bg-cover text-center text-light"
+             style="background-image: url(assets/img/background.jpg);">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12">
+                        <h1>{{ t("Mes Projets") }}</h1>
+                        <ul class="breadcrumb">
+                            <li>
+                                <NuxtLink href="/"><i class="fas fa-home"/> {{ t("Accueil") }}</NuxtLink>
+                            </li>
+                            <li>{{ t("Projets") }}</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
+        <div class="default-padding">
+            <Portfolio/>
+        </div>
     </div>
-  </div>
-<div class="default-padding">
-  <Portfolio/></div>
-
 </template>
-<style lang="scss" scoped>
-
-</style>
 <script setup lang="ts">
 import Portfolio from "../../components/Portfolio.vue";
 import {useI18n} from "vue-i18n";
 
-const {  t } = useI18n({
-  inheritLocale: true
+const {t} = useI18n({
+    inheritLocale: true
 });
 
 useHead({
-            title: t("Mes projets"),
-            meta: [
-                {
-                    name: `description`,
-                    content: t("head.description"),
-                }
-            ],
-        });
+    title: t("Mes projets"),
+    meta: [
+        {
+            name: `description`,
+            content: t("head.description"),
+        }
+    ],
+});
 </script>
+<style lang="scss" scoped>
+
+</style>
 
 <i18n>
 {

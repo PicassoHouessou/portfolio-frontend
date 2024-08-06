@@ -2,7 +2,7 @@
     <div class="col-md-6 col-lg-3 d-flex ftco-animate">
         <div class="align-self-stretch box text-center p-4 shadow">
             <div class="icon d-flex align-items-center justify-content-center">
-                <span :class="icon"></span>
+                <span :class="icon"/>
             </div>
             <div>
                 <h3 class="mb-4">{{ cName }}</h3>
@@ -16,8 +16,8 @@
 export default {
     name: "ContactCard", props: {
         cName: {
+            default:null,
             required: false,
-
             type: String
         },
         content: {

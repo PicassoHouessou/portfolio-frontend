@@ -3,7 +3,7 @@
   <div  v-if="isLoading">
     <div id="ambrox-preloader" class="ambrox-preloader" :class="{'loaded':isLoading}">
       <div class="animation-preloader">
-        <div class="spinner"></div>
+        <div class="spinner"/>
         <div class="txt-loading">
                     <span data-text-preloader="P" class="letters-loading">
                         P
@@ -14,9 +14,7 @@
           <span data-text-preloader="C" class="letters-loading">
                         C
                     </span>
-          <span data-text-preloader="A" class="letters-loading">
-
-                    </span>
+          <span data-text-preloader="A" class="letters-loading"/>
           <span data-text-preloader="S" class="letters-loading">
                         S
                     </span>
@@ -31,16 +29,16 @@
       <div class="loader">
         <div class="row">
           <div class="col-3 loader-section section-left">
-            <div class="bg"></div>
+            <div class="bg"/>
           </div>
           <div class="col-3 loader-section section-left">
-            <div class="bg"></div>
+            <div class="bg"/>
           </div>
           <div class="col-3 loader-section section-right">
-            <div class="bg"></div>
+            <div class="bg"/>
           </div>
           <div class="col-3 loader-section section-right">
-            <div class="bg"></div>
+            <div class="bg"/>
           </div>
         </div>
       </div>
@@ -67,13 +65,14 @@ const props = defineProps({
     type: [String, Boolean],
     default: 'repeating-linear-gradient(to right,#00dc82 0%,#34cdfe 50%,#0047e1 100%)'
   },
+    // eslint-disable-next-line
   estimatedProgress: {
     type: Function as unknown as () => (duration: number, elapsed: number) => number,
     required: false
   }
 })
 
-const { progress, isLoading, start, finish, clear } = useLoadingIndicator({
+const {  isLoading } = useLoadingIndicator({
   duration: props.duration,
   throttle: props.throttle,
   estimatedProgress: props.estimatedProgress

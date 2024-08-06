@@ -10,7 +10,7 @@
           <div class="site-heading text-center">
             <h4 class="sub-title">{{ t("Mon Expertise") }}</h4>
             <h2 class="title">{{ "Avis des partenaires" }}</h2>
-            <div class="devider"></div>
+            <div class="devider"/>
           </div>
         </div>
       </div>
@@ -27,7 +27,7 @@
                 <div class="swiper-slide">
                   <div class="testimonial-style-one">
 
-                    <div class="item" v-for="testimony in data">
+                    <div v-for="testimony in data" :key="testimony.id"  class="item">
 
                       <div class="thumb">
                         <img src="/assets/img/team/1.png" alt="Thumb">
@@ -37,13 +37,13 @@
                       </div>
                       <div class="content">
                         <p>
-                          “{{ data?.content}}”
+                          “{{ testimony?.content}}”
                         </p>
                       </div>
                       <div class="provider">
                         <div class="info">
-                          <h4>{{ data?.author}}</h4>
-                          <span>{{ data?.occupation }}</span>
+                          <h4>{{ testimony?.author}}</h4>
+                          <span>{{ testimony?.occupation }}</span>
                         </div>
                       </div>
                     </div>
@@ -62,7 +62,7 @@
 </template>
 
 <script setup lang="ts">
-import Swiper from 'swiper/bundle';
+//import Swiper from 'swiper/bundle';
 defineProps<{
   data: any
 
@@ -75,6 +75,7 @@ const { t } = useI18n({
 /* ==================================================
       # Testimonial Carousel
    ===============================================*/
+/*
 const testimonial2 = new Swiper(".testimonial-style-one-carousel", {
   loop: true,
   slidesPerView: 1,
@@ -90,4 +91,5 @@ const testimonial2 = new Swiper(".testimonial-style-one-carousel", {
     prevEl: ".swiper-button-prev"
   }
 });
+*/
 </script>
