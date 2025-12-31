@@ -13,10 +13,12 @@ export interface PostType {
 export interface Post {
     id: string;
     parent: Post;
+    isStandalone:boolean;
     postType: PostType;
     contents: Array<PostContent>;
     user: User;
     categories:Array<Category>
+
 }
 export interface PostContent {
     alias: string;

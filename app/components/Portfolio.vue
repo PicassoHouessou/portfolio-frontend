@@ -43,7 +43,7 @@
                                             <ul class="social">
                                                 <li>
                                                     <button class="btn btn-md circle btn-theme"
-                                                            @click="showProject(getTranslation(unref(currentPost))!?.externalUrl)">
+                                                            @click="showProject(currentPost)">
                                                         {{ t("Aperçu en direct") }}
                                                     </button>
                                                 </li>
@@ -155,11 +155,25 @@ const getCategories = (categories: Array<Category>) => {
 }
 
 const closeButton: Ref<HTMLButtonElement | null> = ref(null);
-const showProject = (url: string) => {
-    closeButton.value!.click();
-    const path = localePath({path: '/portfolios/see', query: {url: url}});
-    router.push(path);
 
+const showProject = (post: Post | null) => {
+    if (!post) return;
+    const translation = getTranslation(unref(post), locale.value);
+    if (!translation) return;
+    const url = translation?.externalUrl;
+    if (!url) return;
+
+    closeButton.value?.click();
+
+    if (post.isStandalone) {
+        window.open(url, '_blank', 'noopener,noreferrer');
+    } else {
+        const path = localePath({
+            path: '/portfolios/see',
+            query: { url: encodeURI(url) }
+        });
+        router.push(path);
+    }
 }
 
 const posts = ref<Array<Post>>([]);

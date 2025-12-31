@@ -2,11 +2,15 @@
 import path from "path";
 
 export default defineNuxtConfig({
+    compatibilityDate: '2025-12-31',
+    future: {
+        compatibilityVersion: 4,
+    },
     devtools: {enabled: true},
     typescript: {
         typeCheck: true,
     },
-    srcDir: "src/",
+    srcDir: "app/",
     dir: {public: path.join(__dirname, "public")},
     //@ts-ignore remove Type instantiation is excessively deep and possibly infinite warning
     modules: [
@@ -68,5 +72,41 @@ export default defineNuxtConfig({
     },
     seo: {
         fallbackTitle: true,
+    },
+    css: [
+        "~/assets/css/bootstrap.min.css",
+        "~/assets/css/font-awesome.min.css",
+        "~/assets/css/themify-icons.css",
+        "~/assets/css/elegant-icons.css",
+        "~/assets/css/flaticon-set.css",
+        'swiper/css',
+        'swiper/css/navigation',
+        "~/assets/css/validnavs.css",
+        "~/assets/css/helper.css",
+        "~/assets/css/unit-test.css",
+        "~/assets/css/style.css"
+    ],
+    routeRules: {
+        '/**': {
+            headers: {
+                'Strict-Transport-Security': 'max-age=31536000; includeSubDomains',
+                'Content-Security-Policy': [
+                    "default-src 'self'",
+                    "img-src 'self' data: https:",
+                    "script-src 'self' 'unsafe-inline' 'unsafe-eval'",
+                    "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
+                    // Added data: to allow Base64 encoded fonts
+                    "font-src 'self' https://fonts.gstatic.com data:",
+                    `connect-src 'self' *.sentry.io ${process.env.BACKEND || 'https://localhost:8000'}`,
+                    // PERMISSIVE IFRAME: Allows you to embed any HTTPS website
+                    "frame-src 'self' https:",
+                    "frame-ancestors 'none'"
+                ].join('; '),
+                'X-Frame-Options': 'SAMEORIGIN',
+                'X-Content-Type-Options': 'nosniff',
+                'Referrer-Policy': 'strict-origin-when-cross-origin',
+                'Permissions-Policy': 'geolocation=()'
+            },
+        },
     },
 });
