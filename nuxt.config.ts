@@ -73,6 +73,19 @@ export default defineNuxtConfig({
     seo: {
         fallbackTitle: true,
     },
+    css: [
+        "~/assets/css/bootstrap.min.css",
+        "~/assets/css/font-awesome.min.css",
+        "~/assets/css/themify-icons.css",
+        "~/assets/css/elegant-icons.css",
+        "~/assets/css/flaticon-set.css",
+        'swiper/css',
+        'swiper/css/navigation',
+        "~/assets/css/validnavs.css",
+        "~/assets/css/helper.css",
+        "~/assets/css/unit-test.css",
+        "~/assets/css/style.css"
+    ],
     routeRules: {
         '/**': {
             headers: {
