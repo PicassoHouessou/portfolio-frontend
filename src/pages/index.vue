@@ -872,7 +872,7 @@
                                     <div class="info">
                                         <p> {{ t("Email") }}</p>
                                         <h5>
-                                            <a href="mailto:{{user?.email}}">{{ user?.email }}</a>
+                                            <a :href="'mailto:' + user?.email">{{ user?.email }}</a>
                                             <br>
                                         </h5>
                                     </div>
