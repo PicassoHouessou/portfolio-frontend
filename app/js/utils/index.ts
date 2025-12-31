@@ -1,10 +1,9 @@
-
-import { DATE_FORMAT,defaultLocale} from "../constant";
+import type {ApiRoutesWithoutPrefix, Locale} from '../constant';
+import {DATE_FORMAT, defaultLocale} from "../constant";
+import type {ConfigType} from 'dayjs';
 import dayjs from 'dayjs';
-import type { ConfigType } from 'dayjs';
 import 'dayjs/locale/fr'; // Import the locale you want to use
 import localizedFormat from 'dayjs/plugin/localizedFormat'; // Import the localizedFormat plugin
-import type { Locale ,ApiRoutesWithoutPrefix} from '../constant';
 import relativeTime from 'dayjs/plugin/relativeTime';
 
 // Extend dayjs with the localizedFormat plugin
@@ -19,7 +18,7 @@ export const extractIntegerFromIRI = (iri: string): number | null => {
     if (!match) return null;
 
     // Extracted substring containing the number
-    const extractedNumber = match[1];
+    const extractedNumber = match[1] as string;
 
     // Convert the extracted substring to an integer
     return parseInt(extractedNumber, 10);
@@ -45,7 +44,7 @@ export const generateIRI = (
     if (typeof id === "string") {
         // Extract the last part of the path
         const parts = id.split("/");
-        lastPart = parts[parts.length - 1];
+        lastPart = parts[parts.length - 1] as string;
 
         // Check if it matches UUID format
         if (!isUUID(lastPart))  {
