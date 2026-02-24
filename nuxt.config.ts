@@ -14,13 +14,14 @@ export default defineNuxtConfig({
     dir: {public: path.join(__dirname, "public")},
     //@ts-ignore remove Type instantiation is excessively deep and possibly infinite warning
     modules: [
-        "@nuxtjs/i18n",
-        "@pinia/nuxt",
-        "@vee-validate/nuxt",
-        "@nuxtjs/color-mode",
-        "@nuxt/image",
-        "@nuxtjs/seo",
-        "@nuxt/eslint",
+      "@nuxtjs/i18n",
+      "@pinia/nuxt",
+      "@vee-validate/nuxt",
+      "@nuxtjs/color-mode",
+      "@nuxt/image",
+      "@nuxtjs/seo",
+      "@nuxt/eslint",
+      "@nuxt/scripts",
     ],
     eslint: {
         checker: true,
@@ -54,6 +55,11 @@ export default defineNuxtConfig({
             titleTemplate: "%siteName %separator %s",
         },
     },
+    scripts: {
+        registry: {
+            googleAnalytics: true,
+        }
+    },
     runtimeConfig: {
         public: {
             baseURL: process.env.BASE_URL || "https://localhost:8000",
@@ -62,6 +68,11 @@ export default defineNuxtConfig({
             sentry: {
                 dsn: process.env.SENTRY_DSN || "",
                 environment: process.env.SENTRY_ENVIRONMENT || "development",
+            },
+            scripts: {
+                googleAnalytics: {
+                    id: process.env.NUXT_PUBLIC_SCRIPTS_GOOGLE_ANALYTICS_ID ||'',
+                },
             },
         },
     },
