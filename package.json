@@ -9,6 +9,7 @@
     "build": "nuxt build",
     "dev": "nuxt dev",
     "generate": "nuxt generate",
+    "prod": "nuxt generate --dotenv .env.local",
     "preview": "nuxt preview",
     "preinstall": "npx only-allow pnpm",
     "postinstall": "nuxt prepare",
