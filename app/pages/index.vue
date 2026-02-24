@@ -88,7 +88,7 @@
         "+4 ans d'expérience": "+4 years experience",
         "Mes compétences": "My skills",
         "A propos de moi": "About me",
-        "Conception logicielle & Ingénierie de données": "I develop solutions",
+        "Conception logicielle & Ingénierie de données": "Software Design & Data Engineering",
         "BIENVENUE": "WELCOME",
         "bienvenue": "welcome",
         "head": {
