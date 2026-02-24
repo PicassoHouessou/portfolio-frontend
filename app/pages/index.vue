@@ -1,6 +1,10 @@
 <i18n>
 {
     "fr": {
+        "Ingénieur Software & Data": "Ingénieur Software & Data",
+        "Coordination d'équipes (10+ personnes) et formation de 100+ profils": "Coordination d'équipes (10+ personnes) et formation de 100+ profils",
+        "Voir l'e-mail": "View email",
+        "Ingénieur Data": "Data Engineer",
         "Embauchez moi maintenant": "Embauchez moi maintenant",
         "Parlons-en ?": "Parlons-en ?",
         "Développeur Full Stack": "Développeur Full Stack",
@@ -9,11 +13,11 @@
         "A propos de moi": "A propos de moi",
         "BIENVENUE": "BIENVENUE",
         "Ce que j'offre": "Ce que j'offre",
-        "Je développe des solutions": "Je développe des solutions",
+        "Conception logicielle & Ingénierie de données": "Conception logicielle & Ingénierie de données",
         "bienvenue": "bienvenue",
         "head": {
-            "keywords": "Picasso Houessou, Picasso Houessou-Dossou, Développeur web, Développeur backend, développeur frontend, frontend, backend, HTML, CSS, symfony, laravel, wordpress, développeur wordpress, développeur PHP, développeur vue.js, création de site web au bénin, web designer au bénin, développeur d'API, création de site web à cotonou, refonte de site web",
-            "description": "Bienvenue sur mon site. Je suis un ingénieur informatique et administrateur réseau avec 4 ans d'expérience"
+            "keywords": "Picasso Houessou, Picasso Houessou-Dossou, Ingénieur Data, Software Engineer, Data Engineer, Ingénieur logiciel, Cloud Engineer, DevOps, Python, SQL, dbt, Snowflake, Docker, Kubernetes, AWS, JavaScript, TypeScript, Node.js, Angular, Symfony, PHP, MongoDB, PostgreSQL, API REST, Architecture logicielle, IoT, Raspberry Pi, Arduino, Leadership technique, Gestion de projet, Développeur web, Développeur backend, développeur frontend, frontend, backend, HTML, CSS, laravel, wordpress, développeur wordpress, développeur PHP, développeur vue.js, création de site web au bénin, web designer au bénin, développeur d'API, création de site web à cotonou, refonte de site web, Toulouse",
+            "description": "Ingénieur Software & Data avec 4 ans d'expérience. Expert en conception d'applications scalables, architecture de pipelines de données et solutions IoT."
         },
         "Je suis un": "Je suis un",
         "aboutMe": {
@@ -49,15 +53,26 @@
         "Regardez mon portfolio et": "Regardez mon portfolio et",
         "donnez moi votre avis": "donnez moi votre avis",
         "Application Web": "Application Web",
+        "Accompagnement & Conseil": "Accompagnement & Conseil",
         "Conception et développement de sites web et d'applications web robustes, garantissant une performance fiable et une expérience utilisateur exceptionnelle.": "Conception et développement de sites web et d'applications web robustes, garantissant une performance fiable et une expérience utilisateur exceptionnelle.",
+        "Conception d'applications robustes et scalables. Expertise en architectures API REST, micro-services et optimisation des performances.": "Conception d'applications robustes et scalables. Expertise en architectures API REST, micro-services et optimisation des performances.",
+        "Structuration et industrialisation de pipelines de données. Transformation de données brutes en outils d'aide à la décision stratégique.": "Structuration et industrialisation de pipelines de données. Transformation de données brutes en outils d'aide à la décision stratégique.",
+        "Formation technique et conduite du changement. Vulgarisation de concepts complexes pour faciliter l'adoption des solutions par les utilisateurs métiers.": "Formation technique et conduite du changement. Vulgarisation de concepts complexes pour faciliter l'adoption des solutions par les utilisateurs métiers.",
         "Accueil": "Accueil",
         "Mes Projets": "Mes Projets",
         "Quelques réalisations de Picasso": "Quelques réalisations de Picasso",
         "Voir Mes Réalisations": "Voir Mes Réalisations",
         "Ayant une passion pour l'informatique, j'ai suivi une formation en administration des systèmes et réseaux informatiques à l'École Nationale d'Économie Appliquée et de Management (ENEAM). J'ai développé une grande aisance dans les environnements Linux et Windows, ainsi que dans la virtualisation et le développement web en utilisant le framework Symfony avec le langage PHP. Je suis constamment animé par une soif de curiosité et je ne cesse de travailler et d'apprendre pour améliorer mes compétences et maintenir mes connaissances actualisées.": "ayant une passion pour l'informatique, j'ai suivi une formation en administration des systèmes et réseaux informatiques à l'école nationale d'économie appliquée et de management (eneam). j'ai développé une grande aisance dans les environnements linux et windows, ainsi que dans la virtualisation et le développement web en utilisant le framework symfony avec le langage php. je suis constamment animé par une soif de curiosité et je ne cesse de travailler et d'apprendre pour améliorer mes compétences et maintenir mes connaissances actualisées.",
-        "Si vous avez un projet en tête et souhaitez discuter ou me recruter, n'hésitez pas à laisser un message pour que nous puissions en discuter.": "Si vous avez un projet en tête et souhaitez discuter ou me recruter, n'hésitez pas à laisser un message pour que nous puissions en discuter."
+        "Si vous avez un projet en tête et souhaitez discuter ou me recruter, n'hésitez pas à laisser un message pour que nous puissions en discuter.": "Si vous avez un projet en tête et souhaitez discuter ou me recruter, n'hésitez pas à laisser un message pour que nous puissions en discuter.",
+        "Titulaire d'un premier diplôme en Administration Systèmes et Réseaux (2019) et actuellement en dernière année de cycle ingénieur à l’EILCO, je conçois des solutions où la performance logicielle rencontre l'intelligence des données. Avec plus de 4 ans d’expérience, j’ai évolué de la création de sites web vers l’architecture d'applications distribuées et l'ingénierie de données. Mon parcours me permet aujourd'hui de naviguer avec aisance entre le développement Full Stack, la gestion d'infrastructures (Cloud/DevOps) et la modélisation de pipelines de données complexes. Mon approche est guidée par deux piliers : la rigueur technique et le leadership collaboratif.": "Titulaire d'un premier diplôme en Administration Systèmes et Réseaux (2019) et actuellement en dernière année de cycle ingénieur à l’EILCO, je conçois des solutions où la performance logicielle rencontre l'intelligence des données. Avec plus de 4 ans d’expérience, j’ai évolué de la création de sites web vers l’architecture d'applications distribuées et l'ingénierie de données. Mon parcours me permet aujourd'hui de naviguer avec aisance entre le développement Full Stack, la gestion d'infrastructures (Cloud/DevOps) et la modélisation de pipelines de données complexes. Mon approche est guidée par deux piliers : la rigueur technique et le leadership collaboratif."
     },
     "en": {
+        "Titulaire d'un premier diplôme en Administration Systèmes et Réseaux (2019) et actuellement en dernière année de cycle ingénieur à l’EILCO, je conçois des solutions où la performance logicielle rencontre l'intelligence des données. Avec plus de 4 ans d’expérience, j’ai évolué de la création de sites web vers l’architecture d'applications distribuées et l'ingénierie de données. Mon parcours me permet aujourd'hui de naviguer avec aisance entre le développement Full Stack, la gestion d'infrastructures (Cloud/DevOps) et la modélisation de pipelines de données complexes. Mon approche est guidée par deux piliers : la rigueur technique et le leadership collaboratif.": "With a bachelor's degree in Systems and Network Administration (2019) and currently in my final year of engineering studies at EILCO, I design solutions where software performance meets data intelligence. With over 4 years of experience, I have evolved from website creation to distributed application architecture and data engineering. My background allows me to navigate with ease between full stack development, infrastructure management (Cloud/DevOps), and complex data pipeline modeling. My approach is guided by two pillars: technical rigor and collaborative leadership.",
+        "Ingénieur Software & Data": "Software & Data Engineer",
+        "Coordination d'équipes (10+ personnes) et formation de 100+ profils": "Team coordination (10+ people) and training of 100+ profiles",
+        "Conception d'applications robustes et scalables. Expertise en architectures API REST, micro-services et optimisation des performances.": "Designing robust and scalable applications. Expertise in REST API architectures, microservices, and performance optimization.",
+        "Structuration et industrialisation de pipelines de données. Transformation de données brutes en outils d'aide à la décision stratégique.": "Structuring and industrialization of data pipelines. Transformation of raw data into strategic decision-making tools.",
+        "Formation technique et conduite du changement. Vulgarisation de concepts complexes pour faciliter l'adoption des solutions par les utilisateurs métiers.": "Technical training and change management. Simplifying complex concepts to facilitate the adoption of solutions by business users.",
         "Voir": "See",
         "Client": "Client",
         "Type De Projet": "Project Type",
@@ -73,12 +88,12 @@
         "+4 ans d'expérience": "+4 years experience",
         "Mes compétences": "My skills",
         "A propos de moi": "About me",
-        "Je développe des solutions": "I develop solutions",
+        "Conception logicielle & Ingénierie de données": "I develop solutions",
         "BIENVENUE": "WELCOME",
         "bienvenue": "welcome",
         "head": {
-            "keywords": "Picasso Houessou, Picasso Houessou-Dossou, Développeur web, Développeur backend, développeur frontend, frontend, backend, HTML, CSS, symfony, laravel, wordpress, développeur wordpress, développeur PHP, développeur vue.js, création de site web au bénin, web designer au bénin, développeur d'API, création de site web à cotonou, refonte de site web",
-            "description": "Welcome to my website. I am a software engineer and network administrator with 4 years of experience."
+            "keywords": "Picasso Houessou, Picasso Houessou-Dossou, Web developer, Backend developer, Frontend developer, HTML, CSS, Symfony, Laravel, WordPress, PHP developer, Vue.js developer, Web design Benin, API developer, Web design Cotonou, Data Engineer, Software Engineer, Cloud Engineer, DevOps, Networking, Network Administration, Python, SQL, dbt, Snowflake, Docker, Kubernetes, AWS, JavaScript, TypeScript, Node.js, Angular, MongoDB, PostgreSQL, REST API, Software Architecture, IoT, Raspberry Pi, Arduino, Technical Leadership, Project Management, Toulouse",
+            "description": "Software & Data Engineer with 4 years of experience. Expert in designing scalable applications, data pipelines, and network infrastructures."
         },
         "Regardez mon portfolio et": "Look at my portfolio and",
         "donnez moi votre avis": "give me your feedback",
@@ -221,10 +236,11 @@
                                 <!-- type headline end -->
                             </span>
                         </h3>
+                        <!--
                         <div class="button mt-55">
-                            <!--              <a class="btn btn-md circle btn-dark" href="#resume">{{ t("Télécharger mon CV") }}</a>-->
                             <CVButton class="btn btn-md circle btn-dark"/>
                         </div>
+                    -->
                     </div>
 
                     <div class="col-lg-6 thumb" data-wow-delay="900ms">
@@ -276,9 +292,9 @@
                 <div class="service-style-one col-lg-4 col-md-6">
                     <div class="service-style-one-item">
                         <img src="assets/img/icon/1.png" alt="Icon">
-                        <h4>{{ t("Application Web") }}</h4>
+                        <h4>{{ t("Software Engineering") }}</h4>
                         <p>{{
-                                t("Conception et développement de sites web et d'applications web robustes, garantissant une performance fiable et une expérience utilisateur exceptionnelle.")
+                                t("Conception d'applications robustes et scalables. Expertise en architectures API REST, micro-services et optimisation des performances.")
                             }}
                         </p>
                     </div>
@@ -288,10 +304,10 @@
                 <div class="service-style-one col-lg-4 col-md-6">
                     <div class="service-style-one-item">
                         <img src="assets/img/icon/2.png" alt="Icon">
-                        <h4>{{ t("Application Mobile") }}</h4>
+                        <h4>{{ t("Data Engineering") }}</h4>
                         <p>
                             {{
-                                t("Conception et création d'applications mobiles solides, offrant une performance stable et une expérience utilisateur remarquable sur une gamme variée de dispositifs.")
+                                t("Structuration et industrialisation de pipelines de données. Transformation de données brutes en outils d'aide à la décision stratégique.")
                             }}
                         </p>
                     </div>
@@ -301,10 +317,10 @@
                 <div class="service-style-one col-lg-4 col-md-6">
                     <div class="service-style-one-item">
                         <img src="assets/img/icon/4.png" alt="Icon">
-                        <h4>{{ t("Formation") }}</h4>
+                        <h4>{{ t("Accompagnement & Conseil") }}</h4>
                         <p>
                             {{
-                                t("Offre de formations en informatique axées sur le développement web, garantissant une acquisition de compétences solides et une expertise pratique dans le web design.")
+                                t("Formation technique et conduite du changement. Vulgarisation de concepts complexes pour faciliter l'adoption des solutions par les utilisateurs métiers.")
                             }}
                         </p>
                     </div>
@@ -378,10 +394,10 @@
                 </div>
                 <div class="about-style-six col-lg-6 offset-lg-1">
                     <h4 class="sub-title">{{ t("A propos de moi") }}</h4>
-                    <h2 class="title">{{ t("Je développe des solutions") }}</h2>
+                    <h2 class="title">{{ t("Conception logicielle & Ingénierie de données") }}</h2>
                     <p>
                         {{
-                            getTranslation(unref(user), locale)?.brief ?? t("Ayant une passion pour l'informatique, j'ai suivi une formation en administration des systèmes et réseaux informatiques à l'École Nationale d'Économie Appliquée et de Management (ENEAM). J'ai développé une grande aisance dans les environnements Linux et Windows, ainsi que dans la virtualisation et le développement web en utilisant le framework Symfony avec le langage PHP. Je suis constamment animé par une soif de curiosité et je ne cesse de travailler et d'apprendre pour améliorer mes compétences et maintenir mes connaissances actualisées.")
+                            getTranslation(unref(user), locale)?.brief ?? t("Titulaire d'un premier diplôme en Administration Systèmes et Réseaux (2019) et actuellement en dernière année de cycle ingénieur à l’EILCO, je conçois des solutions où la performance logicielle rencontre l'intelligence des données. Avec plus de 4 ans d’expérience, j’ai évolué de la création de sites web vers l’architecture d'applications distribuées et l'ingénierie de données. Mon parcours me permet aujourd'hui de naviguer avec aisance entre le développement Full Stack, la gestion d'infrastructures (Cloud/DevOps) et la modélisation de pipelines de données complexes. Mon approche est guidée par deux piliers : la rigueur technique et le leadership collaboratif.")
                         }}
 
                     </p>
@@ -389,11 +405,11 @@
                         <ul>
                             <li>
                                 <div class="icon">
-                                    <i class="fab fa-wordpress"/>
+                                    <i class="fas fa-laptop-code"/>
                                 </div>
                                 <div class="content">
-                                    <h4>{{ t("Développeur WordPress professionnel") }}</h4>
-                                    <span>{{ t("+100 Réalisations") }}</span>
+                                    <h4>{{ t("Ingénieur Software & Data") }}</h4>
+                                    <span>{{ t("+4 ans d'expérience") }}</span>
                                 </div>
                             </li>
                             <li>
@@ -401,8 +417,10 @@
                                     <i class="fas fa-layer-group"/>
                                 </div>
                                 <div class="content">
-                                    <h4>{{ t("Développeur Full Stack") }}</h4>
-                                    <span>{{ t("+4 ans d'expérience") }}</span>
+                                    <h4>{{ t("Lead Technique & Formateur") }}</h4>
+                                    <span>{{
+                                            t("Coordination d'équipes (10+ personnes) et formation de 100+ profils.")
+                                        }}</span>
                                 </div>
                             </li>
                         </ul>
@@ -477,7 +495,14 @@
                                             <li>
                                                 <h5>{{ t("E-mail") }}</h5>
                                                 <p>
-                                                    {{ user?.email ?? "" }} </p>
+                                                    <button v-if="!emailRevealed" class="email-reveal-btn"
+                                                            @click="revealEmail">
+                                                        {{ t("Voir l'e-mail") }}
+                                                    </button>
+                                                    <span v-else>
+      {{ emailParts.local }}<span aria-hidden="true" style="display:none">x</span>@{{ emailParts.domain }}
+    </span>
+                                                </p>
                                             </li>
                                             <li>
                                                 <h5>{{ t("Téléphone") }}</h5>
@@ -872,11 +897,19 @@
                                     <div class="info">
                                         <p> {{ t("Email") }}</p>
                                         <h5>
-                                            <a :href="'mailto:' + user?.email">{{ user?.email }}</a>
-                                            <br>
+                                            <button v-if="!emailRevealed" class="email-reveal-btn" @click="revealEmail">
+                                                {{ t("Voir l'e-mail") }}
+                                            </button>
+                                            <a v-else href="#" @click.prevent="openMailto">
+                                                {{ emailParts.local }}<span aria-hidden="true"
+                                                                            style="display:none">x</span>@{{
+                                                    emailParts.domain
+                                                }}
+                                            </a>
                                         </h5>
                                     </div>
                                 </li>
+                                <!--
                                 <li class="contact-info-list wow fadeInUp" data-wow-delay="300ms">
                                     <div class="icon">
                                         <i class="fas fa-map-marker-alt"/>
@@ -888,6 +921,7 @@
                                         </h5>
                                     </div>
                                 </li>
+                                -->
                                 <li class="contact-info-list wow fadeInUp" data-wow-delay="500ms">
                                     <div class="icon">
                                         <i class="fas fa-headphones-alt"/>
@@ -926,7 +960,6 @@ import ColorModePicker from "~/components/ColorModePicker.vue";
 import type {Experience} from "~/models/Experience";
 import type {Education} from "~/models/Education";
 import type {User} from "~/models/User";
-import CVButton from "~/components/CVButton.vue";
 
 defineRule('required', required);
 defineRule('email', email);
@@ -1007,6 +1040,8 @@ watch(form, () => {
 }, {deep: true});
 */
 
+const userEmail = computed(() => user.value?.email)
+const {revealed: emailRevealed, parts: emailParts, reveal: revealEmail, openMailto} = useProtectedEmail(userEmail)
 
 const experiences = ref<Array<Experience>>([]);
 const educations = ref<Array<Education>>([]);
@@ -1025,9 +1060,9 @@ watch(user, () => {
             id: data.id,
             name: data.fullName ?? 'Picasso Houessou',
             birthday: data.birthdate ?? '04 Avril 1998',
-            address: data.address ?? '62137 Coulogne, France',
-            email: data.email ?? 'houessoupicasso@yahoo.fr',
-            phone: data.phoneNumber ?? '+29995718340',
+            address: data.address ?? 'France',
+            email: data.email ?? '',
+            phone: data.phoneNumber ?? '',
             website: data.address ?? ""
         });
 
@@ -1062,7 +1097,7 @@ watchEffect(async () => {
 onMounted(() => {
 
     const options = {
-        strings: [`<b> ${t('Développeur frontend web')}</b>`, `<b>${t('Ingénieur d\'application')}</b>`, `<b>${t('Administrateur réseau')}</b>`],
+        strings: [`<b> ${t('Ingénieur Data')}</b>`, `<b>${t('Ingénieur d\'application')}</b>`, `<b>${t('Administrateur réseau')}</b>`],
         typespeed: 35,
         loop: true,
         backspeed: 35
@@ -1100,7 +1135,7 @@ onMounted(() => {
 
 const colorMode = useColorMode();
 useHead({
-    title: "Portfolio, Ingénieur informatique | Administrateur Réseau",
+    title: "Portfolio, Ingénieur informatique | Ingénieur Data | Administrateur Réseau",
     meta: [
         {
             name: `author`,
@@ -1230,4 +1265,13 @@ $padding: 0 !important;
     animation-name: fadeInUp;
 }
 
+.email-reveal-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: inherit;
+    font: inherit;
+    text-decoration: underline;
+    padding: 0;
+}
 </style>
